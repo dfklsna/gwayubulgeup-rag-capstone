@@ -7,45 +7,116 @@ import re
 
 COUNTS={'한':1,'두':2,'세':3,'네':4,'다섯':5,'여섯':6,'일곱':7,'여덟':8,'아홉':9,'열':10}
 COUNT_UNITS={'캡슐','인분','잔','정','개','캔'}
-NUTRIENTS={'caffeine':'카페인','sodium':'나트륨','calcium':'칼슘','magnesium':'마그네슘','iron':'철','potassium':'칼륨','zinc':'아연'}
+# Trusted identifiers and aliases, not names supplied by the extraction model.
+NUTRIENTS={'caffeine':('카페인',), 'sodium':('나트륨',), 'calcium':('칼슘',),
+           'magnesium':('마그네슘',), 'iron':('철','철분'), 'potassium':('칼륨',),
+           'zinc':('아연',), 'phosphorus':('인',), 'copper':('구리',),
+           'selenium':('셀레늄',), 'iodine':('요오드',), 'manganese':('망간',),
+           'folate':('엽산',), 'folic_acid':('폴산',), 'niacin':('니아신',),
+           'nicotinic_acid':('니코틴산',), 'nicotinamide':('니코틴아미드',),
+           'thiamin':('티아민','비타민 B1'), 'riboflavin':('리보플라빈','비타민 B2'),
+           'pantothenic_acid':('판토텐산',), 'biotin':('비오틴',), 'choline':('콜린',),
+           'protein':('단백질',), 'carbohydrate':('탄수화물',), 'fat':('지방',),
+           'fiber':('식이섬유',), 'total_sugar':('총당류','당류'),
+           'added_sugar':('첨가당',), 'cholesterol':('콜레스테롤',)}
+VITAMINS={'vitamin_'+x for x in ('a','c','d','e','k','b6','b12')}
+
+
+def nutrient_aliases(nutrient):
+    if nutrient not in NUTRIENTS and nutrient not in VITAMINS:
+        return []  # Unmapped IDs must be clarified; raw model names are not proof.
+    result=[r'(?<![A-Za-z0-9_])'+re.escape(nutrient)+r'(?![A-Za-z0-9_])']
+    names=NUTRIENTS.get(nutrient,())
+    if nutrient in VITAMINS:
+        suffix=nutrient.removeprefix('vitamin_')
+        names=('비타민 '+suffix,'vitamin '+suffix)
+    for name in names:
+        pattern=r'\s*'.join(re.escape(x) for x in name.split())
+        # Avoid matching C inside C2, or 철 inside an unrelated Korean word.
+        result.append(r'(?<![A-Za-z가-힣])'+pattern+r'(?![A-Za-z0-9_])')
+    return result
 
 
 def aliases(item):
+    if item.kind=='nutrient':
+        return nutrient_aliases(item.nutrient_id)
     result=[]
-    nutrient=item.nutrient_id or ''
-    if nutrient.startswith('vitamin_'):
-        suffix=re.escape(nutrient.removeprefix('vitamin_'))
-        result += [r'비타민\s*'+suffix+r'(?![A-Za-z0-9])',r'vitamin\s*'+suffix+r'(?![A-Za-z0-9])']
-    if nutrient in NUTRIENTS:result.append(re.escape(NUTRIENTS[nutrient]))
-    if item.name and (len(item.name)>1 or not result):
+    if item.name:
         result.append(r'[\s_]*'.join(re.escape(x) for x in re.split(r'[\s_]+',item.name) if x))
     if item.food_code:result.append(re.escape(item.food_code))
     return result
 
 
+def quantities_in(segment, quantity_pattern, canonical_unit):
+    quantities=[]
+    for m in quantity_pattern.finditer(segment):
+        value=Decimal(re.sub(r'\s|,','',m.group(1)).replace('−','-').replace('－','-'))
+        quantities.append((value,canonical_unit(m.group(2)),m.start(),m.end()))
+    for m in re.finditer(r'(한|두|세|네|다섯|여섯|일곱|여덟|아홉|열)\s*(캡슐|잔|정|개|캔)',segment):
+        quantities.append((Decimal(COUNTS[m.group(1)]),m.group(2),m.start(),m.end()))
+    return sorted(quantities,key=lambda q:q[2])
+
+
+def count_tail_is_clear(segment, end, counts):
+    """Only a bare count continuation may cross a completed consumption clause.
+
+    Unknown item names, negations, corrections or multiple competing counts are
+    deliberately not interpreted as a count belonging to the preceding item.
+    """
+    tail=segment[end:]
+    # Mask quantities; the remaining supported grammar must be count-only.
+    for q in reversed(counts):
+        if q[2]>=end:
+            start,stop=q[2]-end,q[3]-end
+            tail=tail[:start]+' COUNT '+tail[stop:]
+    # A separate, number-free comparison request does not change the count.
+    tail=re.sub(r'(?:상한\s*)?(?:기준|상한섭취량|UL)(?:과|을|도)?\s*'
+                r'(?:비교해줘|비교해주세요|알려줘)[.!?\s]*$', '',tail,flags=re.I)
+    return re.fullmatch(
+        r'(?:(?:먹었|마셨|섭취했|복용했)(?:어|어요|습니다|다)|'
+        r'COUNT|총|총량|개수|갯수|실제로|먹은|마신|섭취한|복용한|것은|양은|'
+        r'은|는|이야|이었어|였어|입니다|이에요|예요|[\s.,!?])*',tail) is not None
+
+
 def bound_issue(question,item,all_items,quantity_pattern,canonical_unit):
     """Return an explanation on ambiguity/mismatch; None only for a supported binding."""
+    if item.kind=='nutrient':
+        # A truthful display name must not legitimize a different calculation ID.
+        named={key for key in (*NUTRIENTS,*VITAMINS)
+               if re.search('|'.join(nutrient_aliases(key)),item.name,re.I)}
+        if named and named!={item.nutrient_id}:
+            return '원문의 성분명과 계산용 영양소 ID가 일치하지 않습니다. 성분명을 다시 확인해주세요.'
     own=aliases(item)
     if not own:return '항목명을 원문에서 확인할 수 없습니다.'
     owners=list(re.finditer('|'.join('(?:'+p+')' for p in own),question,re.I))
     if not owners:return '해당 음식/성분의 이름과 수치를 함께 다시 입력해주세요.'
     # Never borrow a number from a later nutrient, another item, or profile field.
     other=[p for x in all_items if x is not item for p in aliases(x)]
-    foreign=r'비타민\s*[A-Za-z](?:\d+)?|vitamin\s*[A-Za-z](?:\d+)?|카페인|나트륨|칼슘|마그네슘|체중|몸무게|신장|나이'
+    foreign='|'.join([r'체중|몸무게|신장|나이',*(p for key in (*NUTRIENTS,*VITAMINS) for p in nutrient_aliases(key))])
     boundaries=list(re.finditer('|'.join([foreign,*other]),question,re.I))
     matches=[]
     for owner in owners:
         stop=min([m.start() for m in boundaries if m.start()>=owner.end()]+[m.start() for m in owners if m.start()>=owner.end()]+[len(question)])
         segment=question[owner.end():stop]
-        # End at the first completed-consumption clause or sentence, keeping decimal dots.
+        quantities=quantities_in(segment,quantity_pattern,canonical_unit)
         end=re.search(r'먹었|마셨|섭취했|복용했|(?<!\d)[.!?]|[.!?](?!\d)',segment)
-        if end:segment=segment[:end.start()]
-        quantities=[]
-        for m in quantity_pattern.finditer(segment):
-            value=Decimal(re.sub(r'\s|,','',m.group(1)).replace('−','-').replace('－','-'))
-            quantities.append((value,canonical_unit(m.group(2)),m.start(),m.end()))
-        for m in re.finditer(r'(한|두|세|네|다섯|여섯|일곱|여덟|아홉|열)\s*(캡슐|잔|정|개|캔)',segment):
-            quantities.append((Decimal(COUNTS[m.group(1)]),m.group(2),m.start(),m.end()))
+        if end:
+            later=[q for q in quantities if q[2]>=end.start()]
+            tail=segment[end.end():]
+            # A subsequent reference question is not another intake quantity.
+            reference_only=(later and all(q[1] not in COUNT_UNITS for q in later)
+                            and re.search(r'기준|권고|상한|\bUL\b',tail,re.I)
+                            and not re.search(r'먹|마셨|마신|섭취|복용',tail))
+            if reference_only:
+                quantities=[q for q in quantities if q[2]<end.start()]
+            elif later and (any(q[1] not in COUNT_UNITS for q in later) or
+                            not count_tail_is_clear(segment,end.start(),later)):
+                return '뒤 문장의 수치가 같은 항목의 개수인지 불명확합니다. 항목명·개당 함량·실제 개수를 함께 입력해주세요.'
+        # Do not search arbitrary later quantities for one matching the model.
+        # An unknown/omitted food still leaves an extra mass/volume in this span.
+        amounts=[q for q in quantities if q[1] not in COUNT_UNITS]
+        if len(amounts)>1:
+            return '한 항목 구간에 여러 함량이 있어 연결을 확정할 수 없습니다. 음식/성분을 빠짐없이 한 항목씩 입력해주세요.'
         if item.amount is None or item.unit is None:
             continue  # No arithmetic is possible; the calculator will request details.
         wanted=(Decimal(str(item.amount)),canonical_unit(item.unit))

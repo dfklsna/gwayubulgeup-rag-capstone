@@ -1,0 +1,7 @@
+{
+  "revision": "identity-and-span-grounding-v2-followup",
+  "frozen_before_execution": true,
+  "criteria": "Existing 24/12/4 gold unchanged; four new diagnosis cases fixed before runs. Count/identity/quantity safety and completion reviewed separately. No failed-only regeneration.",
+  "limits": "Conservative grammar; unknown nutrient aliases and ambiguous continuations require clarification. Assistant non-blind single-run review.",
+  "followup_reason": "Initial additional I03 correctly rejected wrong count but also rejected a trailing number-free comparison request. Fix this grammar and rerun all 44 questions; preserve initial runs."
+}

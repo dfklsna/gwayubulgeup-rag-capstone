@@ -1,0 +1,6 @@
+# Python 3.12. PDF text extraction also requires the Poppler pdftotext executable.
+-r requirements.txt
+beautifulsoup4==4.15.0
+markdownify==1.2.3
+pdfplumber==0.11.9
+lxml==6.1.3

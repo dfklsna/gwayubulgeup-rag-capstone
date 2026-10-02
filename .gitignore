@@ -35,3 +35,5 @@ local_requests/
 !results/release_summary.json
 
 !results/submission_review_summary.json
+
+!results/grounding_v2_summary.json

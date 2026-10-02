@@ -1,0 +1,6 @@
+{
+  "revision": "identity-and-span-grounding-v2",
+  "frozen_before_execution": true,
+  "criteria": "Existing 24/12/4 gold unchanged; four new diagnosis cases fixed before runs. Count/identity/quantity safety and completion reviewed separately. No failed-only regeneration.",
+  "limits": "Conservative grammar; unknown nutrient aliases and ambiguous continuations require clarification. Assistant non-blind single-run review."
+}

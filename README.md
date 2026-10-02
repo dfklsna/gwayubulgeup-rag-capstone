@@ -2,7 +2,7 @@
 
 음식 섭취량·카페인·비타민 함량을 계산하고 공식 근거와 조건별 기준을 함께 설명하는 RAG 실습입니다. Python이 DB 조회·계산을 담당하고 LLM이 입력 구조화와 일반 설명을 담당합니다.
 
-**현재 제출 점검:** 개수 누락과 체중/음식량 혼동을 수정했습니다. 실제 데이터 환경에서 53개 테스트가 통과했습니다. 내용 검토는 기존24문항 23충족·1부분, 개발12문항 10충족·2부분, 추가4문항 3충족·1실패(계산 보류)입니다. 과거 결과와 구분한 [평가 문서](results/evaluation.md)와 [현재 집계](results/submission_review_summary.json)를 확인하세요. 소규모 비맹검 assistant 검토이며 전체 답변 정확도나 전문가 검증이 아닙니다.
+**현재 제출 점검:** 성분명/ID 불일치, 누락 항목의 수치 차용, 뒤 문장 개수 처리를 수정했습니다. 실제 데이터 환경에서 61개 테스트가 통과했습니다. 내용 검토는 기존24문항 23충족·1부분, 개발12문항 10충족·2부분, 기존 관계4문항 3충족·1실패(계산 보류), 이번 진단4문항 4충족입니다. 과거 결과와 구분한 [평가 문서](results/evaluation.md)와 [현재 집계](results/grounding_v2_summary.json)를 확인하세요. 소규모 비맹검 assistant 검토이며 전체 답변 정확도나 전문가 검증이 아닙니다.
 
 ## 세 파일만으로 실행
 
@@ -62,12 +62,13 @@ python src/capstone_compare.py ask --question '커피 세 잔 마셨는데 카�
 
 ```bash
 python scripts/build_standalone.py --check
+python scripts/crosscheck_submission.py
 python -m unittest discover -s tests -v
 python scripts/make_demo.py
 RAG_DATA_DIR=data/demo RAG_CACHE_DIR=data/demo/index python src/capstone_compare.py calculate --request examples/demo.json
 ```
 
-전체 자료 없는 공개 clone은 53개 중50통과·실데이터용3개 skip입니다. 가상 DB에는 실제 영양소 기준이 없습니다. 개별 보조 모듈을 수정했다면 `python scripts/build_standalone.py`로 제출 진입점의 내장 소스를 갱신하세요. CI는 이 일치 여부와 세 파일의 격리 실행을 검사합니다.
+전체 자료 없는 공개 clone은 61개 중58통과·실데이터용3개 skip입니다. 가상 DB에는 실제 영양소 기준이 없습니다. 개별 보조 모듈을 수정했다면 `python scripts/build_standalone.py`로 제출 진입점의 내장 소스를 갱신하세요. CI는 이 일치 여부와 세 파일의 격리 실행을 검사합니다.
 
 ## 비교와 재평가
 
@@ -85,4 +86,4 @@ python scripts/evaluate_holdout.py --questions examples/holdout_questions_24.jso
 
 한 번에 한 음식/성분을 계산합니다. 동명 음식은 식품코드 선택, 카페인은 표시 함량·개수, 조건별 기준은 인적 조건이 필요합니다. RNI/EAR/AI 초과를 과다로 판정하지 않으며 미확보 성분을0으로 바꾸지 않습니다. 밀도 없는 부피/질량 환산, IU·비타민 A/E의 형태 불명 상한 비교, 여러 항목의 실제 하루 합산, 개인 진단·처방 변경은 지원하지 않습니다.
 
-관계 검증은 제한된 문장 구조를 대상으로 하며 정상 입력도 보류할 수 있습니다. 이번 총량/개수 질문1개도 오계산을 차단했지만 기대 계산을 완료하지 못했습니다. 일반 설명의 근거 함의·적용 범위·불필요한 인용 문제도 남아 있습니다. OCR3개 출처, EFSA부록8개, 모든 표·그림 전수 검토는 미완료입니다. [공개 범위](docs/PUBLISHING.md)를 참고하세요.
+관계 검증은 제한된 문장 구조를 대상으로 하며 정상 입력도 보류할 수 있습니다. 총량/개수 질문1개는 첫 실행에 성공했으나 후속 전체 실행에서 보류돼 안정성이 부족합니다. 일반 설명의 근거 함의·적용 범위·불필요한 인용 문제도 남아 있습니다. OCR3개 출처, EFSA부록8개, 모든 표·그림 전수 검토는 미완료입니다. [공개 범위](docs/PUBLISHING.md)를 참고하세요.

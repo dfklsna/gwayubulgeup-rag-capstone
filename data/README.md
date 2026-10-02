@@ -19,6 +19,6 @@
 - `nutrient_reference_definitions.json`: 영양소 ID·단위·식품 성분 열 매핑.
 - `caffeine_rules.json`: `python scripts/prepare_caffeine_rules.py`로 기존 KR_CAFFEINE 문서에서 생성.
 
-음식 원본 XLSX 정제는 `python scripts/prepare_food_db.py --input /path/to/음식DB.xlsx`로 수행합니다. 추가 전처리 패키지는 `requirements-preprocessing.txt`에 있습니다. 문서·KDRI·과거 자료 정제 스크립트는 기존 수집 디렉터리 구조를 전제로 하며, GitHub clone만으로 전체 수집 자료가 복원되지는 않습니다. 현재 단계에서 누구나 재현 가능한 실행 경로는 가상 데이터 예제입니다.
+음식 원본 XLSX 정제는 `python scripts/prepare_food_db.py --input /path/to/음식DB.xlsx`로 수행합니다. 추가 전처리 패키지는 [requirements-preprocessing.txt](../requirements-preprocessing.txt)에 있습니다. `python -m pip install -r requirements-preprocessing.txt`로 설치합니다. PDF 본문 추출은 별도 시스템 도구 Poppler의 `pdftotext`도 필요합니다. 음식 XLSX 정제는 기존 documents/all_documents/entities 등 수집·정제 파일이 준비된 디렉터리를 전제로 하며, 음식 파일 하나만으로 시작하는 명령은 아닙니다. 문서·KDRI·과거 자료 정제 스크립트는 기존 수집 디렉터리 구조를 전제로 하며, GitHub clone만으로 전체 수집 자료가 복원되지는 않습니다. 현재 단계에서 누구나 재현 가능한 실행 경로는 가상 데이터 예제입니다.
 
 전체 데이터가 준비되면 `python src/capstone_compare.py prepare`, 이어서 `build`를 실행합니다. 새 자료를 사용하면 임베딩 인덱스를 다시 구축해야 합니다. 대용량 자료·로컬 요청·실행 로그는 `.gitignore`로 제외합니다.

@@ -8,23 +8,23 @@
     },
     {
       "path": ".github/workflows/tests.yml",
-      "sha256": "a9328391eba95eb3918a7bab87cf63e03bf44c3bd5c55cf1c345b99852095d84",
-      "bytes": 701
+      "sha256": "185bce737b4857c2cfec20d60840b64d636f8b10ab3be33429443d527e5fc00c",
+      "bytes": 948
     },
     {
       "path": ".gitignore",
-      "sha256": "8333011c1ef06b1ae716e104b63abc76c986bf71fb7e6b1d64cce36cabe52bd9",
-      "bytes": 738
+      "sha256": "245e999bfc567b70db80d2a5d359485bed9c90c237daa23801a51d5e9a82387b",
+      "bytes": 774
     },
     {
       "path": "README.md",
-      "sha256": "0069e8102854fde9ccc656c80b7c4587ba492c89ff52fabd74b9cf798b9666dd",
-      "bytes": 7203
+      "sha256": "04b5e42eabd9d92e633a8643ef4c2e312e40c765c0799e8f532ba684c6097157",
+      "bytes": 7329
     },
     {
       "path": "data/README.md",
-      "sha256": "f4020bec9d5957cb5980b139705a75bcd285a11cfee8e44346217a1bd7ab9b76",
-      "bytes": 2476
+      "sha256": "218677970da27463d10a30ec0f3bee9ca126d2fc3e17b4cc8b105ae17444dff0",
+      "bytes": 2879
     },
     {
       "path": "data/demo/.gitkeep",
@@ -43,13 +43,13 @@
     },
     {
       "path": "docs/PUBLISHING.md",
-      "sha256": "e8ec5719ab754cfbceff9477b830e88ba0bff0412847fad4f185a54e8f3444da",
-      "bytes": 1460
+      "sha256": "50d469e8079b623bd9205a0ecd6966f7011f937764e159c09819e16d4ce214e0",
+      "bytes": 1455
     },
     {
       "path": "docs/SUBMISSION.md",
-      "sha256": "d3524ffc80591dd1b953669ecb1a2c6d8f497332edb82a86ebf0305696ddf245",
-      "bytes": 2108
+      "sha256": "d6288a25d2384127b16efbcb11d553336f2d3a383614465c52a7f10609b28f26",
+      "bytes": 2103
     },
     {
       "path": "docs/history/design_before_submission_review.md",
@@ -57,9 +57,19 @@
       "bytes": 17116
     },
     {
+      "path": "docs/history/design_submission_review_v1.md",
+      "sha256": "89ef4803dbf052d2ece580826ba8cd3ed91f586eab7455a121d53108b1dbe02f",
+      "bytes": 10839
+    },
+    {
       "path": "docs/history/evaluation_before_submission_review.md",
       "sha256": "46947a77f9f5b2b1d6fd3129401b75a6549a752c68281cb4e87ce92607095996",
       "bytes": 31922
+    },
+    {
+      "path": "docs/history/evaluation_submission_review_v1.md",
+      "sha256": "4d70da07e77d86283a1c6d6619d36b8b75c1ce609110b617766eff8f11c54f59",
+      "bytes": 10221
     },
     {
       "path": "examples/caffeine_450mg.json",
@@ -100,6 +110,21 @@
       "path": "examples/fresh_questions_final_4.jsonl",
       "sha256": "47f8d01b5009f59f73b71612776ad5ecae858aa0884a4a2441cfab5c8ff68cbb",
       "bytes": 1678
+    },
+    {
+      "path": "examples/grounding_v2_final_plan.json",
+      "sha256": "b080a50d4dfe01566affe74a118444098d23a0a33097fa6aebb348ed156cea95",
+      "bytes": 644
+    },
+    {
+      "path": "examples/grounding_v2_plan.json",
+      "sha256": "b5115721da06f8deda748df894b9e2228d496a185db9461adca81130118eb3c8",
+      "bytes": 428
+    },
+    {
+      "path": "examples/grounding_v2_questions_4.jsonl",
+      "sha256": "34781075bed3fc37d6780d014187152d0a238a19bc4b2a76c9374a0ae7d3168b",
+      "bytes": 1823
     },
     {
       "path": "examples/holdout_plan.json",
@@ -162,6 +187,11 @@
       "bytes": 318
     },
     {
+      "path": "requirements-preprocessing.txt",
+      "sha256": "7f8992f3afbb7863e4a28c2094709272d15e7ce415b5752b1eee4e2e0cdc42d4",
+      "bytes": 176
+    },
+    {
       "path": "requirements.txt",
       "sha256": "8cd99da356b5ea00a2e0b7467b08f5fca28fe36846304496583b8e608c345e3b",
       "bytes": 116
@@ -173,13 +203,18 @@
     },
     {
       "path": "results/design.md",
-      "sha256": "693aa7479d20a8f94f7a7a9753645a3954511f4a34e9320cc07bd24de0c16fbb",
-      "bytes": 10708
+      "sha256": "00865b2f49a16a5df3c137ed1597939c57d0c8b952d9d27cb8ffe4d30b44c8d9",
+      "bytes": 11415
     },
     {
       "path": "results/evaluation.md",
-      "sha256": "2f23f2bafde6c6ca4d64638c19742fc63d214fea594a4939d567f2baefc3a10a",
-      "bytes": 10090
+      "sha256": "e7c851ecc8d18bfb98924fe167145e6903c6390594da523cbf86cb91f4b80a5e",
+      "bytes": 11948
+    },
+    {
+      "path": "results/grounding_v2_summary.json",
+      "sha256": "67ee34f6ef2f3b76819b2c0f626a8b4edbb8da098f51a35eedce754e8bc23c8c",
+      "bytes": 20069
     },
     {
       "path": "results/holdout_summary.json",
@@ -212,6 +247,11 @@
       "bytes": 1680
     },
     {
+      "path": "scripts/crosscheck_submission.py",
+      "sha256": "d9abe22ee1956eb2f09f3fb3676a315db653ae03613aa04cb93b17c7857ce8a1",
+      "bytes": 4336
+    },
+    {
       "path": "scripts/evaluate_holdout.py",
       "sha256": "11aeb270b6a6acc91c3542c3a43b9914f8d853c90aed02bab9130bc820b9b702",
       "bytes": 7119
@@ -223,8 +263,8 @@
     },
     {
       "path": "scripts/package_release.py",
-      "sha256": "ef8cc37aad572e4cf6f4ab425994afd1be5b5ec0c9282dba785f512817f253d6",
-      "bytes": 2937
+      "sha256": "40041f14530511ef793293d57beeea3c73a803799c27667f2f1770309bc6f76a",
+      "bytes": 3006
     },
     {
       "path": "scripts/package_submission.py",
@@ -298,8 +338,8 @@
     },
     {
       "path": "src/capstone_compare.py",
-      "sha256": "c7f49a6c1812cc0514ce5dd2a3ad547b2d1b14071f3a22985a2809faf3af224f",
-      "bytes": 106091
+      "sha256": "263fbb5b52943a12ee5f859edf72a0ba4b562a85e1302e0c20529f2d73fab74a",
+      "bytes": 110708
     },
     {
       "path": "src/experiments.py",
@@ -308,8 +348,8 @@
     },
     {
       "path": "src/input_grounding.py",
-      "sha256": "e596953a742f99d81f03d12231995f726059e11031d20d72d62ec95ee8fd270f",
-      "bytes": 4439
+      "sha256": "6c113ebd0590e63363e236e69a4bd20e7e928b820ff23655b8c2b8926a266b17",
+      "bytes": 8632
     },
     {
       "path": "src/knowledge_rules.py",
@@ -343,8 +383,8 @@
     },
     {
       "path": "tests/test_relationship_grounding.py",
-      "sha256": "3ea245874d2bed858ffa94bd368ff6d001d197ddc2e52f194a5748ca2b936a8c",
-      "bytes": 2200
+      "sha256": "f01d975a1d04dcc96204573083fef6035e8af1b105e415ec9d1ae7ea88d21c04",
+      "bytes": 5213
     },
     {
       "path": "tests/test_three_file_submission.py",
