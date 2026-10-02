@@ -33,3 +33,5 @@ local_requests/
 !results/revision_summary.json
 
 !results/release_summary.json
+
+!results/submission_review_summary.json

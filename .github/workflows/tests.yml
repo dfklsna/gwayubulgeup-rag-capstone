@@ -1,4 +1,4 @@
-name: baseline-tests
+name: capstone-tests
 on: [push, pull_request]
 permissions:
   contents: read
@@ -12,6 +12,8 @@ jobs:
           python-version: '3.12'
           cache: pip
       - run: python -m pip install -r requirements.txt
+      - run: python scripts/build_standalone.py --check
+      - run: python -I -S src/capstone_compare.py --demo
       - run: python -m unittest discover -s tests -v
       - run: python scripts/make_demo.py
       - run: python src/capstone_compare.py calculate --request examples/demo.json

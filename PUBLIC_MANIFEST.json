@@ -8,18 +8,18 @@
     },
     {
       "path": ".github/workflows/tests.yml",
-      "sha256": "5ee6ba0fdb651c7eef4bd808aec29fe547c9fa7a476a5f7110452cf1f6f0c5db",
-      "bytes": 588
+      "sha256": "a9328391eba95eb3918a7bab87cf63e03bf44c3bd5c55cf1c345b99852095d84",
+      "bytes": 701
     },
     {
       "path": ".gitignore",
-      "sha256": "70410963e10b1d4deb67e4286e5e6798ff65909269b4c5ad92111a23c2fe51ec",
-      "bytes": 697
+      "sha256": "8333011c1ef06b1ae716e104b63abc76c986bf71fb7e6b1d64cce36cabe52bd9",
+      "bytes": 738
     },
     {
       "path": "README.md",
-      "sha256": "c8ba1b9d32cce41a48eae0962f174ee5f79f6546a913b2065ac246aeee8377b5",
-      "bytes": 12768
+      "sha256": "0069e8102854fde9ccc656c80b7c4587ba492c89ff52fabd74b9cf798b9666dd",
+      "bytes": 7203
     },
     {
       "path": "data/README.md",
@@ -38,18 +38,28 @@
     },
     {
       "path": "docs/DEMO.md",
-      "sha256": "d7932198a83ece1877c0eef7bf60bb2d829ba4a38034a8da72e4d97b68c8ba01",
-      "bytes": 3186
+      "sha256": "d2cdfa7c98895e2fb73baa2b18f67baae1c61ea6529589aff6832a1e5563c781",
+      "bytes": 3559
     },
     {
       "path": "docs/PUBLISHING.md",
-      "sha256": "d8db87f79b386ae8358276b5597d0cbde7195acdcc9ca7f87716015ebc9e3617",
-      "bytes": 2504
+      "sha256": "e8ec5719ab754cfbceff9477b830e88ba0bff0412847fad4f185a54e8f3444da",
+      "bytes": 1460
     },
     {
       "path": "docs/SUBMISSION.md",
-      "sha256": "ff65fd73ed779771e0f53f7da02eaaaa3686a6f783f573836b9d3b9dd5abc690",
-      "bytes": 1862
+      "sha256": "d3524ffc80591dd1b953669ecb1a2c6d8f497332edb82a86ebf0305696ddf245",
+      "bytes": 2108
+    },
+    {
+      "path": "docs/history/design_before_submission_review.md",
+      "sha256": "8f053aa611d299ee274ad0142ee3a1430a724978b4754629b9a38c4ec95510de",
+      "bytes": 17116
+    },
+    {
+      "path": "docs/history/evaluation_before_submission_review.md",
+      "sha256": "46947a77f9f5b2b1d6fd3129401b75a6549a752c68281cb4e87ce92607095996",
+      "bytes": 31922
     },
     {
       "path": "examples/caffeine_450mg.json",
@@ -107,6 +117,11 @@
       "bytes": 343
     },
     {
+      "path": "examples/relationship_questions_4.jsonl",
+      "sha256": "a10ed3a8dca5443eb9a0ee5f2f1b40f2bdae4db847e4956c6f10aa8312c57997",
+      "bytes": 2263
+    },
+    {
       "path": "examples/release_evaluation_plan.json",
       "sha256": "ffe37978027a40b42cba0f0b0081bfd39c24d1ef5d85c14a0d107ae526aeb415",
       "bytes": 1118
@@ -137,6 +152,11 @@
       "bytes": 881
     },
     {
+      "path": "examples/submission_review_plan.json",
+      "sha256": "4f2ebe84de54aa53172e4d0d48fb1ba268d588dc0089cbf0f8d2bac3b7cc8ee9",
+      "bytes": 258
+    },
+    {
       "path": "examples/vitamin_c_2000mg.json",
       "sha256": "11e2594ec78783b7ce4ed74c0d678c9af66af791772a6ada66a701b8e3722b97",
       "bytes": 318
@@ -153,13 +173,13 @@
     },
     {
       "path": "results/design.md",
-      "sha256": "64af179fe7b5e4dd3db364148adcc21e86d1cdc99eb82a64fbf553e40fd02f30",
-      "bytes": 16879
+      "sha256": "693aa7479d20a8f94f7a7a9753645a3954511f4a34e9320cc07bd24de0c16fbb",
+      "bytes": 10708
     },
     {
       "path": "results/evaluation.md",
-      "sha256": "354124220d4351b3d1ffb65f54f394dfb95d44975f1f2d303998df2ecf88c043",
-      "bytes": 31685
+      "sha256": "2f23f2bafde6c6ca4d64638c19742fc63d214fea594a4939d567f2baefc3a10a",
+      "bytes": 10090
     },
     {
       "path": "results/holdout_summary.json",
@@ -175,6 +195,16 @@
       "path": "results/revision_summary.json",
       "sha256": "5708cfd063ad1f170935167f2eb56b0959ea30d065bb4c86eddc8cff5f056455",
       "bytes": 21056
+    },
+    {
+      "path": "results/submission_review_summary.json",
+      "sha256": "3aad18426aaf2a1f03a32a1c228eba96e693b4331a6cbeff2d72d20d4e268ee1",
+      "bytes": 15336
+    },
+    {
+      "path": "scripts/build_standalone.py",
+      "sha256": "a255db41911a6f5b47a87d083c65d0a4a7f0ec52e765c1075decd6015ec3535c",
+      "bytes": 1351
     },
     {
       "path": "scripts/configure_api_key.py",
@@ -193,8 +223,13 @@
     },
     {
       "path": "scripts/package_release.py",
-      "sha256": "fd1711f6cbdbf1d3cb29613b954171ce1173af930a62bd8e0f5290c18b947ec7",
-      "bytes": 2896
+      "sha256": "ef8cc37aad572e4cf6f4ab425994afd1be5b5ec0c9282dba785f512817f253d6",
+      "bytes": 2937
+    },
+    {
+      "path": "scripts/package_submission.py",
+      "sha256": "162adc7925ac5e04d5c3cd823ecd69bf7b27475bc042d943b164e09a0a1c0944",
+      "bytes": 1188
     },
     {
       "path": "scripts/prepare_caffeine_rules.py",
@@ -242,6 +277,11 @@
       "bytes": 7119
     },
     {
+      "path": "scripts/standalone_bootstrap.py",
+      "sha256": "9ac6dc89774c8a7c0ee1d0ba9c9d9d2acf866d24c3edfc94f97cc360b9131c61",
+      "bytes": 3056
+    },
+    {
       "path": "scripts/summarize_experiments.py",
       "sha256": "ce21556f537067d201b610491aa9bf73080e1829cf13f2a0e00e8488c69d04b2",
       "bytes": 4022
@@ -258,13 +298,18 @@
     },
     {
       "path": "src/capstone_compare.py",
-      "sha256": "72b1840dbd451943c47a491e3a10bcdefc17c8b72e5ed21dd8b49a8dfbbb124b",
-      "bytes": 35070
+      "sha256": "c7f49a6c1812cc0514ce5dd2a3ad547b2d1b14071f3a22985a2809faf3af224f",
+      "bytes": 106091
     },
     {
       "path": "src/experiments.py",
       "sha256": "ee170e04ab5ce54a8af00f6bdeab625c3f4b78aed2a9d8b5883aa8c0923f76f2",
       "bytes": 31121
+    },
+    {
+      "path": "src/input_grounding.py",
+      "sha256": "e596953a742f99d81f03d12231995f726059e11031d20d72d62ec95ee8fd270f",
+      "bytes": 4439
     },
     {
       "path": "src/knowledge_rules.py",
@@ -295,6 +340,16 @@
       "path": "tests/test_knowledge_rules.py",
       "sha256": "199d840dd989ae1264503a5577a875c8d6d8e50349171b2a68249d97b78d0ebf",
       "bytes": 4552
+    },
+    {
+      "path": "tests/test_relationship_grounding.py",
+      "sha256": "3ea245874d2bed858ffa94bd368ff6d001d197ddc2e52f194a5748ca2b936a8c",
+      "bytes": 2200
+    },
+    {
+      "path": "tests/test_three_file_submission.py",
+      "sha256": "fa94190444aae4a9fab9ecb51c02e871854e61d3484fb910c7a43c24bae6db20",
+      "bytes": 2907
     }
   ]
 }

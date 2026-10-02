@@ -1,0 +1,5 @@
+{
+  "revision": "submission-review-grounding-fix",
+  "frozen_before_execution": true,
+  "criteria": "Existing gold criteria unchanged; four additional prespecified item/amount/count checks. Conservative binding rules, not unrestricted language grounding."
+}

@@ -2,6 +2,16 @@
 
 프로젝트 루트에서 실행합니다. 인적 조건·섭취량은 합성 시나리오입니다. 전체 데이터가 없는 공개 clone은 아래 가상 예제부터 실행합니다.
 
+## 세 파일만 받은 환경
+
+```bash
+python src/capstone_compare.py --help
+python src/capstone_compare.py --demo
+python src/capstone_compare.py --requirements
+```
+
+표준 라이브러리만 사용합니다. 세 파일을 한 폴더에 두었다면 `src/`를 빼세요. 가상 계산만 확인하며 전체 RAG에는 별도 패키지·데이터·키가 필요합니다.
+
 ## API 없이 실행하는 공개 예제
 
 ```bash
