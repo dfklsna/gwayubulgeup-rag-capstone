@@ -45,6 +45,15 @@ class ThreeFileSubmissionTests(unittest.TestCase):
             result=subprocess.run([sys.executable,'-I',str(target/'src/capstone_compare.py'),'calculate','--request',str(request)],cwd=target,env=env,capture_output=True,text=True)
             self.assertEqual(result.returncode,0,result.stderr)
             self.assertTrue(json.loads(result.stdout)['items'])
+            wrong=json.loads(request.read_text())
+            wrong['items'][0]['name']='다른음식'
+            request.write_text(json.dumps(wrong,ensure_ascii=False))
+            result=subprocess.run([sys.executable,'-I',str(target/'src/capstone_compare.py'),'calculate','--request',str(request)],cwd=target,env=env,capture_output=True,text=True)
+            self.assertEqual(result.returncode,0,result.stderr)
+            blocked=json.loads(result.stdout)
+            self.assertEqual(blocked['status'],'needs_clarification')
+            self.assertEqual(blocked['items'],[])
+            self.assertIn('음식명과 식품코드',blocked['clarifications'][0])
             self.assertEqual(len([p for p in target.rglob('*') if p.is_file()]),3)
 
 if __name__=='__main__':unittest.main()

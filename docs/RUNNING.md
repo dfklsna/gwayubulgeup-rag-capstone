@@ -29,4 +29,4 @@ GitHub의 전체 코드·테스트·질문·집계 묶음은 다음 명령으로
 python scripts/package_release.py --output tmp/public_source
 ```
 
-이 묶음은 허용 목록과 파일별 SHA-256 manifest를 사용합니다. 키·개인 로컬 경로의 알려진 패턴을 검사하며 원문·실제 DB·임베딩·실행 로그를 제외합니다. 최신 결과는 `results/context_grounding_summary.json`입니다. 과거 집계는 삭제하지 않고 개발 이력으로 보존했습니다. 내용 검토는 assistant 판단으로 전문가 검증이 아닙니다.
+이 묶음은 허용 목록과 파일별 SHA-256 manifest를 사용합니다. 키·개인 로컬 경로의 알려진 패턴을 검사하며 원문·실제 DB·임베딩·실행 로그를 제외합니다. 최신 결과는 `results/integrity_summary.json`입니다. 과거 집계는 삭제하지 않고 개발 이력으로 보존했습니다. 내용 검토는 assistant 판단으로 전문가 검증이 아닙니다.

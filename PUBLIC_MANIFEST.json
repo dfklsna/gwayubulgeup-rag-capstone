@@ -8,18 +8,18 @@
     },
     {
       "path": ".github/workflows/tests.yml",
-      "sha256": "185bce737b4857c2cfec20d60840b64d636f8b10ab3be33429443d527e5fc00c",
+      "sha256": "ed9894e71fe35c9502ee1fb79397b0bd852e70ff41af2e0065afc42b717d5176",
       "bytes": 948
     },
     {
       "path": ".gitignore",
-      "sha256": "f416ef01b5bf348d2fe878701bba3a1b8a141dba535bb829b45ad54f2d9a795a",
-      "bytes": 847
+      "sha256": "5c207948b18052cdc88f9bb86a35aea87532b73e1afce42deef1f38d62dc9499",
+      "bytes": 880
     },
     {
       "path": "README.md",
-      "sha256": "8040e5c43e4f8e5edd9ff516420b7a65bc00252c07eb8ce766b95835cb5edccc",
-      "bytes": 7542
+      "sha256": "bff6be7777915f5c0a60869004464f9a81a0e97aeef6961221f6913f99fe87d8",
+      "bytes": 7668
     },
     {
       "path": "data/README.md",
@@ -48,8 +48,8 @@
     },
     {
       "path": "docs/RUNNING.md",
-      "sha256": "549d7cc16f97570ccaacf5363670da4de1dfe7f7a08f79dc0280369d695b2e6f",
-      "bytes": 2123
+      "sha256": "4b7358e4cb3f6cd85d50e38d5d5bbc6f1e0cd6e0a1b77182b74d329d11299827",
+      "bytes": 2115
     },
     {
       "path": "docs/history/design_before_submission_review.md",
@@ -167,6 +167,11 @@
       "bytes": 11414
     },
     {
+      "path": "examples/integrity_regression_plan.json",
+      "sha256": "5b7c931dad78308c5345ea182a52b90a5f32714db433d1a8460d9150f5794ba9",
+      "bytes": 746
+    },
+    {
       "path": "examples/jellyfish_400g.json",
       "sha256": "b5b8b0a4bf1595bf33b27effe98f6f0cd5d02a764e82179e426191afe5ae4aac",
       "bytes": 343
@@ -243,13 +248,13 @@
     },
     {
       "path": "results/design.md",
-      "sha256": "a86fcf132e1631630f764f7a93f03ee937ee2c8a8a87a7882da7584235a6668d",
-      "bytes": 14341
+      "sha256": "ed7e2b63560e009f122f41f1c972ff5ef487a5269fe63f5176f9474d62268b54",
+      "bytes": 15410
     },
     {
       "path": "results/evaluation.md",
-      "sha256": "8102998f90cd66f80489e625da7ad7940404d72b1790c09b511ca9722f555163",
-      "bytes": 13837
+      "sha256": "e05b0da48446d436604fd94d53e7317bf0d8829ab4ff54aec04bade90d637e42",
+      "bytes": 13951
     },
     {
       "path": "results/grounding_v2_summary.json",
@@ -260,6 +265,11 @@
       "path": "results/holdout_summary.json",
       "sha256": "d7d5d0ed35b560609c73b059a7ada78eb20c431c8e8e92e15491998fa24afe30",
       "bytes": 8978
+    },
+    {
+      "path": "results/integrity_summary.json",
+      "sha256": "7f04f01dd588583603a37cf6e96f02a7b5bff160e621ba450a2adf425e529bba",
+      "bytes": 21231
     },
     {
       "path": "results/release_summary.json",
@@ -303,8 +313,8 @@
     },
     {
       "path": "scripts/package_release.py",
-      "sha256": "7218fb303815556fd9f09e580b13e4f486128694236937aaca01db8f312ea7f1",
-      "bytes": 3079
+      "sha256": "83c279f27622bead8b86e1b807fa5656accc3b50d1ae89878283d040ab28f623",
+      "bytes": 3112
     },
     {
       "path": "scripts/package_submission.py",
@@ -378,13 +388,13 @@
     },
     {
       "path": "src/capstone_compare.py",
-      "sha256": "74135fda668e3956412abdaed43aea61bb63f82012c77ad91a69fe0ed5301d4d",
-      "bytes": 122475
+      "sha256": "a6b8af9971661c06f92a0ee0cc54475066a486d81ef9e1575707d47c827654af",
+      "bytes": 123572
     },
     {
       "path": "src/experiments.py",
-      "sha256": "ee170e04ab5ce54a8af00f6bdeab625c3f4b78aed2a9d8b5883aa8c0923f76f2",
-      "bytes": 31121
+      "sha256": "76759993691a0eb998c52fbd25c0d35dc677367edc01733e29e31d3a0506914c",
+      "bytes": 31247
     },
     {
       "path": "src/input_grounding.py",
@@ -432,9 +442,14 @@
       "bytes": 7972
     },
     {
+      "path": "tests/test_review_paths.py",
+      "sha256": "087616f806c916627637b745e8eccff7e1097511232efa77a5f616549542992e",
+      "bytes": 9213
+    },
+    {
       "path": "tests/test_three_file_submission.py",
-      "sha256": "fa94190444aae4a9fab9ecb51c02e871854e61d3484fb910c7a43c24bae6db20",
-      "bytes": 2907
+      "sha256": "33d693a4b6359c1338e8f159746232a9004a23220c138dd6f6002877279da73c",
+      "bytes": 3574
     }
   ]
 }

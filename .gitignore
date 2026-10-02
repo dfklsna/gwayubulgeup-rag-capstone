@@ -41,3 +41,5 @@ local_requests/
 !results/coverage_summary.json
 
 !results/context_grounding_summary.json
+
+!results/integrity_summary.json

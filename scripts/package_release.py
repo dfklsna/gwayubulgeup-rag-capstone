@@ -12,7 +12,7 @@ TREES=('src','scripts','tests','examples','docs','.github')
 FILES=('README.md','requirements.txt','requirements-preprocessing.txt','.env.example','.gitignore',
        'data/README.md','data/source_manifest.json','data/demo/.gitkeep',
        'results/design.md','results/evaluation.md','results/comparison_summary.json',
-       'results/holdout_summary.json','results/revision_summary.json','results/release_summary.json','results/submission_review_summary.json','results/grounding_v2_summary.json','results/coverage_summary.json','results/context_grounding_summary.json')
+       'results/holdout_summary.json','results/revision_summary.json','results/release_summary.json','results/submission_review_summary.json','results/grounding_v2_summary.json','results/coverage_summary.json','results/context_grounding_summary.json','results/integrity_summary.json')
 SUFFIXES={'.py','.json','.jsonl','.md','.yml','.yaml'}
 SECRET=re.compile(r'(?:sk-proj-|gh[pousr]_)[A-Za-z0-9_-]{20,}|-----BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY-----')
 
