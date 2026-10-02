@@ -1,0 +1,20 @@
+{
+  "status": "frozen_before_execution",
+  "cases": 24,
+  "groups": {
+    "food": 6,
+    "caffeine": 6,
+    "vitamin": 6,
+    "edge": 6
+  },
+  "input_mode": "natural_language_end_to_end",
+  "system": "existing selected combined strategy unchanged",
+  "expected_source_cases": 13,
+  "criteria": "기대 행동과 금지 행동, 숫자 기대값을 실행 전에 고정. 필수 기대 행동을 모두 충족하고 금지 행동이 없으면 pass, 핵심은 지키지만 설명이 부족하면 partial, 잘못된 판정·정보 생성·주요 요구 실패는 fail, 실행 중단은 error. 내용 검토는 assistant가 수행하며 전문가 평가가 아님.",
+  "limits": [
+    "선택 완료 후 만든 새 시나리오지만 기존 시스템과 알려진 한계를 아는 상태에서 작성한 비맹검 평가",
+    "평가 중 개선 모델을 조정하지 않음",
+    "계산 체크와 최종 답변 품질을 구분해 보고",
+    "각 질문 1회 실행, 반복 측정·통계적 신뢰구간 없음"
+  ]
+}

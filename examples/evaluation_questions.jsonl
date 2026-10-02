@@ -1,0 +1,12 @@
+{"id": "food01", "type": "structured_calculation", "request": {"question": "해파리냉채 400g의 영양성분을 계산하고 기준과 비교해줘.", "profile": {"age_years": 30, "sex": "male", "life_stage": "general", "caffeine_group": "adult"}, "items": [{"kind": "food", "name": "냉채_해파리", "food_code": "D314-612380000-0001", "amount": 400, "unit": "g", "source_scope": "food"}]}, "expected_source_ids": ["KR_KDRI_2025"]}
+{"id": "coffee01", "type": "structured_calculation", "request": {"question": "한 잔당 카페인 150mg이라고 표시된 커피를 3잔 마셨어. 기준과 비교해줘.", "profile": {"age_years": 30, "sex": "male", "life_stage": "general", "caffeine_group": "adult"}, "items": [{"kind": "nutrient", "name": "카페인", "nutrient_id": "caffeine", "amount": 150, "unit": "mg", "count": 3, "source_scope": "food"}]}, "expected_source_ids": ["KR_CAFFEINE"]}
+{"id": "vitamin01", "type": "structured_calculation", "request": {"question": "비타민 C 1000mg짜리 2정을 먹었어. 기준과 비교해줘.", "profile": {"age_years": 30, "sex": "male", "life_stage": "general"}, "items": [{"kind": "nutrient", "name": "비타민 C", "nutrient_id": "vitamin_c", "amount": 1000, "unit": "mg", "count": 2, "source_scope": "supplement"}]}, "expected_source_ids": ["KR_KDRI_2025"]}
+{"id": "coffee02", "type": "clear_answer", "question": "성인의 카페인 최대 일일 섭취 권고량은?", "expected_source_ids": ["KR_CAFFEINE"]}
+{"id": "coffee03", "type": "paraphrase", "question": "카페인은 하루에 어느 정도까지 마실 수 있다고 안내해?", "expected_source_ids": ["KR_CAFFEINE"]}
+{"id": "coffee04", "type": "exact_keyword", "question": "디카페인 커피는 카페인이 전혀 없나?", "expected_source_ids": ["FDA_CAFFEINE"]}
+{"id": "compound01", "type": "compound", "question": "성인과 임산부의 카페인 권고량이 어떻게 다르고 어린이는 어떻게 계산해?", "expected_source_ids": ["KR_CAFFEINE"]}
+{"id": "missing01", "type": "no_evidence", "question": "오늘 우리 학교 급식 해파리냉채에는 나트륨이 정확히 얼마나 들어 있어?", "expected_source_ids": []}
+{"id": "missing02", "type": "no_evidence", "question": "XYZ-999 비타민 제품 한 알의 함량을 알려줘.", "expected_source_ids": []}
+{"id": "clarify01", "type": "clarification", "question": "커피 세 잔 마셨는데 카페인 과다야?", "expected_source_ids": []}
+{"id": "clarify02", "type": "clarification", "question": "해파리냉채 400g 먹었어. 어떤 성분이 과다야?", "expected_source_ids": []}
+{"id": "scope01", "type": "reference_semantics", "question": "비타민 A를 권장량보다 많이 먹었으면 상한량도 넘은 거야?", "expected_source_ids": ["KR_KDRI_2025"]}

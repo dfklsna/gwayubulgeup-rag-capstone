@@ -1,0 +1,21 @@
+{
+  "fixed_questions": "examples/evaluation_questions.jsonl",
+  "baseline": "results/runs/baseline_01",
+  "input_control": "Baseline에서 이미 추출한 request JSON을 전 방법에서 재사용. 자연어 추출의 재평가는 별도.",
+  "changes": {
+    "hybrid": "dense50+BM25(단어/한국어 bigram)50, RRF k=60, top5",
+    "mmr": "dense50, lambda=0.7, top5",
+    "rerank": "dense20, 동일 모델 structured relevance0-4, top5",
+    "topic_filter": "문서 linked_entities와 질문의 명시적 주제, 없으면 dense",
+    "compression": "문서 관련 단락 최대3/700자 목표(긴 단락 보존), 미확보 계산행 제외 및 출처 참조",
+    "guard": "섭취 항목은 결정적 계산·확인 질문 렌더링, 일반 질문은 baseline generation",
+    "citations": "기존 baseline 답변의 복합 인용 검증·없는 ID 제거, 사실 내용은 수정 안함"
+  },
+  "selection_rule": "검색은 recall 우선. 동률이면 추가 LLM 호출 없는 단순한 방법 우선. guard/citations는 관찰된 판정·ID 오류 해결 여부 확인. compression은 문맥/비용 감소와 실제 답변 회귀 여부 검토 후 선택.",
+  "limitations": [
+    "12문항은 개선 선택에 사용하는 개발 평가셋이며 독립 최종 검증셋이 아님",
+    "생성은 1회 실행: 난수 변동/신뢰구간 미측정",
+    "ID 연결 검사는 근거 함의 평가가 아님",
+    "원래 답변을 재사용한 guard/citations의 신규 토큰0은 전체서비스 원가0이 아님"
+  ]
+}

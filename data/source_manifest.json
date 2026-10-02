@@ -1,0 +1,1256 @@
+{
+  "notice": "출처 링크 목록이며 자료 본문·재배포 허가를 포함하지 않습니다.",
+  "sources": [
+    {
+      "source_id": "KR_KDRI_2025",
+      "title": "2025 한국인 영양소 섭취기준: 국문 요약표 및 정오표 안내",
+      "organization": "보건복지부·한국영양학회",
+      "url": "https://www.kns.or.kr/fileroom/fileroom_view.asp?BoardID=Kdr&idx=167",
+      "country": "KR",
+      "published_or_updated": "2025-12-31",
+      "source_type": "reference_intake"
+    },
+    {
+      "source_id": "ODS_A",
+      "title": "Vitamin A – Health Professional Fact Sheet",
+      "organization": "NIH Office of Dietary Supplements",
+      "url": "https://ods.od.nih.gov/factsheets/VitaminA-HealthProfessional/",
+      "country": "US",
+      "published_or_updated": "",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "ODS_C",
+      "title": "Vitamin C – Health Professional Fact Sheet",
+      "organization": "NIH Office of Dietary Supplements",
+      "url": "https://ods.od.nih.gov/factsheets/VitaminC-HealthProfessional/",
+      "country": "US",
+      "published_or_updated": "2025-07-31",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "ODS_D",
+      "title": "Vitamin D – Health Professional Fact Sheet",
+      "organization": "NIH Office of Dietary Supplements",
+      "url": "https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/",
+      "country": "US",
+      "published_or_updated": "2025-06-27",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "ODS_E",
+      "title": "Vitamin E – Health Professional Fact Sheet",
+      "organization": "NIH Office of Dietary Supplements",
+      "url": "https://ods.od.nih.gov/factsheets/VitaminE-HealthProfessional/",
+      "country": "US",
+      "published_or_updated": "2021-03-26",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "ODS_K",
+      "title": "Vitamin K – Health Professional Fact Sheet",
+      "organization": "NIH Office of Dietary Supplements",
+      "url": "https://ods.od.nih.gov/factsheets/VitaminK-HealthProfessional/",
+      "country": "US",
+      "published_or_updated": "2021-03-29",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "ODS_B1",
+      "title": "Thiamin – Health Professional Fact Sheet",
+      "organization": "NIH Office of Dietary Supplements",
+      "url": "https://ods.od.nih.gov/factsheets/Thiamin-HealthProfessional/",
+      "country": "US",
+      "published_or_updated": "2023-02-09",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "ODS_B3",
+      "title": "Niacin – Consumer Fact Sheet",
+      "organization": "NIH Office of Dietary Supplements",
+      "url": "https://ods.od.nih.gov/factsheets/Niacin-Consumer/",
+      "country": "US",
+      "published_or_updated": "2021-03-22",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "ODS_B5",
+      "title": "Pantothenic Acid – Health Professional Fact Sheet",
+      "organization": "NIH Office of Dietary Supplements",
+      "url": "https://ods.od.nih.gov/factsheets/PantothenicAcid-HealthProfessional/",
+      "country": "US",
+      "published_or_updated": "",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "ODS_B6",
+      "title": "Vitamin B6 – Health Professional Fact Sheet",
+      "organization": "NIH Office of Dietary Supplements",
+      "url": "https://ods.od.nih.gov/factsheets/VitaminB6-HealthProfessional/",
+      "country": "US",
+      "published_or_updated": "",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "ODS_B7",
+      "title": "Biotin – Health Professional Fact Sheet",
+      "organization": "NIH Office of Dietary Supplements",
+      "url": "https://ods.od.nih.gov/factsheets/Biotin-HealthProfessional/",
+      "country": "US",
+      "published_or_updated": "2022-01-10",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "ODS_B12",
+      "title": "Vitamin B12 – Health Professional Fact Sheet",
+      "organization": "NIH Office of Dietary Supplements",
+      "url": "https://ods.od.nih.gov/factsheets/VitaminB12-HealthProfessional/",
+      "country": "US",
+      "published_or_updated": "2025-07-02",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "ODS_CA",
+      "title": "Calcium – Health Professional Fact Sheet",
+      "organization": "NIH Office of Dietary Supplements",
+      "url": "https://ods.od.nih.gov/factsheets/Calcium-HealthProfessional/",
+      "country": "US",
+      "published_or_updated": "2026-06-22",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "ODS_P",
+      "title": "Phosphorus – Health Professional Fact Sheet",
+      "organization": "NIH Office of Dietary Supplements",
+      "url": "https://ods.od.nih.gov/factsheets/Phosphorus-HealthProfessional/",
+      "country": "US",
+      "published_or_updated": "2023-05-04",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "ODS_MG",
+      "title": "Magnesium – Health Professional Fact Sheet",
+      "organization": "NIH Office of Dietary Supplements",
+      "url": "https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/",
+      "country": "US",
+      "published_or_updated": "2026-01-06",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "ODS_FE",
+      "title": "Iron – Health Professional Fact Sheet",
+      "organization": "NIH Office of Dietary Supplements",
+      "url": "https://ods.od.nih.gov/factsheets/Iron-HealthProfessional/",
+      "country": "US",
+      "published_or_updated": "",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "ODS_ZN",
+      "title": "Zinc – Health Professional Fact Sheet",
+      "organization": "NIH Office of Dietary Supplements",
+      "url": "https://ods.od.nih.gov/factsheets/Zinc-HealthProfessional/",
+      "country": "US",
+      "published_or_updated": "2026-01-06",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "ODS_CU",
+      "title": "Copper – Health Professional Fact Sheet",
+      "organization": "NIH Office of Dietary Supplements",
+      "url": "https://ods.od.nih.gov/factsheets/Copper-HealthProfessional/",
+      "country": "US",
+      "published_or_updated": "2022-10-18",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "ODS_MN",
+      "title": "Manganese – Health Professional Fact Sheet",
+      "organization": "NIH Office of Dietary Supplements",
+      "url": "https://ods.od.nih.gov/factsheets/Manganese-HealthProfessional/",
+      "country": "US",
+      "published_or_updated": "",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "ODS_SE",
+      "title": "Selenium – Health Professional Fact Sheet",
+      "organization": "NIH Office of Dietary Supplements",
+      "url": "https://ods.od.nih.gov/factsheets/Selenium-HealthProfessional/",
+      "country": "US",
+      "published_or_updated": "2025-09-04",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "ODS_I",
+      "title": "Iodine – Health Professional Fact Sheet",
+      "organization": "NIH Office of Dietary Supplements",
+      "url": "https://ods.od.nih.gov/factsheets/Iodine-HealthProfessional/",
+      "country": "US",
+      "published_or_updated": "2024-11-05",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "ODS_MO",
+      "title": "Molybdenum – Consumer Fact Sheet",
+      "organization": "NIH Office of Dietary Supplements",
+      "url": "https://ods.od.nih.gov/factsheets/Molybdenum-Consumer/",
+      "country": "US",
+      "published_or_updated": "2021-03-22",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "ODS_F",
+      "title": "Fluoride – Health Professional Fact Sheet",
+      "organization": "NIH Office of Dietary Supplements",
+      "url": "https://ods.od.nih.gov/factsheets/Fluoride-HealthProfessional/",
+      "country": "US",
+      "published_or_updated": "2025-04-11",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "ODS_POTASSIUM",
+      "title": "Potassium – Health Professional Fact Sheet",
+      "organization": "NIH Office of Dietary Supplements",
+      "url": "https://ods.od.nih.gov/factsheets/Potassium-HealthProfessional/",
+      "country": "US",
+      "published_or_updated": "",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "ODS_CHOLINE",
+      "title": "Choline – Health Professional Fact Sheet",
+      "organization": "NIH Office of Dietary Supplements",
+      "url": "https://ods.od.nih.gov/factsheets/Choline-HealthProfessional/",
+      "country": "US",
+      "published_or_updated": "2022-06-02",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "ODS_OMEGA3",
+      "title": "Omega-3 Fatty Acids – Health Professional Fact Sheet",
+      "organization": "NIH Office of Dietary Supplements",
+      "url": "https://ods.od.nih.gov/factsheets/Omega3FattyAcids-HealthProfessional/",
+      "country": "US",
+      "published_or_updated": "2025-08-22",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "NHS_B",
+      "title": "Vitamins and minerals – B vitamins and folic acid",
+      "organization": "NHS",
+      "url": "https://www.nhs.uk/conditions/vitamins-and-minerals/vitamin-b/",
+      "country": "GB",
+      "published_or_updated": "",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "NHS_A",
+      "title": "Vitamins and minerals – Vitamin A",
+      "organization": "NHS",
+      "url": "https://www.nhs.uk/conditions/vitamins-and-minerals/vitamin-a/",
+      "country": "GB",
+      "published_or_updated": "2020-08-03",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "WHO_DIET",
+      "title": "Healthy diet",
+      "organization": "WHO",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
+      "country": "INT",
+      "published_or_updated": "2026-01-26",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "NIDDK_CKD",
+      "title": "Healthy Eating for Adults with Chronic Kidney Disease",
+      "organization": "NIH NIDDK",
+      "url": "https://www.niddk.nih.gov/health-information/kidney-disease/chronic-kidney-disease-ckd/healthy-eating-adults-chronic-kidney-disease",
+      "country": "US",
+      "published_or_updated": "",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "NIDDK_IBS",
+      "title": "Eating, Diet, & Nutrition for Irritable Bowel Syndrome",
+      "organization": "NIH NIDDK",
+      "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/irritable-bowel-syndrome/eating-diet-nutrition",
+      "country": "US",
+      "published_or_updated": "",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "NIOSH_HEAT",
+      "title": "Workplace Recommendations – Heat Stress",
+      "organization": "CDC NIOSH",
+      "url": "https://www.cdc.gov/niosh/heat-stress/recommendations/index.html",
+      "country": "US",
+      "published_or_updated": "2026-07-16",
+      "source_type": "guideline"
+    },
+    {
+      "source_id": "NIOSH_WATER",
+      "title": "Heat Stress: Hydration (2017-126)",
+      "organization": "CDC NIOSH",
+      "url": "https://www.cdc.gov/niosh/docs/2017-126/pdfs/2017-126.pdf",
+      "country": "US",
+      "published_or_updated": "2017-02",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "KR_CAFFEINE",
+      "title": "식품통계로 알아보는 음료류 이야기",
+      "organization": "식품의약품안전처·식품안전정보원",
+      "url": "https://mfds.go.kr/brd/m_629/view.do?company_cd=&company_nm=&itm_seq_1=0&itm_seq_2=0&multi_itm_seq=0&page=2&seq=28&srchFr=&srchTo=&srchTp=&srchWord=",
+      "country": "KR",
+      "published_or_updated": "2021-01-21",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "FDA_CAFFEINE",
+      "title": "Spilling the Beans: How Much Caffeine is Too Much?",
+      "organization": "FDA",
+      "url": "https://www.fda.gov/consumers/consumer-updates/spilling-beans-how-much-caffeine-too-much",
+      "country": "US",
+      "published_or_updated": "",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "KR_EXERCISE",
+      "title": "노인 운동",
+      "organization": "질병관리청 국가건강정보포털",
+      "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6758",
+      "country": "KR",
+      "published_or_updated": "",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "CDC_EXERCISE",
+      "title": "Adult Activity: An Overview",
+      "organization": "CDC",
+      "url": "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html",
+      "country": "US",
+      "published_or_updated": "2023-12-20",
+      "source_type": "guideline"
+    },
+    {
+      "source_id": "WHO_ACTIVITY",
+      "title": "Physical activity",
+      "organization": "WHO",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/physical-activity",
+      "country": "INT",
+      "published_or_updated": "2024-06-26",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "NIAMS_INJURY",
+      "title": "Sports Injuries–Types, Symptoms, & Risk Factors",
+      "organization": "NIH NIAMS",
+      "url": "https://www.niams.nih.gov/health-topics/sports-injuries",
+      "country": "US",
+      "published_or_updated": "",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "NIAMS_RECOVERY",
+      "title": "Sports Injuries: Diagnosis, Treatment, and Steps to Take",
+      "organization": "NIH NIAMS",
+      "url": "https://www.niams.nih.gov/health-topics/sports-injuries/diagnosis-treatment-and-steps-to-take",
+      "country": "US",
+      "published_or_updated": "",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "NHS_RUNNING",
+      "title": "Get running with Couch to 5K",
+      "organization": "NHS",
+      "url": "https://www.nhs.uk/better-health/get-active/get-running-with-couch-to-5k/",
+      "country": "GB",
+      "published_or_updated": "",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "NHS_FLEX",
+      "title": "How to improve your strength and flexibility",
+      "organization": "NHS",
+      "url": "https://www.nhs.uk/live-well/exercise/how-to-improve-strength-flexibility/",
+      "country": "GB",
+      "published_or_updated": "",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "CDC_SLEEP",
+      "title": "About Sleep",
+      "organization": "CDC",
+      "url": "https://www.cdc.gov/sleep/about/index.html",
+      "country": "US",
+      "published_or_updated": "2024-05-15",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "AASM_SLEEP",
+      "title": "Recommended Amount of Sleep for a Healthy Adult: A Joint Consensus Recommendation",
+      "organization": "American Academy of Sleep Medicine·Sleep Research Society",
+      "url": "https://www.aasm.org/resources/pdf/adultsleepdurationconsensus.pdf",
+      "country": "US",
+      "published_or_updated": "2015-06",
+      "source_type": "guideline"
+    },
+    {
+      "source_id": "NHLBI_SLEEP",
+      "title": "Sleep Deprivation and Deficiency – Healthy Sleep Habits",
+      "organization": "NIH NHLBI",
+      "url": "https://www.nhlbi.nih.gov/health/sleep-deprivation/healthy-sleep-habits",
+      "country": "US",
+      "published_or_updated": "2022-03-24",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "WHO_CHILD",
+      "title": "To grow up healthy, children need to sit less and play more",
+      "organization": "WHO",
+      "url": "https://www.who.int/news/item/24-04-2019-to-grow-up-healthy-children-need-to-sit-less-and-play-more",
+      "country": "INT",
+      "published_or_updated": "2019-04-24",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "WHO_SOUND",
+      "title": "Deafness and hearing loss: Safe listening",
+      "organization": "WHO",
+      "url": "https://www.who.int/news-room/questions-and-answers/item/deafness-and-hearing-loss-safe-listening",
+      "country": "INT",
+      "published_or_updated": "2026-03-06",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "NIOSH_NOISE",
+      "title": "Understand Noise Exposure",
+      "organization": "CDC NIOSH",
+      "url": "https://www.cdc.gov/niosh/noise/prevent/understand.html",
+      "country": "US",
+      "published_or_updated": "",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "WHO_UV",
+      "title": "Ultraviolet radiation",
+      "organization": "WHO",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/ultraviolet-radiation",
+      "country": "INT",
+      "published_or_updated": "2022-06-21",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "CA_HEAT",
+      "title": "Extreme Heat Events Guidelines: Technical Guide for Health Care Workers",
+      "organization": "Health Canada",
+      "url": "https://www.canada.ca/en/health-canada/services/environmental-workplace-health/reports-publications/climate-change-health/extreme-heat-events-guidelines-technical-guide-health-care-workers.html",
+      "country": "CA",
+      "published_or_updated": "",
+      "source_type": "guideline"
+    },
+    {
+      "source_id": "NWS_COLDWATER",
+      "title": "Cold Water Hazards and Safety",
+      "organization": "NOAA National Weather Service",
+      "url": "https://www.weather.gov/safety/coldwater",
+      "country": "US",
+      "published_or_updated": "",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "CA_WATER",
+      "title": "Guidelines for Canadian Recreational Water Quality: Physical, Aesthetic and Chemical Characteristics",
+      "organization": "Health Canada",
+      "url": "https://www.canada.ca/en/services/health/publications/healthy-living/guidelines-canadian-recreational-water-physical-aesthetic-chemical-characteristics.html",
+      "country": "CA",
+      "published_or_updated": "",
+      "source_type": "guideline"
+    },
+    {
+      "source_id": "CDC_COLD",
+      "title": "Preventing Hypothermia",
+      "organization": "CDC",
+      "url": "https://www.cdc.gov/winter-weather/prevention/index.html",
+      "country": "US",
+      "published_or_updated": "2026-08-25",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "NICE_DIET",
+      "title": "Overweight and obesity management (NG246) – Physical activity and diet",
+      "organization": "NICE",
+      "url": "https://www.nice.org.uk/guidance/ng246/chapter/Physical-activity-and-diet",
+      "country": "GB",
+      "published_or_updated": "2026-01-08",
+      "source_type": "guideline"
+    },
+    {
+      "source_id": "NIH_FAST",
+      "title": "To Fast or Not to Fast",
+      "organization": "NIH News in Health",
+      "url": "https://newsinhealth.nih.gov/2019/12/fast-or-not-fast",
+      "country": "US",
+      "published_or_updated": "2019-12",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "NCCIH_FAST",
+      "title": "“Detoxes” and “Cleanses”: What You Need To Know",
+      "organization": "NIH NCCIH",
+      "url": "https://www.nccih.nih.gov/health/detoxes-and-cleanses-what-you-need-to-know",
+      "country": "US",
+      "published_or_updated": "2025-03",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "FDA_SWEET",
+      "title": "Aspartame and Other Sweeteners in Food",
+      "organization": "FDA",
+      "url": "https://www.fda.gov/food/food-additives-petitions/aspartame-and-other-sweeteners-food",
+      "country": "US",
+      "published_or_updated": "",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "KR_ASPARTAME",
+      "title": "식약처, 아스파탐 현행 사용 기준 유지",
+      "organization": "식품의약품안전처",
+      "url": "https://www.mfds.go.kr/webzine/202307/sub05.html",
+      "country": "KR",
+      "published_or_updated": "2023-07-14",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "EFSA_ACEK",
+      "title": "Re-evaluation of acesulfame K (E 950) as a food additive",
+      "organization": "EFSA",
+      "url": "https://www.efsa.europa.eu/en/plain-language-summary/re-evaluation-acesulfame-k-e-950-food-additive",
+      "country": "EU",
+      "published_or_updated": "2025-04-30",
+      "source_type": "reference_intake"
+    },
+    {
+      "source_id": "EFSA_SACCHARIN",
+      "title": "Saccharin: safety threshold increased",
+      "organization": "EFSA",
+      "url": "https://www.efsa.europa.eu/en/news/saccharin-safety-threshold-increased",
+      "country": "EU",
+      "published_or_updated": "2024-11-15",
+      "source_type": "reference_intake"
+    },
+    {
+      "source_id": "EFSA_SUCRALOSE",
+      "title": "Re-evaluation of sucralose (E 955) as a food additive and evaluation of a new application on extension of use of sucralose (E 955) in fine bakery wares",
+      "organization": "EFSA",
+      "url": "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2026.9854",
+      "country": "EU",
+      "published_or_updated": "2026-02-17",
+      "source_type": "reference_intake"
+    },
+    {
+      "source_id": "FDA_FISH",
+      "title": "Advice about Eating Fish",
+      "organization": "FDA·EPA",
+      "url": "https://www.fda.gov/food/consumers/advice-about-eating-fish",
+      "country": "US",
+      "published_or_updated": "",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "EPA_MERCURY",
+      "title": "What EPA is Doing to Reduce Mercury Pollution, and Exposures to Mercury",
+      "organization": "EPA",
+      "url": "https://www.epa.gov/mercury/what-epa-doing-reduce-mercury-pollution-and-exposures-mercury",
+      "country": "US",
+      "published_or_updated": "",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "BFR_COUMARIN",
+      "title": "FAQ on coumarin in cinnamon and other foods",
+      "organization": "German Federal Institute for Risk Assessment (BfR)",
+      "url": "https://www.bfr.bund.de/en/service/frequently-asked-questions/topic/faq-on-coumarin-in-cinnamon-and-other-foods/",
+      "country": "DE",
+      "published_or_updated": "",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "BFR_LICORICE",
+      "title": "Health assessment of liquorice",
+      "organization": "German Federal Institute for Risk Assessment (BfR)",
+      "url": "https://www.bfr.bund.de/en/food-safety/health-assessment-of-special-food-groups/selected-foods/health-assessment-of-liquorice/",
+      "country": "DE",
+      "published_or_updated": "",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "NCCIH_LICORICE",
+      "title": "Licorice Root: Usefulness and Safety",
+      "organization": "NIH NCCIH",
+      "url": "https://www.nccih.nih.gov/health/licorice-root",
+      "country": "US",
+      "published_or_updated": "2025-04",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "NCCIH_TEA",
+      "title": "Green Tea: Usefulness and Safety",
+      "organization": "NIH NCCIH",
+      "url": "https://www.nccih.nih.gov/health/green-tea",
+      "country": "US",
+      "published_or_updated": "2025-02",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "EFSA_EGCG",
+      "title": "Scientific opinion on the safety of green tea catechins",
+      "organization": "EFSA",
+      "url": "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2018.5239",
+      "country": "EU",
+      "published_or_updated": "2018-04-18",
+      "source_type": "reference_intake"
+    },
+    {
+      "source_id": "EU_EGCG",
+      "title": "Commission Regulation (EU) 2022/2340 of 30 November 2022",
+      "organization": "European Commission",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R2340",
+      "country": "EU",
+      "published_or_updated": "2022-11-30",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "KR_ACETAMINOPHEN",
+      "title": "타이레놀정500밀리그람(아세트아미노펜) 품목 허가정보",
+      "organization": "식품의약품안전처 의약품안전나라",
+      "url": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202106092",
+      "country": "KR",
+      "published_or_updated": "2026-04-08",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "KR_ANTIHISTAMINE",
+      "title": "화창한 봄날에 불청객 꽃가루, 알레르기 치료제 바로 알고 사용하세요",
+      "organization": "식품의약품안전처·식품의약품안전평가원",
+      "url": "https://impfood.mfds.go.kr/CFBBB02F02/getCntntsDetail?cntntsSn=282329",
+      "country": "KR",
+      "published_or_updated": "2017-03-29",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "KR_ZOLPIDEM",
+      "title": "마약류 최면진정제 이렇게 사용하세요!",
+      "organization": "식품의약품안전처 / 대한민국 정책브리핑",
+      "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148889133",
+      "country": "KR",
+      "published_or_updated": "2021-07-01",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "KR_CREATINE",
+      "title": "건강기능식품 제품정보: 크레아틴100 (신고번호 2014001711616)",
+      "organization": "식품의약품안전처 식품안전나라",
+      "url": "https://www.foodsafetykorea.go.kr/portal/healthyfoodlife/searchHomeHFDetail.do?prdlstReportLedgNo=2022021000191767",
+      "country": "KR",
+      "published_or_updated": "2022-05-16",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "NIH_SPORTS",
+      "title": "Dietary Supplements for Exercise and Athletic Performance – Health Professional Fact Sheet",
+      "organization": "NIH Office of Dietary Supplements",
+      "url": "https://ods.od.nih.gov/factsheets/ExerciseAndAthleticPerformance-HealthProfessional/",
+      "country": "US",
+      "published_or_updated": "2024-04-01",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "NCCIH_ASH",
+      "title": "Ashwagandha",
+      "organization": "NIH NCCIH",
+      "url": "https://www.nccih.nih.gov/health/ashwagandha",
+      "country": "US",
+      "published_or_updated": "2023-03",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "NCCIH_CURCUMIN",
+      "title": "Turmeric",
+      "organization": "NIH NCCIH",
+      "url": "https://www.nccih.nih.gov/health/turmeric",
+      "country": "US",
+      "published_or_updated": "2025-04",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "NCCIH_MELATONIN",
+      "title": "Melatonin: What You Need To Know",
+      "organization": "NIH NCCIH",
+      "url": "https://www.nccih.nih.gov/health/melatonin-what-you-need-to-know",
+      "country": "US",
+      "published_or_updated": "2024-05",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "NCCIH_PROBIOTICS",
+      "title": "Probiotics: Usefulness and Safety",
+      "organization": "NIH NCCIH",
+      "url": "https://www.nccih.nih.gov/health/probiotics-usefulness-and-safety",
+      "country": "US",
+      "published_or_updated": "2019-08",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "ODS_ASH_CONSUMER",
+      "title": "Ashwagandha: Is it helpful for stress, anxiety, or sleep? – Consumer",
+      "organization": "NIH Office of Dietary Supplements",
+      "url": "https://ods.od.nih.gov/factsheets/Ashwagandha-Consumer/",
+      "country": "US",
+      "published_or_updated": "2023-12-04",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "ODS_PROBIOTICS_CONSUMER",
+      "title": "Probiotics – Fact Sheet for Consumers",
+      "organization": "NIH Office of Dietary Supplements",
+      "url": "https://ods.od.nih.gov/factsheets/Probiotics-Consumer/",
+      "country": "US",
+      "published_or_updated": "2025-11-17",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "TGA_CURCUMIN",
+      "title": "Medicines containing turmeric or curcumin – risk of liver injury",
+      "organization": "Therapeutic Goods Administration",
+      "url": "https://www.tga.gov.au/safety/safety-monitoring-and-information/safety-alerts/medicines-containing-turmeric-or-curcumin-risk-liver-injury",
+      "country": "AU",
+      "published_or_updated": "2023-08-15",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "NHS_MELATONIN",
+      "title": "How and when to take melatonin",
+      "organization": "NHS",
+      "url": "https://www.nhs.uk/medicines/melatonin/how-and-when-to-take-melatonin/",
+      "country": "GB",
+      "published_or_updated": "2023-02-13",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "NHS_BRUSH",
+      "title": "Bad breath – things you can do",
+      "organization": "NHS",
+      "url": "https://www.nhs.uk/symptoms/bad-breath/",
+      "country": "GB",
+      "published_or_updated": "2025-06-05",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "ASC_CWI",
+      "title": "Cold Water Immersion: Is it worth the plunge?",
+      "organization": "Australian Sports Commission / Australian Institute of Sport",
+      "url": "https://www.ausport.gov.au/ais/rest-hub/recovery",
+      "country": "AU",
+      "published_or_updated": "",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "ASC_IMMERSION",
+      "title": "Water immersion: recovery overview",
+      "organization": "Australian Sports Commission / Australian Institute of Sport",
+      "url": "https://www.ausport.gov.au/ais/rest-hub/recovery",
+      "country": "AU",
+      "published_or_updated": "",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "NICE_FASTING",
+      "title": "NG246 Rationale and impact – Intermittent fasting in adults (no recommendations)",
+      "organization": "NICE",
+      "url": "https://www.nice.org.uk/guidance/ng246/chapter/Rationale-and-impact",
+      "country": "GB",
+      "published_or_updated": "2026-01-08",
+      "source_type": "guideline"
+    },
+    {
+      "source_id": "FDA_ACETAMINOPHEN",
+      "title": "Don’t Overuse Acetaminophen",
+      "organization": "FDA",
+      "url": "https://www.fda.gov/consumers/consumer-updates/dont-overuse-acetaminophen",
+      "country": "US",
+      "published_or_updated": "",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "FDA_CETIRIZINE",
+      "title": "Rare severe itching after stopping long-term use of oral cetirizine or levocetirizine",
+      "organization": "FDA",
+      "url": "https://www.fda.gov/drugs/drug-safety-communications/fda-requires-warning-about-rare-severe-itching-after-stopping-long-term-use-oral-allergy-medicines",
+      "country": "US",
+      "published_or_updated": "2025-05-16",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "FDA_BENZO",
+      "title": "Boxed Warning updated to improve safe use of benzodiazepine drug class",
+      "organization": "FDA",
+      "url": "https://www.fda.gov/drugs/drug-safety-and-availability/fda-requiring-boxed-warning-updated-improve-safe-use-benzodiazepine-drug-class",
+      "country": "US",
+      "published_or_updated": "2020-09-23",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "FDA_OPIOID",
+      "title": "Opioid pain medicine prescribing information: long-term use risks",
+      "organization": "FDA",
+      "url": "https://www.fda.gov/drugs/drug-safety-communications/fda-requiring-opioid-pain-medicine-manufacturers-update-prescribing-information-regarding-long-term",
+      "country": "US",
+      "published_or_updated": "2025-07-31",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "FDA_GABAPENTINOID",
+      "title": "Gabapentin and pregabalin: serious breathing problems – Drug Safety Communication",
+      "organization": "FDA",
+      "url": "https://www.fda.gov/safety/medical-product-safety-information/neurontin-gralise-horizant-gabapentin-and-lyrica-lyrica-cr-pregabalin-drug-safety-communication",
+      "country": "US",
+      "published_or_updated": "2019-12-19",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "MHRA_DEPENDENCE",
+      "title": "Improving information supplied with gabapentinoids, benzodiazepines and Z-drugs",
+      "organization": "MHRA",
+      "url": "https://www.gov.uk/drug-safety-update/improving-information-supplied-with-gabapentinoids-pregabalin-slash-gabapentin-benzodiazepines-and-z-drugs",
+      "country": "GB",
+      "published_or_updated": "2026-01-08",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "MHRA_NASAL",
+      "title": "Xylometazoline / oxymetazoline: rebound congestion, rhinitis medicamentosa and tachyphylaxis with overuse",
+      "organization": "MHRA",
+      "url": "https://www.gov.uk/drug-safety-update/nasal-decongestant-sprays-and-drops-containing-xylometazoline-hydrochloride-slash-oxymetazoline-hydrochloride-increased-risk-of-rebound-congestion-rhinitis-medicamentosa-and-tachyphylaxis-with-overuse",
+      "country": "GB",
+      "published_or_updated": "2026-04-30",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "CA_NASAL",
+      "title": "Nonprescription topical nasal decongestants labelling standard",
+      "organization": "Health Canada",
+      "url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/applications-submissions/guidance-documents/nonprescription-drugs-labelling-standards/nonprescription-topical-nasal-decongestants-labelling-standard.html",
+      "country": "CA",
+      "published_or_updated": "2017-05-04",
+      "source_type": "guideline"
+    },
+    {
+      "source_id": "NHS_DIPHENHYDRAMINE",
+      "title": "How and when to take or use diphenhydramine",
+      "organization": "NHS",
+      "url": "https://www.nhs.uk/medicines/diphenhydramine/how-and-when-to-take-or-use-diphenhydramine/",
+      "country": "GB",
+      "published_or_updated": "2025-05-13",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "NHS_ANTIDEPRESSANT",
+      "title": "Antidepressants",
+      "organization": "NHS",
+      "url": "https://www.nhs.uk/medicines/antidepressants/",
+      "country": "GB",
+      "published_or_updated": "2025-06-12",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "NHS_BETA",
+      "title": "Beta blockers",
+      "organization": "NHS",
+      "url": "https://www.nhs.uk/medicines/beta-blockers/",
+      "country": "GB",
+      "published_or_updated": "2026-09-04",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "NHS_ARB",
+      "title": "Losartan (representative ARB)",
+      "organization": "NHS",
+      "url": "https://www.nhs.uk/medicines/losartan/",
+      "country": "GB",
+      "published_or_updated": "2026-06-10",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "NHS_SULFONYLUREA",
+      "title": "Gliclazide (representative sulfonylurea)",
+      "organization": "NHS",
+      "url": "https://www.nhs.uk/medicines/gliclazide/",
+      "country": "GB",
+      "published_or_updated": "2026-08-06",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "NHS_INSULIN_DETAIL",
+      "title": "How and when to take long-acting insulin",
+      "organization": "NHS",
+      "url": "https://www.nhs.uk/medicines/insulin/long-acting-insulin/how-and-when-to-take-long-acting-insulin/",
+      "country": "GB",
+      "published_or_updated": "2023-07-07",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "NHS_IRON",
+      "title": "How and when to take ferrous sulfate",
+      "organization": "NHS",
+      "url": "https://www.nhs.uk/medicines/ferrous-sulfate/how-and-when-to-take-ferrous-sulfate/",
+      "country": "GB",
+      "published_or_updated": "2023-02-09",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "NHS_ACE",
+      "title": "ACE inhibitors",
+      "organization": "Cambridge University Hospitals NHS Foundation Trust",
+      "url": "https://www.cuh.nhs.uk/patient-information/ace-inhibitors/",
+      "country": "GB",
+      "published_or_updated": "2023-10-25",
+      "source_type": "fact_sheet"
+    },
+    {
+      "source_id": "DM_ALUMINUM_HYDROXIDE",
+      "title": "aluminum hydroxide – 경구 현탁액 320 mg/5 mL aluminum hydroxide (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=27c574a5-1fe0-4973-9a31-9beb4fc6ec46",
+      "country": "US",
+      "published_or_updated": "2025-12-11",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_ASPIRIN",
+      "title": "aspirin – 즉방 경구정 325 mg/tablet (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=459d01df-6ff6-cff6-e063-6394a90ab35c",
+      "country": "US",
+      "published_or_updated": "2026-01-13",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_BENZOYL",
+      "title": "benzoyl peroxide – 여드름 외용 leave-on 제제 2.5% (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0ba5e88c-a4d5-4550-93fa-d3d7fee45f9f",
+      "country": "US",
+      "published_or_updated": "2024-10-23",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_BISACODYL",
+      "title": "bisacodyl – 지연방출 경구정 5 mg/tablet (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=49cb9a34-4c76-48c5-92c0-39e0ffc805c3",
+      "country": "US",
+      "published_or_updated": "2026-04-14",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_BISMUTH",
+      "title": "bismuth subsalicylate – 씹는 정제 262 mg/tablet (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7627bf1-da97-4875-b614-5029663f7482",
+      "country": "US",
+      "published_or_updated": "2026-06-08",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_CALCIUM_ANTACID",
+      "title": "calcium carbonate – 씹는 정제 calcium carbonate 750 mg/tablet (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3988e3f8-b276-43a0-bdd3-01ddd422c986",
+      "country": "US",
+      "published_or_updated": "2024-03-03",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_CETIRIZINE",
+      "title": "cetirizine hydrochloride – 경구정 10 mg/tablet (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2b03c026-3e8a-4283-981f-965bc084c03d",
+      "country": "US",
+      "published_or_updated": "2025-07-10",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_CHLORPHENIRAMINE",
+      "title": "chlorpheniramine maleate – 경구정 4 mg/tablet (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=54681242-c861-4415-b5c0-d3ab55b62be1",
+      "country": "US",
+      "published_or_updated": "2024-05-17",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_DEXTROMETHORPHAN",
+      "title": "dextromethorphan polistirex (HBr equivalent) – 12시간 서방 현탁액 HBr equivalent 30 mg/5 mL (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=759acdcd-d8d0-41d0-8b80-7f81fe196a9f",
+      "country": "US",
+      "published_or_updated": "2026-05-04",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_DICLOFENAC",
+      "title": "diclofenac sodium – 관절염 외용 겔 1% (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=23c01a58-9ff2-420a-be8c-770d67b19e3e",
+      "country": "US",
+      "published_or_updated": "2026-09-18",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_DIPHENHYDRAMINE",
+      "title": "diphenhydramine hydrochloride – 경구 캡슐 25 mg/capsule (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=59aeb692-2f79-45aa-8e6a-dab77cd3b2f9",
+      "country": "US",
+      "published_or_updated": "2025-03-28",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_DOXYLAMINE",
+      "title": "doxylamine succinate – 경구정 25 mg/tablet (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a436f6d2-6d7e-4f0e-b1c3-acc17cbcb64a",
+      "country": "US",
+      "published_or_updated": "2025-12-02",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_ESOMEPRAZOLE",
+      "title": "esomeprazole – OTC 지연방출 경구제 20 mg (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c45fd180-9d81-41e0-b7f8-025b8f29763a",
+      "country": "US",
+      "published_or_updated": "2025-02-21",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_FAMOTIDINE",
+      "title": "famotidine – OTC 경구정 20 mg/tablet (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=58b653eb-6539-4b79-9d22-df6eaf35307f",
+      "country": "US",
+      "published_or_updated": "2024-09-30",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_FEXOFENADINE",
+      "title": "fexofenadine hydrochloride – 경구정 180 mg/tablet (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7cac266a-4de8-4af1-8324-b01823a3989a",
+      "country": "US",
+      "published_or_updated": "2026-01-07",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_FLUTICASONE",
+      "title": "fluticasone propionate – 비강 스프레이 50 mcg/spray (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0107ad1c-1d8e-434c-a91f-dd2caf4fa5e5",
+      "country": "US",
+      "published_or_updated": "2026-07-17",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_GABAPENTIN_CURRENT",
+      "title": "gabapentin – 즉방 경구 캡슐/정/액 제품별 함량 (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=97935fd9-1d4a-43b6-a5d9-de994591187b",
+      "country": "US",
+      "published_or_updated": "2026-05-12",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_GUAIFENESIN",
+      "title": "guaifenesin – 12시간 서방정 600 mg/tablet (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=28b31f37-6896-40f5-8f3a-60c93c5c1278",
+      "country": "US",
+      "published_or_updated": "2026-02-01",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_HYDROCORTISONE",
+      "title": "hydrocortisone – 외용 크림 1% (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eb031535-d17e-9d5e-e053-2a95a90ad3e0",
+      "country": "US",
+      "published_or_updated": "2025-11-25",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_IBUPROFEN",
+      "title": "ibuprofen – 즉방 경구정 200 mg/tablet (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d3351d44-2078-3adc-e053-2995a90a3c8f",
+      "country": "US",
+      "published_or_updated": "2024-01-03",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_LEVOTHYROXINE",
+      "title": "levothyroxine sodium – 경구정 제품별 mcg 함량 (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4ddcaec1-a58f-340b-9bc1-bbe048b8c885",
+      "country": "US",
+      "published_or_updated": "2026-09-15",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_LIDOCAINE_VERIFIED",
+      "title": "lidocaine – 외용 패치 4% (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9507f727-c49f-4de4-9d64-b6d977d568ab",
+      "country": "US",
+      "published_or_updated": "2024-01-17",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_LOPERAMIDE",
+      "title": "loperamide hydrochloride – OTC 경구 캡슐 2 mg/capsule (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=237b845b-0f02-410d-9750-c95123e6142d",
+      "country": "US",
+      "published_or_updated": "2024-01-11",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_LORATADINE",
+      "title": "loratadine – 경구정 10 mg/tablet (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3360d02d-612d-4cc5-acc9-2cc93713c387",
+      "country": "US",
+      "published_or_updated": "2024-11-25",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_MAGNESIUM_HYDROXIDE",
+      "title": "magnesium hydroxide – 경구 현탁액 400 mg/5 mL magnesium hydroxide (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=144c7242-4ff9-404a-86bf-48e2871eb0cd",
+      "country": "US",
+      "published_or_updated": "2026-06-05",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_METFORMIN",
+      "title": "metformin hydrochloride – 즉방 경구정 500/850/1000 mg (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0448c618-2f0d-4ed3-866f-74b413cf902d",
+      "country": "US",
+      "published_or_updated": "2026-04-16",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_NAPHAZOLINE",
+      "title": "naphazoline hydrochloride – 점안액 naphazoline 0.012% + glycerin 0.25% (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a26ef66e-2def-4c98-9959-d40d4cfe3108",
+      "country": "US",
+      "published_or_updated": "2026-09-10",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_NAPROXEN",
+      "title": "naproxen sodium – 즉방 경구정 naproxen sodium 220 mg/tablet (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=82412133-c11a-4905-a119-965f44de10b7",
+      "country": "US",
+      "published_or_updated": "2026-08-17",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_OMEPRAZOLE",
+      "title": "omeprazole – OTC 지연방출 경구제 20 mg (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a4e92bd2-8f75-4acc-9b75-df8332bd4cc4",
+      "country": "US",
+      "published_or_updated": "2026-06-04",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_OXYMETAZOLINE",
+      "title": "oxymetazoline hydrochloride – 비강 스프레이 0.05% (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d01b8fb6-1ddf-4901-bda6-ae608e94a6a4",
+      "country": "US",
+      "published_or_updated": "2025-12-04",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_PEG",
+      "title": "polyethylene glycol 3350 – 전해질 없는 경구 분말 PEG 3350 (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=cccbe459-813d-4668-8cd2-76be82906a32",
+      "country": "US",
+      "published_or_updated": "2026-08-17",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_PREGABALIN",
+      "title": "pregabalin – 경구 캡슐 제품별 함량 (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=241c4b7e-f719-4828-8639-ea613b8a6583",
+      "country": "US",
+      "published_or_updated": "2025-09-29",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_PSEUDOEPHEDRINE",
+      "title": "pseudoephedrine hydrochloride – 즉방 경구정 30 mg/tablet (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c3b5d9f7-3e4d-4b27-ac34-3192d21ee2e2",
+      "country": "US",
+      "published_or_updated": "2025-10-15",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_SALICYLIC",
+      "title": "salicylic acid – 여드름 외용 leave-on 제제 2% (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=55f614ee-f0fb-425d-aa5e-f90cad51c285",
+      "country": "US",
+      "published_or_updated": "2023-12-30",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_SENNA",
+      "title": "sennosides – 경구정 sennosides 8.6 mg/tablet (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=485129a0-8340-4f61-be51-5abff5032b8d",
+      "country": "US",
+      "published_or_updated": "2025-01-20",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_TETRAHYDROZOLINE",
+      "title": "tetrahydrozoline hydrochloride – 점안액 0.05% (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=703645d0-5157-7a83-e053-2a91aa0a903e",
+      "country": "US",
+      "published_or_updated": "2024-01-22",
+      "source_type": "regulation"
+    },
+    {
+      "source_id": "DM_ZOLPIDEM",
+      "title": "zolpidem tartrate – 즉방 경구정 5 또는 10 mg (DailyMed SPL)",
+      "organization": "DailyMed (U.S. National Library of Medicine; 제출된 제품 SPL)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0f8488f3-851d-4111-af23-60f420aad0d6",
+      "country": "US",
+      "published_or_updated": "2026-04-15",
+      "source_type": "regulation"
+    }
+  ]
+}

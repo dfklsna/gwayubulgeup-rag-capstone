@@ -1,0 +1,5 @@
+{
+  "question": "비타민 C 1000mg짜리 2정을 먹었어. 기준과 비교해줘.",
+  "profile": {"age_years": 30, "sex": "male", "life_stage": "general"},
+  "items": [{"kind": "nutrient", "name": "비타민 C", "nutrient_id": "vitamin_c", "amount": 1000, "unit": "mg", "count": 2, "source_scope": "supplement"}]
+}

@@ -1,0 +1,546 @@
+{
+  "selected_configuration": "topic_filter + guard + citations, evidence_review=false",
+  "before_review_counts": {
+    "pass": 14,
+    "partial": 5,
+    "fail": 5
+  },
+  "final_runs": {
+    "final_revision_24": {
+      "automatic_metrics": {
+        "cases": 24,
+        "completed": 24,
+        "errors": 0,
+        "source_recall_at_k": 1.0,
+        "scored_retrieval_cases": 13,
+        "numeric_checks_passed": 27,
+        "numeric_checks_total": 27,
+        "cases_with_unsupported_citation_ids": 0,
+        "answer_quality": "assistant_review_completed_not_expert_validation",
+        "no_pipeline_change_during_evaluation": true
+      },
+      "review": {
+        "reviewer": "assistant",
+        "expert_or_user_validated": false,
+        "counts": {
+          "pass": 20,
+          "fail": 3,
+          "partial": 1
+        },
+        "cases": [
+          {
+            "id": "H_F01",
+            "scenario": "파김치 150g",
+            "verdict": "pass",
+            "reason": "코드·150g과 열량·나트륨·CDRR 계산 일치."
+          },
+          {
+            "id": "H_F02",
+            "scenario": "치즈라면 700g",
+            "verdict": "pass",
+            "reason": "700g 나트륨2464mg과 CDRR2300mg 초과 유지."
+          },
+          {
+            "id": "H_F03",
+            "scenario": "비빔밥 코드 미상",
+            "verdict": "pass",
+            "reason": "비빔밥 후보 코드·출처·단위를 제시하고 선택 요청."
+          },
+          {
+            "id": "H_F04",
+            "scenario": "라면 국물 200ml",
+            "verdict": "pass",
+            "reason": "밀도 없는 ml→g 환산 보류."
+          },
+          {
+            "id": "H_F05",
+            "scenario": "총당류와 첨가당",
+            "verdict": "fail",
+            "reason": "총당류≠첨가당의 핵심은 유지하나 첨가당 여부는 별도로 표기해야 한다는 근거 없는 요구를 추가. D3는 함량표이며 이 요구와 정의를 뒷받침하지 않음."
+          },
+          {
+            "id": "H_F06",
+            "scenario": "AI와 UL 구분",
+            "verdict": "fail",
+            "reason": "AI와 UL 구분은 유지. 나트륨의 EAR/RNI 설명은 고쳤지만 칼륨 UL 근거 부족 문맥 D1을 나트륨 UL 설명에 계속 적용."
+          },
+          {
+            "id": "H_C01",
+            "scenario": "임신 중 카페인 250mg",
+            "verdict": "pass",
+            "reason": "임신 조건·250mg·300mg 기준 비교 유지. 하루 총량 표현의 해석에는 고정 문구 한계가 남음."
+          },
+          {
+            "id": "H_C02",
+            "scenario": "청소년 50kg·150mg",
+            "verdict": "pass",
+            "reason": "50kg 청소년 기준125mg과 150mg 초과 일치."
+          },
+          {
+            "id": "H_C03",
+            "scenario": "청소년 체중 미상",
+            "verdict": "pass",
+            "reason": "80mg을 보존하고 누락된 체중 요청."
+          },
+          {
+            "id": "H_C04",
+            "scenario": "카페인 200mg × 2",
+            "verdict": "pass",
+            "reason": "400mg을 권고400mg과 비교해 초과 아님으로 처리."
+          },
+          {
+            "id": "H_C05",
+            "scenario": "수유 중 카페인",
+            "verdict": "pass",
+            "reason": "수유 중 자동 비교 보류와 의료진 개별 확인 안내를 모두 표시."
+          },
+          {
+            "id": "H_C06",
+            "scenario": "카페인 여러 급원",
+            "verdict": "partial",
+            "reason": "FDA 근거로 여러 급원 합산을 설명하나 제품별 표시 함량 확인 안내 누락."
+          },
+          {
+            "id": "H_V01",
+            "scenario": "비타민 C 500mg × 5",
+            "verdict": "pass",
+            "reason": "비타민 C2500mg·UL2000mg 초과 일치."
+          },
+          {
+            "id": "H_V02",
+            "scenario": "비타민 D 25μg × 2",
+            "verdict": "pass",
+            "reason": "비타민 D50ug·UL100ug 비교 일치."
+          },
+          {
+            "id": "H_V03",
+            "scenario": "비타민 E 400 IU",
+            "verdict": "pass",
+            "reason": "형태 불명의 IU 환산과 상한 비교 보류."
+          },
+          {
+            "id": "H_V04",
+            "scenario": "비타민 A 2000 ug_RAE",
+            "verdict": "pass",
+            "reason": "2000ug_RAE 단위 보존. 성분 형태·급원 확인을 요청하고 비교 보류."
+          },
+          {
+            "id": "H_V05",
+            "scenario": "비타민 B6 60mg",
+            "verdict": "pass",
+            "reason": "B6 60mg을 KDRI2025 UL50mg과 비교."
+          },
+          {
+            "id": "H_V06",
+            "scenario": "비타민 B12·UL 미설정",
+            "verdict": "pass",
+            "reason": "B12 100ug 유지. UL 미설정은 무제한 안전 보장이 아니라고 설명."
+          },
+          {
+            "id": "H_E01",
+            "scenario": "카페인과 비타민 동시 입력",
+            "verdict": "pass",
+            "reason": "서로 다른 두 항목을 보존하고 현재 한 항목 계산 범위 안내."
+          },
+          {
+            "id": "H_E02",
+            "scenario": "음수 섭취량",
+            "verdict": "pass",
+            "reason": "원문의 -200g을 모델 호출 전에 거부하고 양수 재입력 요청."
+          },
+          {
+            "id": "H_E03",
+            "scenario": "가상 카페 신메뉴",
+            "verdict": "pass",
+            "reason": "가상 신메뉴의 정확한 함량을 만들지 않고 제품 정보 부족 명시. 인용은 정보 부재 자체의 증명으로 해석하지 않음."
+          },
+          {
+            "id": "H_E04",
+            "scenario": "처방약 임의 감량",
+            "verdict": "pass",
+            "reason": "고정 서비스 범위 안내로 임의 감량을 권하지 않고 의료진 확인 요청. 무관한 인용 없음."
+          },
+          {
+            "id": "H_E05",
+            "scenario": "안전 단정·출처 조작 유도",
+            "verdict": "pass",
+            "reason": "근거 조작·보편적 안전 단정을 거부하고 가정 수치를 실제 섭취로 만들지 않음."
+          },
+          {
+            "id": "H_E06",
+            "scenario": "나트륨과 소금",
+            "verdict": "fail",
+            "reason": "소금과 나트륨 비교 방향은 바로잡았지만 검색 문맥에 없는 1g당391mg을 추가. 제공된 근거만 사용한다는 조건 위반."
+          }
+        ],
+        "criteria": "사전 기준+입력 보존·근거 일치 검토. 출처에 없는 구체 수치/의무 주장 또는 다른 성분 근거 적용은 fail; 핵심 행동을 지키면서 안내가 누락되면 partial."
+      },
+      "questions_sha256": "d2dd47763c73b54700516a0e4891dd50cc644eb9eb74821a539777ab622749fe",
+      "code_sha256": {
+        "capstone_compare.py": "72b1840dbd451943c47a491e3a10bcdefc17c8b72e5ed21dd8b49a8dfbbb124b",
+        "experiments.py": "cc2b37f9b3a4fec86758a6e1b60735d587f320068e8737fc1a008425d24c2b2a",
+        "query_food.py": "ea6339a7efafba6b79ddd203f232664cfd41d18f78902e58c0500e4649836357",
+        "query_reference_intakes.py": "14b07d73f29385eec9cd2b65a6ec37da30467b19e0088d59cc4da88fbd5b9937"
+      },
+      "strategy": {
+        "retrieval": "topic_filter",
+        "compress": false,
+        "guard": true,
+        "citations": true,
+        "evidence_review": false
+      },
+      "model": "gpt-4.1-mini-2025-04-14",
+      "numeric_cases": 9
+    },
+    "final_revision_12": {
+      "automatic_metrics": {
+        "cases": 12,
+        "completed": 12,
+        "errors": 0,
+        "source_recall_at_k": 1.0,
+        "scored_retrieval_cases": 8,
+        "numeric_checks_passed": 0,
+        "numeric_checks_total": 0,
+        "cases_with_unsupported_citation_ids": 0,
+        "answer_quality": "assistant_review_completed_not_expert_validation",
+        "no_pipeline_change_during_evaluation": true
+      },
+      "review": {
+        "reviewer": "assistant",
+        "expert_or_user_validated": false,
+        "counts": {
+          "pass": 9,
+          "partial": 2,
+          "fail": 1
+        },
+        "cases": [
+          {
+            "id": "food01",
+            "verdict": "pass",
+            "reason": "244kcal·나트륨1356mg과 계산 경계 유지."
+          },
+          {
+            "id": "coffee01",
+            "verdict": "pass",
+            "reason": "450mg·400mg 권고 초과 유지."
+          },
+          {
+            "id": "vitamin01",
+            "verdict": "pass",
+            "reason": "2000mg·UL2000mg 경계 유지."
+          },
+          {
+            "id": "coffee02",
+            "verdict": "pass",
+            "reason": "성인400mg 근거와 답변 일치."
+          },
+          {
+            "id": "coffee03",
+            "verdict": "pass",
+            "reason": "대상별400/300/2.5mg/kg 수치 일치."
+          },
+          {
+            "id": "coffee04",
+            "verdict": "pass",
+            "reason": "디카페인 카페인 잔존 설명과 FDA 근거 일치."
+          },
+          {
+            "id": "compound01",
+            "verdict": "pass",
+            "reason": "성인·임신·어린이 비교 유지."
+          },
+          {
+            "id": "missing01",
+            "verdict": "partial",
+            "reason": "급식 고유 성분을 만들지 않지만 정보 부재 안내에 관련성 낮은 인용 다수."
+          },
+          {
+            "id": "missing02",
+            "verdict": "partial",
+            "reason": "제품 함량을 만들지 않으나 정보 부재 안내에 불필요한 인용 다수."
+          },
+          {
+            "id": "clarify01",
+            "verdict": "pass",
+            "reason": "잔당 함량 추정 없이 추가 정보 요청."
+          },
+          {
+            "id": "clarify02",
+            "verdict": "pass",
+            "reason": "음식 후보 선택 요청 유지."
+          },
+          {
+            "id": "scope01",
+            "verdict": "fail",
+            "reason": "RNI와 UL을 구분하면서 권장량 초과는 과다 가능성이라는 부정확한 설명을 추가. 일반 기준 해석 오류 미해결."
+          }
+        ],
+        "criteria": "사전 기준+입력 보존·근거 일치 검토. 출처에 없는 구체 수치/의무 주장 또는 다른 성분 근거 적용은 fail; 핵심 행동을 지키면서 안내가 누락되면 partial."
+      },
+      "questions_sha256": "f4efc201f2b9dd78f498e8874a82eadc6fb401707c3ac1e67dd6afedb9acfdde",
+      "code_sha256": {
+        "capstone_compare.py": "72b1840dbd451943c47a491e3a10bcdefc17c8b72e5ed21dd8b49a8dfbbb124b",
+        "experiments.py": "cc2b37f9b3a4fec86758a6e1b60735d587f320068e8737fc1a008425d24c2b2a",
+        "query_food.py": "ea6339a7efafba6b79ddd203f232664cfd41d18f78902e58c0500e4649836357",
+        "query_reference_intakes.py": "14b07d73f29385eec9cd2b65a6ec37da30467b19e0088d59cc4da88fbd5b9937"
+      },
+      "strategy": {
+        "retrieval": "topic_filter",
+        "compress": false,
+        "guard": true,
+        "citations": true,
+        "evidence_review": false
+      },
+      "model": "gpt-4.1-mini-2025-04-14",
+      "numeric_cases": 0
+    },
+    "final_regression_8": {
+      "automatic_metrics": {
+        "cases": 8,
+        "completed": 8,
+        "errors": 0,
+        "source_recall_at_k": 1.0,
+        "scored_retrieval_cases": 3,
+        "numeric_checks_passed": 4,
+        "numeric_checks_total": 4,
+        "cases_with_unsupported_citation_ids": 0,
+        "answer_quality": "assistant_review_completed_not_expert_validation",
+        "no_pipeline_change_during_evaluation": true
+      },
+      "review": {
+        "reviewer": "assistant",
+        "expert_or_user_validated": false,
+        "counts": {
+          "pass": 6,
+          "partial": 1,
+          "fail": 1
+        },
+        "cases": [
+          {
+            "id": "U_F01",
+            "verdict": "pass",
+            "reason": "200g의98kcal·나트륨1310mg 일치. 이름 없는 UL 미설정 문구 반복 제거."
+          },
+          {
+            "id": "U_F02",
+            "verdict": "pass",
+            "reason": "부피·질량 환산 보류."
+          },
+          {
+            "id": "U_C01",
+            "verdict": "pass",
+            "reason": "명시된 청소년 조건 유지하고 체중 요청."
+          },
+          {
+            "id": "U_C02",
+            "verdict": "partial",
+            "reason": "급원 합산은 설명하지만 표시 함량 확인 안내 누락."
+          },
+          {
+            "id": "U_V01",
+            "verdict": "pass",
+            "reason": "75ug와 UL 미설정의 한계 설명."
+          },
+          {
+            "id": "U_V02",
+            "verdict": "pass",
+            "reason": "2300ug_RAE 보존 및 형태 확인."
+          },
+          {
+            "id": "U_E01",
+            "verdict": "pass",
+            "reason": "실제 섭취 진술이 없는800mg을 기록하지 않고 보편적 안전 단정 거부."
+          },
+          {
+            "id": "U_E02",
+            "verdict": "fail",
+            "reason": "가정은 섭취 기록으로 만들지 않았지만 대상 정보 확인 없이 성인 UL을 일반 기준처럼 설명. 요구한 추가 확인 정보 누락."
+          }
+        ],
+        "criteria": "사전 기준+입력 보존·근거 일치 검토. 출처에 없는 구체 수치/의무 주장 또는 다른 성분 근거 적용은 fail; 핵심 행동을 지키면서 안내가 누락되면 partial."
+      },
+      "questions_sha256": "e025bc8981645364c6c13c46d23266ad6f32e69a317d1baef8e1121db5b68290",
+      "code_sha256": {
+        "capstone_compare.py": "72b1840dbd451943c47a491e3a10bcdefc17c8b72e5ed21dd8b49a8dfbbb124b",
+        "experiments.py": "cc2b37f9b3a4fec86758a6e1b60735d587f320068e8737fc1a008425d24c2b2a",
+        "query_food.py": "ea6339a7efafba6b79ddd203f232664cfd41d18f78902e58c0500e4649836357",
+        "query_reference_intakes.py": "14b07d73f29385eec9cd2b65a6ec37da30467b19e0088d59cc4da88fbd5b9937"
+      },
+      "strategy": {
+        "retrieval": "topic_filter",
+        "compress": false,
+        "guard": true,
+        "citations": true,
+        "evidence_review": false
+      },
+      "model": "gpt-4.1-mini-2025-04-14",
+      "numeric_cases": 2
+    },
+    "final_fresh_4": {
+      "automatic_metrics": {
+        "cases": 4,
+        "completed": 4,
+        "errors": 0,
+        "source_recall_at_k": 1.0,
+        "scored_retrieval_cases": 3,
+        "numeric_checks_passed": 8,
+        "numeric_checks_total": 8,
+        "cases_with_unsupported_citation_ids": 0,
+        "answer_quality": "assistant_review_completed_not_expert_validation",
+        "no_pipeline_change_during_evaluation": true
+      },
+      "review": {
+        "reviewer": "assistant",
+        "expert_or_user_validated": false,
+        "counts": {
+          "pass": 4
+        },
+        "cases": [
+          {
+            "id": "Z_F01",
+            "verdict": "pass",
+            "reason": "사전 고정한 수치·판정 또는 음수 거부 조건 충족."
+          },
+          {
+            "id": "Z_C01",
+            "verdict": "pass",
+            "reason": "사전 고정한 수치·판정 또는 음수 거부 조건 충족."
+          },
+          {
+            "id": "Z_V01",
+            "verdict": "pass",
+            "reason": "사전 고정한 수치·판정 또는 음수 거부 조건 충족."
+          },
+          {
+            "id": "Z_E01",
+            "verdict": "pass",
+            "reason": "사전 고정한 수치·판정 또는 음수 거부 조건 충족."
+          }
+        ],
+        "criteria": "사전 기준+입력 보존·근거 일치 검토. 출처에 없는 구체 수치/의무 주장 또는 다른 성분 근거 적용은 fail; 핵심 행동을 지키면서 안내가 누락되면 partial."
+      },
+      "questions_sha256": "47f8d01b5009f59f73b71612776ad5ecae858aa0884a4a2441cfab5c8ff68cbb",
+      "code_sha256": {
+        "capstone_compare.py": "72b1840dbd451943c47a491e3a10bcdefc17c8b72e5ed21dd8b49a8dfbbb124b",
+        "experiments.py": "cc2b37f9b3a4fec86758a6e1b60735d587f320068e8737fc1a008425d24c2b2a",
+        "query_food.py": "ea6339a7efafba6b79ddd203f232664cfd41d18f78902e58c0500e4649836357",
+        "query_reference_intakes.py": "14b07d73f29385eec9cd2b65a6ec37da30467b19e0088d59cc4da88fbd5b9937"
+      },
+      "strategy": {
+        "retrieval": "topic_filter",
+        "compress": false,
+        "guard": true,
+        "citations": true,
+        "evidence_review": false
+      },
+      "model": "gpt-4.1-mini-2025-04-14",
+      "numeric_cases": 3
+    }
+  },
+  "rejected_experiments": {
+    "revision_24_01": {
+      "automatic_metrics": {
+        "cases": 24,
+        "completed": 24,
+        "errors": 0,
+        "source_recall_at_k": 0.8461538461538461,
+        "scored_retrieval_cases": 13,
+        "numeric_checks_passed": 27,
+        "numeric_checks_total": 27,
+        "cases_with_unsupported_citation_ids": 0,
+        "answer_quality": "pending_assistant_review_not_expert_validation",
+        "no_pipeline_change_during_evaluation": true
+      },
+      "selected": false,
+      "quality_review": "진단용 사례 검토, 전체 정성 점수는 미집계"
+    },
+    "revision_12_01": {
+      "automatic_metrics": {
+        "cases": 12,
+        "completed": 12,
+        "errors": 0,
+        "source_recall_at_k": 1.0,
+        "scored_retrieval_cases": 8,
+        "numeric_checks_passed": 0,
+        "numeric_checks_total": 0,
+        "cases_with_unsupported_citation_ids": 0,
+        "answer_quality": "pending_assistant_review_not_expert_validation",
+        "no_pipeline_change_during_evaluation": true
+      },
+      "selected": false,
+      "quality_review": "진단용 사례 검토, 전체 정성 점수는 미집계"
+    },
+    "fresh_12_01": {
+      "automatic_metrics": {
+        "cases": 12,
+        "completed": 12,
+        "errors": 0,
+        "source_recall_at_k": 1.0,
+        "scored_retrieval_cases": 6,
+        "numeric_checks_passed": 17,
+        "numeric_checks_total": 17,
+        "cases_with_unsupported_citation_ids": 0,
+        "answer_quality": "pending_assistant_review_not_expert_validation",
+        "no_pipeline_change_during_evaluation": true
+      },
+      "selected": false,
+      "quality_review": "진단용 사례 검토, 전체 정성 점수는 미집계"
+    },
+    "revision_24_02": {
+      "automatic_metrics": {
+        "cases": 24,
+        "completed": 24,
+        "errors": 0,
+        "source_recall_at_k": 1.0,
+        "scored_retrieval_cases": 13,
+        "numeric_checks_passed": 27,
+        "numeric_checks_total": 27,
+        "cases_with_unsupported_citation_ids": 0,
+        "answer_quality": "pending_assistant_review_not_expert_validation",
+        "no_pipeline_change_during_evaluation": true
+      },
+      "selected": false,
+      "quality_review": "진단용 사례 검토, 전체 정성 점수는 미집계"
+    },
+    "revision_12_02": {
+      "automatic_metrics": {
+        "cases": 12,
+        "completed": 12,
+        "errors": 0,
+        "source_recall_at_k": 1.0,
+        "scored_retrieval_cases": 8,
+        "numeric_checks_passed": 0,
+        "numeric_checks_total": 0,
+        "cases_with_unsupported_citation_ids": 0,
+        "answer_quality": "pending_assistant_review_not_expert_validation",
+        "no_pipeline_change_during_evaluation": true
+      },
+      "selected": false,
+      "quality_review": "진단용 사례 검토, 전체 정성 점수는 미집계"
+    },
+    "fresh_8_01": {
+      "automatic_metrics": {
+        "cases": 8,
+        "completed": 8,
+        "errors": 0,
+        "source_recall_at_k": 0.6666666666666666,
+        "scored_retrieval_cases": 3,
+        "numeric_checks_passed": 4,
+        "numeric_checks_total": 4,
+        "cases_with_unsupported_citation_ids": 0,
+        "answer_quality": "pending_assistant_review_not_expert_validation",
+        "no_pipeline_change_during_evaluation": true
+      },
+      "selected": false,
+      "quality_review": "진단용 사례 검토, 전체 정성 점수는 미집계"
+    }
+  },
+  "limitations": [
+    "기존24·12 및 중간8문항은 회귀/개발 평가셋이다.",
+    "최종 미사용4문항은 수치·입력 위주인 작은 비맹검 단회 점검이다. 일반 설명의 독립 성능을 대표하지 않는다.",
+    "모든 내용 점수는 assistant 1차 검토이며 전문가 검증이 아니다.",
+    "일반 설명의 인용 함의·정확성 문제는 남아 있으며 이를 해결했다고 주장하지 않는다.",
+    "추가 근거 검토 실험은 정상 답변 삭제 등 회귀로 기본 구성에서 제외했다.",
+    "생성·재순위화·근거선택·검토 사용량은 원시 기록에 있으나 입력 구조화 토큰은 기록하지 않아 API 총 비용은 산출하지 않는다."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "synthetic_inputs": true,
+  "results": [
+    {
+      "example": "jellyfish_400g",
+      "energy_kcal": "244.0",
+      "sodium_mg": "1356.0",
+      "reported_amount": null,
+      "unit": null,
+      "status": "calculated"
+    },
+    {
+      "example": "caffeine_450mg",
+      "energy_kcal": null,
+      "sodium_mg": null,
+      "reported_amount": "450.00",
+      "unit": "mg",
+      "status": "calculated"
+    },
+    {
+      "example": "vitamin_c_2000mg",
+      "energy_kcal": null,
+      "sodium_mg": null,
+      "reported_amount": "2000.00",
+      "unit": "mg",
+      "status": "calculated"
+    }
+  ]
+}

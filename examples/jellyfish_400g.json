@@ -1,0 +1,5 @@
+{
+  "question": "해파리냉채 400g의 영양성분을 계산하고 기준과 비교해줘.",
+  "profile": {"age_years": 30, "sex": "male", "life_stage": "general", "caffeine_group": "adult"},
+  "items": [{"kind": "food", "name": "냉채_해파리", "food_code": "D314-612380000-0001", "amount": 400, "unit": "g", "source_scope": "food"}]
+}

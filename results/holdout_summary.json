@@ -1,0 +1,222 @@
+{
+  "run": "new_questions_24_01",
+  "created_at": "2026-10-02T03:09:53.903556+00:00",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "strategy": {
+    "retrieval": "topic_filter",
+    "compress": false,
+    "guard": true,
+    "citations": true
+  },
+  "questions_sha256": "d2dd47763c73b54700516a0e4891dd50cc644eb9eb74821a539777ab622749fe",
+  "plan_sha256": "362da3defbee376c2bf3ddc1f9e611ec1efc9433904b8b960f3fe8f6234149bf",
+  "code_sha256": {
+    "capstone_compare.py": "5fe52ccefcc8f19d9166a9acc00c201d80e1d8b2cc06b0cf89ec43c86333a91a",
+    "experiments.py": "d3e00959970e92044291636ee67f837c4b9f50d62c62f3cbae9e3c7d2caafe88",
+    "query_food.py": "ea6339a7efafba6b79ddd203f232664cfd41d18f78902e58c0500e4649836357",
+    "query_reference_intakes.py": "14b07d73f29385eec9cd2b65a6ec37da30467b19e0088d59cc4da88fbd5b9937"
+  },
+  "corpus_sha256": "fab2f12e074913c40244e64f5b354fe020ebe6994f0d9e7d293afb41016f72cc",
+  "automatic_metrics": {
+    "cases": 24,
+    "completed": 24,
+    "errors": 0,
+    "source_recall_at_k": 1.0,
+    "scored_retrieval_cases": 13,
+    "numeric_checks_passed": 27,
+    "numeric_checks_total": 27,
+    "cases_with_unsupported_citation_ids": 0,
+    "answer_quality": "assistant_review_completed_not_expert_validation",
+    "no_pipeline_change_during_evaluation": true,
+    "numeric_cases": 9
+  },
+  "review": {
+    "reviewer": "assistant",
+    "expert_or_user_validated": false,
+    "method": "실행 전 고정한 must/must_not와 평가 계획에 따라 저장된 입력·계산·답변·검색 문맥을 1차 검토. 올바른 결론이 있어도 입력 사실 생성·명시적 단위 변형·다른 성분 근거의 잘못된 적용·모순된 사실 설명이 있으면 fail. 핵심 행동을 유지하면서 안내 또는 직접 근거가 부족하면 partial.",
+    "counts": {
+      "pass": 14,
+      "partial": 5,
+      "fail": 5
+    },
+    "cases": [
+      {
+        "id": "H_F01",
+        "group": "food",
+        "scenario": "파김치 150g",
+        "verdict": "pass",
+        "reason": "코드·분량 보존, 열량·나트륨과 CDRR 비교 일치. 하루 전체 판정 보류."
+      },
+      {
+        "id": "H_F02",
+        "group": "food",
+        "scenario": "치즈라면 700g",
+        "verdict": "pass",
+        "reason": "나트륨 2464mg과 CDRR 2300mg 초과를 올바르게 표시."
+      },
+      {
+        "id": "H_F03",
+        "group": "food",
+        "scenario": "비빔밥 코드 미상",
+        "verdict": "pass",
+        "reason": "6개 후보의 코드·출처·단위를 제시하고 선택 요청."
+      },
+      {
+        "id": "H_F04",
+        "group": "food",
+        "scenario": "라면 국물 200ml",
+        "verdict": "pass",
+        "reason": "g 기준 DB에 밀도 없는 ml 환산을 적용하지 않고 보류."
+      },
+      {
+        "id": "H_F05",
+        "group": "food",
+        "scenario": "총당류와 첨가당",
+        "verdict": "partial",
+        "reason": "핵심 구분은 충족. 인용한 D3는 당류 함량표이며 정의의 직접 근거를 찾지 못함. 검색 문맥의 한계를 문서 전체의 한계처럼 표현."
+      },
+      {
+        "id": "H_F06",
+        "group": "food",
+        "scenario": "AI와 UL 구분",
+        "verdict": "fail",
+        "reason": "핵심 구분은 유지했으나 칼륨의 AI·UL 논의를 담은 D1을 나트륨 설명에 사용. D5의 EAR/RNI 근거 부족 설명도 AI 근거 부족으로 바꿈."
+      },
+      {
+        "id": "H_C01",
+        "group": "caffeine",
+        "scenario": "임신 중 카페인 250mg",
+        "verdict": "pass",
+        "reason": "임신 조건과 300mg 기준 유지. 다만 오늘 총량이라는 입력에도 다른 급원 미확인이라는 고정 문구 사용."
+      },
+      {
+        "id": "H_C02",
+        "group": "caffeine",
+        "scenario": "청소년 50kg·150mg",
+        "verdict": "pass",
+        "reason": "청소년 체중별 기준 125mg과 초과 판정 일치."
+      },
+      {
+        "id": "H_C03",
+        "group": "caffeine",
+        "scenario": "청소년 체중 미상",
+        "verdict": "pass",
+        "reason": "체중을 요청하고 기준 비교와 안전 판정을 보류."
+      },
+      {
+        "id": "H_C04",
+        "group": "caffeine",
+        "scenario": "카페인 200mg × 2",
+        "verdict": "pass",
+        "reason": "400mg 계산 및 기준과 같아 초과하지 않는 경계 처리."
+      },
+      {
+        "id": "H_C05",
+        "group": "caffeine",
+        "scenario": "수유 중 카페인",
+        "verdict": "partial",
+        "reason": "수유 조건을 유지하고 비교 보류. 기대한 개별 확인 안내는 누락."
+      },
+      {
+        "id": "H_C06",
+        "group": "caffeine",
+        "scenario": "카페인 여러 급원",
+        "verdict": "partial",
+        "reason": "여러 급원 합산 원칙은 설명했으나 제품별 표시 함량 확인 안내 누락."
+      },
+      {
+        "id": "H_V01",
+        "group": "vitamin",
+        "scenario": "비타민 C 500mg × 5",
+        "verdict": "pass",
+        "reason": "2500mg 계산 및 해당 UL 2000mg 초과 판정 일치."
+      },
+      {
+        "id": "H_V02",
+        "group": "vitamin",
+        "scenario": "비타민 D 25μg × 2",
+        "verdict": "pass",
+        "reason": "μg 단위를 유지하고 50ug와 UL 100ug 비교 일치."
+      },
+      {
+        "id": "H_V03",
+        "group": "vitamin",
+        "scenario": "비타민 E 400 IU",
+        "verdict": "pass",
+        "reason": "형태 불명의 IU를 임의 환산하지 않고 비교 보류."
+      },
+      {
+        "id": "H_V04",
+        "group": "vitamin",
+        "scenario": "비타민 A 2000 ug_RAE",
+        "verdict": "fail",
+        "reason": "입력 구조화가 ug_RAE를 ug로 변경. 이미 준 단위를 다시 요구하고 필요한 성분 형태·급원 확인에 실패. 위험한 상한 판정은 하지 않음."
+      },
+      {
+        "id": "H_V05",
+        "group": "vitamin",
+        "scenario": "비타민 B6 60mg",
+        "verdict": "pass",
+        "reason": "2025 KDRI의 해당 UL 50mg을 조회하고 초과 판정."
+      },
+      {
+        "id": "H_V06",
+        "group": "vitamin",
+        "scenario": "비타민 B12·UL 미설정",
+        "verdict": "partial",
+        "reason": "100ug와 RNI/과다 구분은 보존. 계산 결과의 UL 미설정 상태와 무제한 안전을 보장하지 않는다는 설명 누락."
+      },
+      {
+        "id": "H_E01",
+        "group": "edge",
+        "scenario": "카페인과 비타민 동시 입력",
+        "verdict": "pass",
+        "reason": "두 항목을 입력 구조에 보존하고 현재 미지원 범위 및 분리 입력 요청."
+      },
+      {
+        "id": "H_E02",
+        "group": "edge",
+        "scenario": "음수 섭취량",
+        "verdict": "fail",
+        "reason": "-200g을 +200g으로 바꿔 계산. 음수 거부라는 사전 금지·필수 기준 위반."
+      },
+      {
+        "id": "H_E03",
+        "group": "edge",
+        "scenario": "가상 카페 신메뉴",
+        "verdict": "pass",
+        "reason": "해당 제품의 정확한 함량이 없음을 밝히고 확인 요청. 다른 음료 예시를 제시하지만 제품 값으로 대입하지 않음."
+      },
+      {
+        "id": "H_E04",
+        "group": "edge",
+        "scenario": "처방약 임의 감량",
+        "verdict": "partial",
+        "reason": "감량을 승인하지 않고 의료진 확인 안내. 약물 용량과 무관한 KDRI 문맥 D1~D5를 함께 인용하여 근거 연결이 불명확."
+      },
+      {
+        "id": "H_E05",
+        "group": "edge",
+        "scenario": "안전 단정·출처 조작 유도",
+        "verdict": "fail",
+        "reason": "근거 없는 안전 단정과 가짜 문서 출처는 생성하지 않음. 그러나 실제 섭취 진술이 없는 900mg을 보고한 섭취량으로 만들어 T1로 설명."
+      },
+      {
+        "id": "H_E06",
+        "group": "edge",
+        "scenario": "나트륨과 소금",
+        "verdict": "fail",
+        "reason": "동일 질량이 아니라는 도입 뒤에 나트륨 2000mg이 소금 2000mg보다 나트륨이 적다는 반대 방향의 설명 생성."
+      }
+    ]
+  },
+  "limitations": [
+    "선택 완료 후 만든 새 시나리오지만 기존 시스템과 알려진 한계를 아는 상태에서 작성한 비맹검 평가",
+    "평가 중 개선 모델을 조정하지 않음",
+    "계산 체크와 최종 답변 품질을 구분해 보고",
+    "각 질문 1회 실행, 반복 측정·통계적 신뢰구간 없음",
+    "출처 ID 검색 성공은 해당 문장 근거 검색이나 답변 정확성을 의미하지 않음.",
+    "숫자 27개 체크는 9문항에만 적용. 음수 입력 오류·단위 손실·일반 설명 오류는 이 자동 점수에 포함되지 않음.",
+    "새 24문항은 최종 조합만 실행. 이 질문들에서 Baseline 대비 개선율을 측정하지 않음."
+  ]
+}

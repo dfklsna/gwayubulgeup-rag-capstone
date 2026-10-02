@@ -1,0 +1,14 @@
+{
+  "strategy": {
+    "retrieval": "topic_filter",
+    "compress": false,
+    "guard": true,
+    "citations": true,
+    "evidence_review": false,
+    "bounded_concepts": true
+  },
+  "selected_from": "results/comparisons/ablation_01",
+  "reason": "주제 필터 8/8 출처 검색, 섭취 항목의 임의 수치/판정을 코드 렌더링으로 제한, 잘못된 복합 인용 ID 제거. 문맥 압축은 핵심 수치 누락 회귀로 제외.",
+  "limitation": "12개 개발 평가 질문에서 선택한 구성. 독립 검증과 임상적 안전성이 확인된 것은 아님.",
+  "post_holdout_revision": "원문 입력 검증·서비스 범위 가드 유지. 기준 종류, 총당류/첨가당, 여러 급원 카페인, 소금환산은 검증한 원문 앵커와 코드 설명/계산으로 제한. 원문 없음·해시 변경 시 보류. 실험용 evidence_review는 false."
+}

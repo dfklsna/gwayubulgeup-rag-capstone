@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "reviewed_at": "2026-10-02",
+  "reviewer": "assistant_source_reading_not_expert_validation",
+  "concepts": {
+    "reference_types": {
+      "sources": [
+        {
+          "chunk_id": "KR_KDRI_2025__a0c8d2c03c2f:p23:c0",
+          "source_id": "KR_KDRI_2025",
+          "title": "웹용_2025 KDRI-1권_에너지와 다량영양소.pdf",
+          "url": "https://www.kns.or.kr/common/download.asp?filename=%A1%DA2025%20KDRI_%C3%A5%C0%DA(3%B1%C7)+%BF%E4%BE%E0%BA%BB(2%C1%BE)_%C1%A4%BF%C0%C7%A5%20%C0%FB%BF%EB_f4.zip&filerename=20260317173290189018.zip&FileDir=FileRoom#archive-member=%EC%9B%B9%EC%9A%A9_2025%20KDRI-1%EA%B6%8C_%EC%97%90%EB%84%88%EC%A7%80%EC%99%80%20%EB%8B%A4%EB%9F%89%EC%98%81%EC%96%91%EC%86%8C.pdf",
+          "pdf_page": 23,
+          "text_sha256": "bc1b3e7bc17e48ac9bf442742815af4840b10f1d8582b7fb2fe0e1ca9a6b9cf8"
+        },
+        {
+          "chunk_id": "KR_KDRI_2025__a0c8d2c03c2f:p24:c0",
+          "source_id": "KR_KDRI_2025",
+          "title": "웹용_2025 KDRI-1권_에너지와 다량영양소.pdf",
+          "url": "https://www.kns.or.kr/common/download.asp?filename=%A1%DA2025%20KDRI_%C3%A5%C0%DA(3%B1%C7)+%BF%E4%BE%E0%BA%BB(2%C1%BE)_%C1%A4%BF%C0%C7%A5%20%C0%FB%BF%EB_f4.zip&filerename=20260317173290189018.zip&FileDir=FileRoom#archive-member=%EC%9B%B9%EC%9A%A9_2025%20KDRI-1%EA%B6%8C_%EC%97%90%EB%84%88%EC%A7%80%EC%99%80%20%EB%8B%A4%EB%9F%89%EC%98%81%EC%96%91%EC%86%8C.pdf",
+          "pdf_page": 24,
+          "text_sha256": "da9fca1b70d3d1301d8812236660c99b31ef2b7133ff7e28e0580f69b110ab3b"
+        }
+      ]
+    },
+    "sugars": {
+      "sources": [
+        {
+          "chunk_id": "KR_KDRI_2025__a0c8d2c03c2f:p92:c0",
+          "source_id": "KR_KDRI_2025",
+          "title": "웹용_2025 KDRI-1권_에너지와 다량영양소.pdf",
+          "url": "https://www.kns.or.kr/common/download.asp?filename=%A1%DA2025%20KDRI_%C3%A5%C0%DA(3%B1%C7)+%BF%E4%BE%E0%BA%BB(2%C1%BE)_%C1%A4%BF%C0%C7%A5%20%C0%FB%BF%EB_f4.zip&filerename=20260317173290189018.zip&FileDir=FileRoom#archive-member=%EC%9B%B9%EC%9A%A9_2025%20KDRI-1%EA%B6%8C_%EC%97%90%EB%84%88%EC%A7%80%EC%99%80%20%EB%8B%A4%EB%9F%89%EC%98%81%EC%96%91%EC%86%8C.pdf",
+          "pdf_page": 92,
+          "text_sha256": "721bf630bae827d659a31463c476eaf8aec1df31398c68b1d8dff9c08c93bb0b"
+        }
+      ]
+    },
+    "salt_equivalent": {
+      "sources": [
+        {
+          "chunk_id": "KR_KDRI_2025__e106cf17921a:p144:c1",
+          "source_id": "KR_KDRI_2025",
+          "title": "웹용_2025 KDRI-3권_무기질.pdf",
+          "url": "https://www.kns.or.kr/common/download.asp?filename=%A1%DA2025%20KDRI_%C3%A5%C0%DA(3%B1%C7)+%BF%E4%BE%E0%BA%BB(2%C1%BE)_%C1%A4%BF%C0%C7%A5%20%C0%FB%BF%EB_f4.zip&filerename=20260317173290189018.zip&FileDir=FileRoom#archive-member=%EC%9B%B9%EC%9A%A9_2025%20KDRI-3%EA%B6%8C_%EB%AC%B4%EA%B8%B0%EC%A7%88.pdf",
+          "pdf_page": 144,
+          "text_sha256": "3705ee7563d6b86e22a374cc4651386bbfe49ab7cb257772951cee7539f408df"
+        }
+      ],
+      "salt_per_sodium": "2.5",
+      "derivation": "KDRI2025 무기질 물리144쪽의 소금5g=나트륨2000mg 근사 대응에서 5000/2000. 대상별 섭취권고로 사용하지 않음."
+    },
+    "caffeine_sources": {
+      "sources": [
+        {
+          "chunk_id": "FDA_CAFFEINE__f733bff15dfc:p0:c3",
+          "source_id": "FDA_CAFFEINE",
+          "title": "Spilling the Beans: How Much Caffeine is Too Much?",
+          "url": "https://www.fda.gov/consumers/consumer-updates/spilling-beans-how-much-caffeine-too-much",
+          "pdf_page": null,
+          "text_sha256": "edf53f721abac346d1ed46c5f97675a2496a4dd9c2a9f7b73a5e44ab256eb05a"
+        }
+      ]
+    }
+  }
+}

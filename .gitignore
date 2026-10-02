@@ -1,0 +1,35 @@
+# Credentials and local environments
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+.pytest_cache/
+# Third-party corpora, generated databases, embeddings and local input/output
+data/*
+!data/README.md
+!data/source_manifest.json
+!data/demo/
+data/demo/*
+!data/demo/.gitkeep
+tmp/
+results/*
+!results/design.md
+!results/evaluation.md
+!results/comparison_summary.json
+# Never publish actual intake/profile logs
+local_requests/
+*.sqlite
+*.faiss
+*.npy
+
+# Public synthetic holdout metrics and assistant review (no source text)
+!results/holdout_summary.json
+
+# Public revision metrics; raw source excerpts remain private
+!results/revision_summary.json
+
+!results/release_summary.json

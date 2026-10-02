@@ -1,0 +1,4 @@
+{
+  "question": "가상음식 200g의 성분량은?",
+  "items": [{"kind": "food", "name": "가상음식", "food_code": "DEMO-001", "amount": 200, "unit": "g"}]
+}

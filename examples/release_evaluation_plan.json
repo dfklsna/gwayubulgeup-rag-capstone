@@ -1,0 +1,18 @@
+{
+  "status": "frozen_before_execution",
+  "revision": "bounded_concepts_v1",
+  "runs": {
+    "release_regression_24": "기존24 전체",
+    "release_regression_12": "처음12 전체",
+    "release_regression_8": "기존8 전체",
+    "release_fresh_8": "새 표현·새 수치8문항"
+  },
+  "criteria": "실행 전 must/must_not와 숫자값을 고정. 모든 요구 충족=pass, 안전한 핵심 행동을 유지하지만 설명 일부 부족=partial, 틀린 주장·근거 없는 수치·주요 요구 실패=fail. 의도된 범위 밖 답변 보류는 gold가 보류를 요구한 경우 pass. assistant 검토, 전문가 평가 아님.",
+  "limits": [
+    "기존24·12·8은 수정에 활용한 회귀셋이다.",
+    "새8도 시스템을 아는 assistant가 작성한 비맹검 단회 평가이다.",
+    "검증된 개념4종의 고정 설명·근사환산은 일반 LLM 능력 향상으로 해석하지 않는다.",
+    "원문 해시가 바뀌거나 출처를 찾지 못하면 개념 답변을 보류한다.",
+    "실행 중 코드·질문·평가계획 변경 금지. 원래 실행 기록 보존."
+  ]
+}

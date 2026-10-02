@@ -1,0 +1,5 @@
+{
+  "question": "한 잔당 카페인 150mg이라고 표시된 커피를 3잔 마셨어. 기준과 비교해줘.",
+  "profile": {"age_years": 30, "sex": "male", "life_stage": "general", "caffeine_group": "adult"},
+  "items": [{"kind": "nutrient", "name": "카페인", "nutrient_id": "caffeine", "amount": 150, "unit": "mg", "count": 3, "source_scope": "food"}]
+}

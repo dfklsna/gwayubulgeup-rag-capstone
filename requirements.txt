@@ -1,0 +1,6 @@
+openai==3.23.0
+numpy==2.5.3
+faiss-cpu==1.15.1
+python-dotenv==1.2.4
+langchain-text-splitters==1.1.2
+pydantic==2.13.5

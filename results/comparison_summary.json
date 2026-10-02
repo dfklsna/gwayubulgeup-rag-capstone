@@ -1,0 +1,1670 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-02",
+  "question_count": 12,
+  "retrieval_scored_cases": 8,
+  "metric": "source ID Recall@5, not answer accuracy or passage recall",
+  "citation_metric": "same current ID parser applied to every saved answer; not entailment verification",
+  "limitations": [
+    "개발 질문으로 설정 선택; 독립 검증 아님",
+    "LLM 생성 1회 실행, 신뢰구간 없음",
+    "재사용 답변의 신규 API 토큰0은 서비스 원가0을 의미하지 않음",
+    "성공한 생성/재순위화 호출의 기록만 집계. 입력 추출·임베딩·중단 시도 비용은 포함하지 않음"
+  ],
+  "variants": {
+    "baseline": {
+      "cases": 12,
+      "source_recall_at_k": 0.75,
+      "scored_retrieval_cases": 8,
+      "unsupported_citation_cases": 4,
+      "same_source_all_top5_cases": 8,
+      "generation_input_tokens": 139393,
+      "generation_output_tokens": 2089,
+      "rerank_input_tokens": 0,
+      "rerank_output_tokens": 0,
+      "mean_context_characters": 25808.583333333332,
+      "generation_methods": {
+        "llm": 12
+      },
+      "generation_quality": "requires_content_review_not_measured_by_citation_ids",
+      "artifact": "results/runs/baseline_01",
+      "observation": "카페인 2문항 검색 누락. 음식 안전·부족 단정과 잔당 함량 추정.",
+      "reviewer": "assistant",
+      "human_reviewed": false,
+      "per_case": [
+        {
+          "case_id": "food01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "coffee01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "vitamin01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "coffee02",
+          "source_recall_at_k": 0.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [
+            "T1"
+          ],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "coffee03",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "coffee04",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "FDA_CAFFEINE",
+            "KR_KDRI_2025",
+            "FDA_CAFFEINE"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "compound01",
+          "source_recall_at_k": 0.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [
+            "T1"
+          ],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "missing01",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [
+            "T1"
+          ],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "missing02",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [
+            "T1"
+          ],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "clarify01",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "FDA_CAFFEINE",
+            "KR_CREATINE",
+            "EFSA_EGCG"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "clarify02",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "scope01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        }
+      ]
+    },
+    "hybrid": {
+      "cases": 12,
+      "source_recall_at_k": 0.875,
+      "scored_retrieval_cases": 8,
+      "unsupported_citation_cases": 4,
+      "same_source_all_top5_cases": 5,
+      "generation_input_tokens": 149728,
+      "generation_output_tokens": 2125,
+      "rerank_input_tokens": 0,
+      "rerank_output_tokens": 0,
+      "mean_context_characters": 26402.75,
+      "generation_methods": {
+        "llm": 12
+      },
+      "generation_quality": "requires_content_review_not_measured_by_citation_ids",
+      "artifact": "results/comparisons/ablation_01/hybrid",
+      "observation": "성인 카페인 회복. 디카페인 근거 누락으로 회귀. 복합 문항은 출처 ID만 찾고 필요한 수치가 없는 청크를 선택.",
+      "reviewer": "assistant",
+      "human_reviewed": false,
+      "per_case": [
+        {
+          "case_id": "clarify01",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "KR_CREATINE",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "clarify02",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_ZOLPIDEM",
+            "KR_KDRI_2025",
+            "KR_ZOLPIDEM",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "coffee01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "coffee02",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_CAFFEINE",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "coffee03",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "KR_KDRI_2025",
+            "KR_CREATINE",
+            "KR_ZOLPIDEM"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "coffee04",
+          "source_recall_at_k": 0.0,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "KR_CREATINE",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "compound01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_CAFFEINE"
+          ],
+          "unsupported_citation_ids": [
+            "T1"
+          ],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "food01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "missing01",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [
+            "T1"
+          ],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "missing02",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [
+            "T1"
+          ],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "scope01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [
+            "T1"
+          ],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "vitamin01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        }
+      ]
+    },
+    "mmr": {
+      "cases": 12,
+      "source_recall_at_k": 0.75,
+      "scored_retrieval_cases": 8,
+      "unsupported_citation_cases": 3,
+      "same_source_all_top5_cases": 7,
+      "generation_input_tokens": 136196,
+      "generation_output_tokens": 2090,
+      "rerank_input_tokens": 0,
+      "rerank_output_tokens": 0,
+      "mean_context_characters": 25108.5,
+      "generation_methods": {
+        "llm": 12
+      },
+      "generation_quality": "requires_content_review_not_measured_by_citation_ids",
+      "artifact": "results/comparisons/ablation_01/mmr",
+      "observation": "검색 6/8 유지. 음식 판정과 커피 잔당 함량 추정 오류 지속.",
+      "reviewer": "assistant",
+      "human_reviewed": false,
+      "per_case": [
+        {
+          "case_id": "clarify01",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "EFSA_EGCG",
+            "CA_HEAT",
+            "KR_KDRI_2025",
+            "KR_CAFFEINE"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "clarify02",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "coffee01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_KDRI_2025",
+            "KR_ANTIHISTAMINE",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "coffee02",
+          "source_recall_at_k": 0.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [
+            "T1"
+          ],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "coffee03",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "KR_ACETAMINOPHEN",
+            "FDA_CAFFEINE",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "coffee04",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "FDA_CAFFEINE",
+            "KR_CAFFEINE",
+            "CA_HEAT",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "compound01",
+          "source_recall_at_k": 0.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [
+            "T1"
+          ],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "food01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "missing01",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "missing02",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_ANTIHISTAMINE",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [
+            "T1"
+          ],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "scope01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "vitamin01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        }
+      ]
+    },
+    "rerank": {
+      "cases": 12,
+      "source_recall_at_k": 0.75,
+      "scored_retrieval_cases": 8,
+      "unsupported_citation_cases": 4,
+      "same_source_all_top5_cases": 8,
+      "generation_input_tokens": 139425,
+      "generation_output_tokens": 2241,
+      "rerank_input_tokens": 99180,
+      "rerank_output_tokens": 2670,
+      "mean_context_characters": 26002.916666666668,
+      "generation_methods": {
+        "llm": 12
+      },
+      "generation_quality": "requires_content_review_not_measured_by_citation_ids",
+      "artifact": "results/comparisons/rerank_validated_01/rerank",
+      "observation": "후보 전체 형식 검증 보완 후 12문항 재실행. 검색 6/8 유지. 450mg을 400mg보다 112.5% 초과라고 표현하는 등 생성 오류 지속.",
+      "reviewer": "assistant",
+      "human_reviewed": false,
+      "per_case": [
+        {
+          "case_id": "clarify01",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "FDA_CAFFEINE",
+            "FDA_CAFFEINE",
+            "KR_CAFFEINE",
+            "FDA_CAFFEINE"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "clarify02",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "coffee01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "coffee02",
+          "source_recall_at_k": 0.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [
+            "T1"
+          ],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "coffee03",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "coffee04",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "FDA_CAFFEINE",
+            "FDA_CAFFEINE",
+            "KR_CAFFEINE",
+            "FDA_CAFFEINE",
+            "KR_CAFFEINE"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "compound01",
+          "source_recall_at_k": 0.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [
+            "T1"
+          ],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "food01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "missing01",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "missing02",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [
+            "T1"
+          ],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "scope01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [
+            "T1"
+          ],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "vitamin01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        }
+      ]
+    },
+    "topic_filter": {
+      "cases": 12,
+      "source_recall_at_k": 1.0,
+      "scored_retrieval_cases": 8,
+      "unsupported_citation_cases": 2,
+      "same_source_all_top5_cases": 6,
+      "generation_input_tokens": 138055,
+      "generation_output_tokens": 2286,
+      "rerank_input_tokens": 0,
+      "rerank_output_tokens": 0,
+      "mean_context_characters": 26265.75,
+      "generation_methods": {
+        "llm": 12
+      },
+      "generation_quality": "requires_content_review_not_measured_by_citation_ids",
+      "artifact": "results/comparisons/ablation_01/topic_filter",
+      "observation": "8/8 출처 및 필요한 카페인 문맥 회복. 단독 적용에서는 계산 해석·잔당 함량 추정 오류 지속.",
+      "reviewer": "assistant",
+      "human_reviewed": false,
+      "per_case": [
+        {
+          "case_id": "clarify01",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "FDA_CAFFEINE",
+            "FDA_CAFFEINE",
+            "FDA_CAFFEINE"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "clarify02",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "coffee01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "FDA_CAFFEINE",
+            "FDA_CAFFEINE",
+            "FDA_CAFFEINE"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "coffee02",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "FDA_CAFFEINE",
+            "FDA_CAFFEINE",
+            "FDA_CAFFEINE"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "coffee03",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "FDA_CAFFEINE",
+            "FDA_CAFFEINE",
+            "FDA_CAFFEINE"
+          ],
+          "unsupported_citation_ids": [
+            "T1"
+          ],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "coffee04",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "FDA_CAFFEINE",
+            "FDA_CAFFEINE",
+            "FDA_CAFFEINE"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "compound01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "FDA_CAFFEINE",
+            "FDA_CAFFEINE",
+            "FDA_CAFFEINE"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "food01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "missing01",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "missing02",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [
+            "T1"
+          ],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "scope01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "vitamin01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        }
+      ]
+    },
+    "compression": {
+      "cases": 12,
+      "source_recall_at_k": 0.75,
+      "scored_retrieval_cases": 8,
+      "unsupported_citation_cases": 4,
+      "same_source_all_top5_cases": 8,
+      "generation_input_tokens": 75885,
+      "generation_output_tokens": 1840,
+      "rerank_input_tokens": 0,
+      "rerank_output_tokens": 0,
+      "mean_context_characters": 13844.0,
+      "generation_methods": {
+        "llm": 12
+      },
+      "generation_quality": "requires_content_review_not_measured_by_citation_ids",
+      "artifact": "results/comparisons/ablation_01/compression",
+      "observation": "생성 입력 감소. 카페인 400mg/300mg 문맥 삭제 회귀. 출처 ID 지표만으로 손실을 발견할 수 없음.",
+      "reviewer": "assistant",
+      "human_reviewed": false,
+      "per_case": [
+        {
+          "case_id": "clarify01",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "FDA_CAFFEINE",
+            "KR_CREATINE",
+            "EFSA_EGCG"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "clarify02",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "coffee01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "coffee02",
+          "source_recall_at_k": 0.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [
+            "T1"
+          ],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "coffee03",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "coffee04",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "FDA_CAFFEINE",
+            "KR_KDRI_2025",
+            "FDA_CAFFEINE"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "compound01",
+          "source_recall_at_k": 0.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "food01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "missing01",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [
+            "T1"
+          ],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "missing02",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [
+            "T1"
+          ],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "scope01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [
+            "T1"
+          ],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "vitamin01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        }
+      ]
+    },
+    "guard": {
+      "cases": 12,
+      "source_recall_at_k": 0.75,
+      "scored_retrieval_cases": 8,
+      "unsupported_citation_cases": 4,
+      "same_source_all_top5_cases": 8,
+      "generation_input_tokens": 0,
+      "generation_output_tokens": 0,
+      "rerank_input_tokens": 0,
+      "rerank_output_tokens": 0,
+      "mean_context_characters": 25821.75,
+      "generation_methods": {
+        "deterministic_calculation_renderer": 5,
+        "reused_original_generation": 7
+      },
+      "generation_quality": "requires_content_review_not_measured_by_citation_ids",
+      "artifact": "results/comparisons/final_validation_01/guard",
+      "observation": "명시적 섭취 항목 5개를 코드 렌더링으로 처리. 일반 질문은 원래 답변 재사용. UL, CDRR, 권고 미만 조건을 구분.",
+      "reviewer": "assistant",
+      "human_reviewed": false,
+      "per_case": [
+        {
+          "case_id": "clarify01",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "FDA_CAFFEINE",
+            "KR_CREATINE",
+            "EFSA_EGCG"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "deterministic_calculation_renderer"
+        },
+        {
+          "case_id": "clarify02",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "deterministic_calculation_renderer"
+        },
+        {
+          "case_id": "coffee01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "deterministic_calculation_renderer"
+        },
+        {
+          "case_id": "coffee02",
+          "source_recall_at_k": 0.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [
+            "T1"
+          ],
+          "generation_method": "reused_original_generation"
+        },
+        {
+          "case_id": "coffee03",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "reused_original_generation"
+        },
+        {
+          "case_id": "coffee04",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "FDA_CAFFEINE",
+            "KR_KDRI_2025",
+            "FDA_CAFFEINE"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "reused_original_generation"
+        },
+        {
+          "case_id": "compound01",
+          "source_recall_at_k": 0.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [
+            "T1"
+          ],
+          "generation_method": "reused_original_generation"
+        },
+        {
+          "case_id": "food01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "deterministic_calculation_renderer"
+        },
+        {
+          "case_id": "missing01",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [
+            "T1"
+          ],
+          "generation_method": "reused_original_generation"
+        },
+        {
+          "case_id": "missing02",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [
+            "T1"
+          ],
+          "generation_method": "reused_original_generation"
+        },
+        {
+          "case_id": "scope01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "reused_original_generation"
+        },
+        {
+          "case_id": "vitamin01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "deterministic_calculation_renderer"
+        }
+      ]
+    },
+    "citations": {
+      "cases": 12,
+      "source_recall_at_k": 0.75,
+      "scored_retrieval_cases": 8,
+      "unsupported_citation_cases": 0,
+      "same_source_all_top5_cases": 8,
+      "generation_input_tokens": 0,
+      "generation_output_tokens": 0,
+      "rerank_input_tokens": 0,
+      "rerank_output_tokens": 0,
+      "mean_context_characters": 25821.75,
+      "generation_methods": {
+        "reused_original_generation": 12
+      },
+      "generation_quality": "requires_content_review_not_measured_by_citation_ids",
+      "artifact": "results/comparisons/ablation_01/citations",
+      "observation": "잘못 연결한 근거 ID 제거. 원래 사실 내용을 바꾸지 않으므로 판단 오류는 남음.",
+      "reviewer": "assistant",
+      "human_reviewed": false,
+      "per_case": [
+        {
+          "case_id": "clarify01",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "FDA_CAFFEINE",
+            "KR_CREATINE",
+            "EFSA_EGCG"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "reused_original_generation"
+        },
+        {
+          "case_id": "clarify02",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "reused_original_generation"
+        },
+        {
+          "case_id": "coffee01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "reused_original_generation"
+        },
+        {
+          "case_id": "coffee02",
+          "source_recall_at_k": 0.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "reused_original_generation"
+        },
+        {
+          "case_id": "coffee03",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "reused_original_generation"
+        },
+        {
+          "case_id": "coffee04",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "FDA_CAFFEINE",
+            "KR_KDRI_2025",
+            "FDA_CAFFEINE"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "reused_original_generation"
+        },
+        {
+          "case_id": "compound01",
+          "source_recall_at_k": 0.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "reused_original_generation"
+        },
+        {
+          "case_id": "food01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "reused_original_generation"
+        },
+        {
+          "case_id": "missing01",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "reused_original_generation"
+        },
+        {
+          "case_id": "missing02",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "reused_original_generation"
+        },
+        {
+          "case_id": "scope01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "reused_original_generation"
+        },
+        {
+          "case_id": "vitamin01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "reused_original_generation"
+        }
+      ]
+    },
+    "combined": {
+      "cases": 12,
+      "source_recall_at_k": 1.0,
+      "scored_retrieval_cases": 8,
+      "unsupported_citation_cases": 0,
+      "same_source_all_top5_cases": 6,
+      "generation_input_tokens": 26610,
+      "generation_output_tokens": 617,
+      "rerank_input_tokens": 0,
+      "rerank_output_tokens": 0,
+      "mean_context_characters": 26265.75,
+      "generation_methods": {
+        "deterministic_calculation_renderer": 5,
+        "llm": 7
+      },
+      "generation_quality": "requires_content_review_not_measured_by_citation_ids",
+      "artifact": "results/comparisons/final_01",
+      "observation": "주제 필터+계산/확인 강화+인용 검증. 출처 8/8, 섭취 질문 5개 결정적 답변. 일반 비타민 A 설명의 UL 해석 오류는 남음.",
+      "reviewer": "assistant",
+      "human_reviewed": false,
+      "per_case": [
+        {
+          "case_id": "clarify01",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "FDA_CAFFEINE",
+            "FDA_CAFFEINE",
+            "FDA_CAFFEINE"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "deterministic_calculation_renderer"
+        },
+        {
+          "case_id": "clarify02",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "deterministic_calculation_renderer"
+        },
+        {
+          "case_id": "coffee01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "FDA_CAFFEINE",
+            "FDA_CAFFEINE",
+            "FDA_CAFFEINE"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "deterministic_calculation_renderer"
+        },
+        {
+          "case_id": "coffee02",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "FDA_CAFFEINE",
+            "FDA_CAFFEINE",
+            "FDA_CAFFEINE"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "coffee03",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "FDA_CAFFEINE",
+            "FDA_CAFFEINE",
+            "FDA_CAFFEINE"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "coffee04",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "FDA_CAFFEINE",
+            "FDA_CAFFEINE",
+            "FDA_CAFFEINE"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "compound01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_CAFFEINE",
+            "KR_CAFFEINE",
+            "FDA_CAFFEINE",
+            "FDA_CAFFEINE",
+            "FDA_CAFFEINE"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "food01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "deterministic_calculation_renderer"
+        },
+        {
+          "case_id": "missing01",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "missing02",
+          "source_recall_at_k": null,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "scope01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "llm"
+        },
+        {
+          "case_id": "vitamin01",
+          "source_recall_at_k": 1.0,
+          "retrieved_source_ids": [
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025",
+            "KR_KDRI_2025"
+          ],
+          "unsupported_citation_ids": [],
+          "generation_method": "deterministic_calculation_renderer"
+        }
+      ]
+    }
+  }
+}

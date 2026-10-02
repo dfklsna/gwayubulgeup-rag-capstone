@@ -1,0 +1,21 @@
+{
+  "status": "frozen_before_execution",
+  "purpose": "post_holdout_fix_regression_and_fresh_check",
+  "runs": {
+    "regression_24": "기존24문항",
+    "regression_12": "기존12문항",
+    "regression_8": "직전미사용8문항은 이제 회귀셋",
+    "fresh_4": "최종변경 후 사전고정 미사용4문항"
+  },
+  "criteria": "각 질문의 must/must_not 충족, 원문 입력 보존, 계산/기준 일치, 설명 및 인용 근거를 assistant 검토. 잘못된 사실·입력 변경·주요 요구 실패=fail, 핵심 행동 유지하지만 설명/근거 부족=partial, 모두 충족=pass. 전문가 검증 아님.",
+  "limits": [
+    "수정은 기존 24문항의 실패를 보고 설계했으므로 24문항은 회귀 평가셋이다.",
+    "새 12문항도 시스템을 아는 assistant가 작성한 비맹검 단회 평가이다.",
+    "근거 검토 모델과 생성 모델이 같아 상관된 오류가 남을 수 있다.",
+    "새 근거 선택·검토 호출의 비용을 생성 호출과 별도로 기록한다.",
+    "3개 평가 실행 중 코드 수정하지 않음. 수정 필요 시 원시 결과 보존하고 새 run 사용.",
+    "앞선 fresh_12_01은 v1의 최초 미사용 평가 결과로 보존. v2의 독립 결과로 재사용하지 않음.",
+    "최종 변경에 v2의 8문항 관찰을 활용했으므로 해당 8문항도 회귀셋으로 전환. 마지막4문항만 최종버전 미사용 점검이며 표본이 작음."
+  ],
+  "revision": "v3 selected: evidence_review=false; rejected experimental retrieval/review; preserve input/renderer fixes"
+}
