@@ -1,26 +1,27 @@
-# 과유불급 — 영양 정보 RAG 개선 비교
+# 과유불급 — 음식·카페인·비타민 섭취 분석 RAG
 
-음식 섭취량·카페인·비타민 함량을 계산하고 공식 근거와 조건별 기준을 함께 설명하는 RAG 실습입니다. Python이 DB 조회·계산을 담당하고 LLM이 입력 구조화와 일반 설명을 담당합니다.
+먹은 음식의 양이나 제품에 표시된 성분 함량을 입력하면, 영양성분을 계산하고 공식 자료의 조건별 기준과 함께 설명하는 프로젝트입니다. 음식 DB 조회와 수치 계산은 Python이 담당하고, LLM은 자연어 입력 구조화와 검색 근거를 활용한 설명을 담당합니다.
 
-**현재 제출 점검:** 성분명/ID 불일치, 누락 항목의 수치 차용, 뒤 문장 개수 처리를 수정했습니다. 실제 데이터 환경에서 61개 테스트가 통과했습니다. 내용 검토는 기존24문항 23충족·1부분, 개발12문항 10충족·2부분, 기존 관계4문항 3충족·1실패(계산 보류), 이번 진단4문항 4충족입니다. 과거 결과와 구분한 [평가 문서](results/evaluation.md)와 [현재 집계](results/grounding_v2_summary.json)를 확인하세요. 소규모 비맹검 assistant 검토이며 전체 답변 정확도나 전문가 검증이 아닙니다.
+Baseline RAG를 구현한 뒤 검색·답변 처리 방법 7가지를 비교하고, 새 질문에서 발견한 오류를 바탕으로 입력 검증과 근거 처리를 개선했습니다. 설계 과정, 실험 결과, 남은 한계를 함께 공개합니다.
 
-## 세 파일만으로 실행
+## 주요 기능
 
-필수 제출 파일은 `src/capstone_compare.py`, `results/design.md`, `results/evaluation.md`입니다. 진입점에 직접 작성한 보조 코드·설정이 내장되어 있어 세 파일만 받은 환경에서도 다음 명령이 동작합니다.
+- **음식 영양성분 계산:** 식품코드와 섭취량으로 성분량을 계산합니다. 같은 이름의 음식이 여러 개면 출처·단위를 보여주고 선택을 요청합니다.
+- **카페인·비타민 기준 비교:** 표시 함량과 개수를 계산하고 대상 조건에 맞는 기준을 조회합니다. 정보가 부족하면 추가 입력을 요청합니다.
+- **근거 추적:** 답변에 검색 문서의 URL·페이지와 계산 내역을 남깁니다.
+- **입력 검증:** 성분명과 ID, 수치·단위·개수의 연결을 확인하고 불명확한 입력은 계산을 보류합니다.
+
+## 빠르게 실행하기
+
+Python 3.12 기준입니다. API 키나 별도 패키지 없이 가상 데이터 계산을 먼저 확인할 수 있습니다.
 
 ```bash
-python src/capstone_compare.py --help
+git clone https://github.com/dfklsna/gwayubulgeup-rag-capstone.git
+cd gwayubulgeup-rag-capstone
 python src/capstone_compare.py --demo
-python src/capstone_compare.py --requirements
 ```
 
-세 파일을 같은 폴더에 두었다면 `src/`를 빼세요. 위 명령은 외부 패키지·API·실제 DB 없이 실행됩니다. `--demo`는 합성 음식200g의 160kcal·나트륨60mg 계산입니다. 실제 영양 평가나 전체 RAG 실행은 아닙니다. 전체 RAG에는 아래 설치·데이터·API 설정이 별도로 필요합니다.
-
-```bash
-python scripts/package_submission.py --output tmp/submission_three_files
-```
-
-정확히 세 파일만 담은 폴더와 ZIP을 만듭니다. 전체 공개 소스 묶음은 `python scripts/package_release.py --output tmp/public_source`로 별도 생성합니다. [제출 안내](docs/SUBMISSION.md)를 참고하세요.
+가상 음식 200g의 에너지 160kcal·나트륨 60mg이 출력됩니다. 실제 영양 기준이나 검색·생성까지 실행하려면 아래 설치와 데이터 준비가 필요합니다. 명령 목록은 `python src/capstone_compare.py --help`로 확인할 수 있습니다.
 
 ## 데이터와 설계
 
@@ -61,23 +62,23 @@ python src/capstone_compare.py ask --question '커피 세 잔 마셨는데 카�
 ## API 없이 공개 소스 검증
 
 ```bash
-python scripts/build_standalone.py --check
-python scripts/crosscheck_submission.py
 python -m unittest discover -s tests -v
 python scripts/make_demo.py
 RAG_DATA_DIR=data/demo RAG_CACHE_DIR=data/demo/index python src/capstone_compare.py calculate --request examples/demo.json
 ```
 
-전체 자료 없는 공개 clone은 61개 중58통과·실데이터용3개 skip입니다. 가상 DB에는 실제 영양소 기준이 없습니다. 개별 보조 모듈을 수정했다면 `python scripts/build_standalone.py`로 제출 진입점의 내장 소스를 갱신하세요. CI는 이 일치 여부와 세 파일의 격리 실행을 검사합니다.
+전체 자료 없는 공개 clone에서는 테스트 61개 중 58개가 통과하고 실제 데이터가 필요한 3개는 건너뜁니다. 실제 데이터 환경에서는 61개 모두 통과했습니다. 가상 DB에는 실제 영양소 기준이 없습니다.
 
 ## 비교와 재평가
 
-개발12문항에서 Baseline source Recall@5는6/8, 주제 필터+계산·확인+인용 검사 조합은8/8이었습니다. 검색 점수는 답변 정확도가 아닙니다. 이후 새24문항에서14충족·5부분·5실패를 기록했고 원문 검증·제한된 개념 처리를 보완했습니다. 모든 단계의 요약과 현재 남은 오류는 [평가 문서](results/evaluation.md)에 있습니다.
+개발12문항에서 Baseline source Recall@5는6/8, 주제 필터+계산·확인+인용 검사 조합은8/8이었습니다. 검색 점수는 답변 정확도가 아닙니다. 이후 새24문항에서14충족·5부분·5실패를 기록했고 원문 검증·제한된 개념 처리를 보완했습니다. 현재 내용 검토 결과는 기존 24문항 23충족·1부분, 개발 12문항 10충족·2부분, 기존 관계 4문항 3충족·1실패(계산 보류), 추가 진단 4문항 4충족입니다. 소규모 비맹검 assistant 검토이며 전문가 검증이나 일반적인 답변 정확도를 의미하지 않습니다.
+
+단계별 실험과 남은 오류는 [평가 문서](results/evaluation.md), 수치와 문항별 판단은 [평가 집계](results/grounding_v2_summary.json)에 있습니다.
 
 ```bash
 python src/capstone_compare.py evaluate --questions examples/evaluation_questions.jsonl --output results/runs/my_baseline
 python src/capstone_compare.py compare --baseline results/runs/my_baseline --output results/comparisons/my_ablation
-python scripts/evaluate_holdout.py --questions examples/holdout_questions_24.jsonl --plan examples/submission_review_plan.json --output results/holdout/my_review
+python scripts/evaluate_holdout.py --questions examples/holdout_questions_24.jsonl --plan examples/grounding_v2_final_plan.json --output results/holdout/my_review
 ```
 
 7개 단독 방법은 hybrid, mmr, rerank, topic_filter, compression, guard, citations입니다. 전체 데이터·API가 필요하고 기존 결과를 덮어쓰지 않습니다. 정답 출처를 모델에 넣지 않으며 답변 내용 검토는 자동 지표와 별도로 수행합니다.
