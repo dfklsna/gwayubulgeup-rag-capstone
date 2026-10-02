@@ -67,18 +67,18 @@ python scripts/make_demo.py
 RAG_DATA_DIR=data/demo RAG_CACHE_DIR=data/demo/index python src/capstone_compare.py calculate --request examples/demo.json
 ```
 
-전체 자료 없는 공개 clone에서는 테스트 61개 중 58개가 통과하고 실제 데이터가 필요한 3개는 건너뜁니다. 실제 데이터 환경에서는 61개 모두 통과했습니다. 가상 DB에는 실제 영양소 기준이 없습니다.
+전체 자료 없는 공개 clone에서는 테스트 67개 중 64개가 통과하고 실제 데이터가 필요한 3개는 건너뜁니다. 실제 데이터 환경에서는 67개 모두 통과했습니다. 가상 DB에는 실제 영양소 기준이 없습니다.
 
 ## 비교와 재평가
 
-개발12문항에서 Baseline source Recall@5는6/8, 주제 필터+계산·확인+인용 검사 조합은8/8이었습니다. 검색 점수는 답변 정확도가 아닙니다. 이후 새24문항에서14충족·5부분·5실패를 기록했고 원문 검증·제한된 개념 처리를 보완했습니다. 현재 내용 검토 결과는 기존 24문항 23충족·1부분, 개발 12문항 10충족·2부분, 기존 관계 4문항 3충족·1실패(계산 보류), 추가 진단 4문항 4충족입니다. 소규모 비맹검 assistant 검토이며 전문가 검증이나 일반적인 답변 정확도를 의미하지 않습니다.
+개발12문항에서 Baseline source Recall@5는6/8, 주제 필터+계산·확인+인용 검사 조합은8/8이었습니다. 검색 점수는 답변 정확도가 아닙니다. 이후 새24문항에서14충족·5부분·5실패를 기록했고 원문 검증·제한된 개념 처리를 보완했습니다. 현재 내용 검토 결과는 기존 24문항 24충족, 개발 12문항 9충족·3부분, 기존 관계 4문항 3충족·1실패(계산 보류), 추가 진단 4문항 4충족입니다. 소규모 비맹검 assistant 검토이며 전문가 검증이나 일반적인 답변 정확도를 의미하지 않습니다.
 
-단계별 실험과 남은 오류는 [평가 문서](results/evaluation.md), 수치와 문항별 판단은 [평가 집계](results/grounding_v2_summary.json)에 있습니다.
+단계별 실험과 남은 오류는 [평가 문서](results/evaluation.md), 수치와 문항별 판단은 [평가 집계](results/coverage_summary.json)에 있습니다.
 
 ```bash
 python src/capstone_compare.py evaluate --questions examples/evaluation_questions.jsonl --output results/runs/my_baseline
 python src/capstone_compare.py compare --baseline results/runs/my_baseline --output results/comparisons/my_ablation
-python scripts/evaluate_holdout.py --questions examples/holdout_questions_24.jsonl --plan examples/grounding_v2_final_plan.json --output results/holdout/my_review
+python scripts/evaluate_holdout.py --questions examples/holdout_questions_24.jsonl --plan examples/coverage_verification_plan.json --output results/holdout/my_review
 ```
 
 7개 단독 방법은 hybrid, mmr, rerank, topic_filter, compression, guard, citations입니다. 전체 데이터·API가 필요하고 기존 결과를 덮어쓰지 않습니다. 정답 출처를 모델에 넣지 않으며 답변 내용 검토는 자동 지표와 별도로 수행합니다.

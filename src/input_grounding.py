@@ -57,6 +57,70 @@ def quantities_in(segment, quantity_pattern, canonical_unit):
     return sorted(quantities,key=lambda q:q[2])
 
 
+def coverage_issue(question, items, quantity_pattern, canonical_unit):
+    """Require each quantity in an explicit intake clause to have its own item.
+
+    Scan source clauses, including those before the first extracted item. Counts
+    attached to a mass are handled by bound_issue; explicit profile/reference
+    fields are not intake candidates. Ambiguous unmatched spans cause abstention.
+    """
+    candidates=[]
+    start=0
+    events=re.finditer(r'먹었|마셨|섭취했|복용했|(?<!\d)[.!?]|[.!?](?!\d)|[;\n]',question)
+    for event in events:
+        if event.group() not in ('먹었','마셨','섭취했','복용했'):
+            start=event.end()
+            continue
+        segment=question[start:event.start()]
+        offset=start
+        start=event.end()
+        # Conditional reports are already handled by the intent validator.
+        if re.match(r'(?:다)?면',question[event.end():]):
+            continue
+        quantities=quantities_in(segment,quantity_pattern,canonical_unit)
+        mass=[q for q in quantities if q[1] not in COUNT_UNITS]
+        previous=0
+        for q in mass or quantities:
+            prefix=segment[previous:q[2]]
+            suffix=segment[q[3]:]
+            begin=previous
+            previous=q[3]
+            profile=re.search(r'(?:체중|몸무게|신장|나이)(?:은|는|이|가|:|\s)*$',prefix)
+            reference=(re.search(r'(?:\bUL\b|상한(?:섭취량)?|권고(?:량)?|기준(?:값|량)?)(?:은|는|이|가|:|\s)*$',prefix,re.I)
+                       or re.match(r'\s*(?:은|는|이|가)?\s*(?:상한|권고|기준|\bUL\b)',suffix,re.I))
+            if profile or reference:
+                continue
+            candidates.append((q[0],q[1],offset+begin,offset+q[2]))
+    edges=[]
+    for amount,unit,begin,end in candidates:
+        possible=[]
+        for index,item in enumerate(items):
+            patterns=aliases(item)
+            if not patterns or item.amount is None or item.unit is None:
+                continue
+            if (Decimal(str(item.amount)),canonical_unit(item.unit))!=(amount,unit):
+                continue
+            if re.search('|'.join(patterns),question[begin:end],re.I):
+                possible.append(index)
+        edges.append(possible)
+    # One extracted item cannot cover two independently reported source amounts.
+    assigned={}
+    def match(candidate,seen):
+        for item in edges[candidate]:
+            if item in seen:
+                continue
+            seen.add(item)
+            if item not in assigned or match(assigned[item],seen):
+                assigned[item]=candidate
+                return True
+        return False
+    if any(not match(index,set()) for index in range(len(edges))):
+        if candidates and all(unit in COUNT_UNITS for _,unit,_,_ in candidates):
+            return '잔·정·인분의 용량이나 제품 표시 성분 함량이 필요합니다. 항목별 실제 섭취량과 제품 정보를 알려주세요.'
+        return '원문에 추출 결과가 설명하지 못하는 섭취 항목이 남아 있습니다. 음식·성분과 섭취량을 빠짐없이 한 항목씩 입력해주세요.'
+    return None
+
+
 def count_tail_is_clear(segment, end, counts):
     """Only a bare count continuation may cross a completed consumption clause.
 

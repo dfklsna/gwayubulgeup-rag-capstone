@@ -47,6 +47,14 @@ def probe(source):
     for amount in (120,400):
         check(f'reference_{amount}', '카페인 120mg 먹었어. 일반 성인 400mg 기준으로 비교해줘.', amount==120,
               name='카페인', nutrient_id='caffeine', amount=amount)
+    for order in ('비타민 D 25ug과 비타민 C 500mg','비타민 C 500mg과 비타민 D 25ug'):
+        check('missing_nutrient_'+order, order+' 먹었어.', False)
+    for order in ('파김치 150g과 식품코드 D314-612380000-0001 해파리냉채 400g',
+                  '식품코드 D314-612380000-0001 해파리냉채 400g과 파김치 150g'):
+        check('missing_food_'+order,order+' 먹었어.',False,kind='food',name='해파리냉채',
+              food_code='D314-612380000-0001',nutrient_id=None,amount=400,unit='g')
+    check('profile_reference_exempt','체중 70kg이고 비타민 C의 UL 2000mg인데 비타민 C 500mg 먹었어.',True)
+    check('equal_amount_omission','비타민 B6 500mg과 비타민 C 500mg 먹었어.',False)
     return rows
 
 

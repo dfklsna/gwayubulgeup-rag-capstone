@@ -13,13 +13,13 @@
     },
     {
       "path": ".gitignore",
-      "sha256": "245e999bfc567b70db80d2a5d359485bed9c90c237daa23801a51d5e9a82387b",
-      "bytes": 774
+      "sha256": "99610944a759ef3fc8a98a0d2a41c829edd5537a27d2ff02caeac8883fe57469",
+      "bytes": 806
     },
     {
       "path": "README.md",
-      "sha256": "a72697d4f6ef12b80c561959662e398274727d6ec8e21333526017e639a4e868",
-      "bytes": 7415
+      "sha256": "1f92d8d7f7c96f982da575a269a843504430ce0e4f454402b14fb77a2499942e",
+      "bytes": 7404
     },
     {
       "path": "data/README.md",
@@ -43,13 +43,13 @@
     },
     {
       "path": "docs/PUBLISHING.md",
-      "sha256": "50d469e8079b623bd9205a0ecd6966f7011f937764e159c09819e16d4ce214e0",
-      "bytes": 1455
+      "sha256": "8e062710480be8e714bed9b1e5deb7281dce9d929aa35b3ebaf0dc068cded191",
+      "bytes": 1451
     },
     {
-      "path": "docs/SUBMISSION.md",
-      "sha256": "d6288a25d2384127b16efbcb11d553336f2d3a383614465c52a7f10609b28f26",
-      "bytes": 2103
+      "path": "docs/RUNNING.md",
+      "sha256": "11d22715d4d90b0a15ff4481d8a705e1bce1232a6420966d07d64215944b41a9",
+      "bytes": 2114
     },
     {
       "path": "docs/history/design_before_submission_review.md",
@@ -75,6 +75,16 @@
       "path": "examples/caffeine_450mg.json",
       "sha256": "66b059f1115a727c2c98537bd6bb99d09a3b7f3324f92735cb31b7f2553c45fe",
       "bytes": 363
+    },
+    {
+      "path": "examples/coverage_regression_plan.json",
+      "sha256": "cbd9deaa8219a8841f743c2500376d60db0392bbf1eb7e7eb054cdefe55c87db",
+      "bytes": 455
+    },
+    {
+      "path": "examples/coverage_verification_plan.json",
+      "sha256": "74748e05abde8f07c8283a2da23c19bee7f3b58583dc135dba7c9832772057b6",
+      "bytes": 670
     },
     {
       "path": "examples/demo.json",
@@ -202,14 +212,19 @@
       "bytes": 48266
     },
     {
+      "path": "results/coverage_summary.json",
+      "sha256": "fd7e2b46e47813aa34fc3e6201eae32dacf56abd23742f0807a07777d8c87839",
+      "bytes": 19980
+    },
+    {
       "path": "results/design.md",
-      "sha256": "00865b2f49a16a5df3c137ed1597939c57d0c8b952d9d27cb8ffe4d30b44c8d9",
-      "bytes": 11415
+      "sha256": "ce5a082716095479bba7b9882c7cae3ccb6db6d0caddbe40f40e61ec6b7a45af",
+      "bytes": 11959
     },
     {
       "path": "results/evaluation.md",
-      "sha256": "e7c851ecc8d18bfb98924fe167145e6903c6390594da523cbf86cb91f4b80a5e",
-      "bytes": 11948
+      "sha256": "cc9db859a2e8a6736ecdd260d693becd5ea78b4611e5fca12ae8e338d9c5ef41",
+      "bytes": 12766
     },
     {
       "path": "results/grounding_v2_summary.json",
@@ -248,8 +263,8 @@
     },
     {
       "path": "scripts/crosscheck_submission.py",
-      "sha256": "d9abe22ee1956eb2f09f3fb3676a315db653ae03613aa04cb93b17c7857ce8a1",
-      "bytes": 4336
+      "sha256": "127e6475086e88b8739fa35650c5f5765df3bcfd97c080562e51a182feca692f",
+      "bytes": 5091
     },
     {
       "path": "scripts/evaluate_holdout.py",
@@ -263,8 +278,8 @@
     },
     {
       "path": "scripts/package_release.py",
-      "sha256": "40041f14530511ef793293d57beeea3c73a803799c27667f2f1770309bc6f76a",
-      "bytes": 3006
+      "sha256": "2fe793f83348c0827871776f693768af437ff5a1ade8ac11525566e554e1d2c8",
+      "bytes": 3038
     },
     {
       "path": "scripts/package_submission.py",
@@ -338,8 +353,8 @@
     },
     {
       "path": "src/capstone_compare.py",
-      "sha256": "263fbb5b52943a12ee5f859edf72a0ba4b562a85e1302e0c20529f2d73fab74a",
-      "bytes": 110708
+      "sha256": "5c282a253901a37c3a0cc51b021055216f90f08cbb55557d5bf625ce57c6d09c",
+      "bytes": 114147
     },
     {
       "path": "src/experiments.py",
@@ -348,8 +363,8 @@
     },
     {
       "path": "src/input_grounding.py",
-      "sha256": "6c113ebd0590e63363e236e69a4bd20e7e928b820ff23655b8c2b8926a266b17",
-      "bytes": 8632
+      "sha256": "3062d32bd32b4462a0a2d92b745f4ce3e1fde9e6c0888da28fd34b5f6e2ff65b",
+      "bytes": 11797
     },
     {
       "path": "src/knowledge_rules.py",
@@ -383,8 +398,8 @@
     },
     {
       "path": "tests/test_relationship_grounding.py",
-      "sha256": "f01d975a1d04dcc96204573083fef6035e8af1b105e415ec9d1ae7ea88d21c04",
-      "bytes": 5213
+      "sha256": "7e8274df9300e3c510cdfdfbb431e40423c882b648ee99db194be2c13ee516c5",
+      "bytes": 7972
     },
     {
       "path": "tests/test_three_file_submission.py",

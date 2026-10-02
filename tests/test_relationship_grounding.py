@@ -25,7 +25,7 @@ class RelationshipGroundingTests(unittest.TestCase):
     def test_later_item_quantity_cannot_be_borrowed(self):
         q='비타민 C 500mg 먹었고 비타민 D 25ug 먹었어.'
         self.assertFalse(self.check(q,amount=25,unit='ug').items)
-        self.assertTrue(self.check(q).items)
+        self.assertFalse(self.check(q).items)  # The other reported intake must not disappear.
 
     def test_explicit_total_not_multiplied_again(self):
         q='비타민 C 총 1000mg을 2정으로 먹었어.'
@@ -91,5 +91,49 @@ class RelationshipGroundingTests(unittest.TestCase):
         self.assertEqual(api.responses.parse.call_count,2)
         self.assertEqual(result['status'],'needs_clarification')
         self.assertEqual(result['items'],[])
+
+    def test_missing_nutrient_is_blocked_in_both_orders(self):
+        for q in ['비타민 D 25ug과 비타민 C 500mg 먹었어.',
+                  '비타민 C 500mg과 비타민 D 25ug 먹었어.']:
+            only_c=self.check(q)
+            self.assertFalse(only_c.items)
+            self.assertEqual(b.calculate(only_c)['status'],'needs_clarification')
+            c=b.ExtractedIntake(kind='nutrient',name='비타민 C',nutrient_id='vitamin_c',amount=500,unit='mg',evidence=q,intent='reported')
+            d=b.ExtractedIntake(kind='nutrient',name='비타민 D',nutrient_id='vitamin_d',amount=25,unit='ug',evidence=q,intent='reported')
+            complete=b.validate_extraction(q,b.ExtractedRequest(items=[c,d]))
+            self.assertEqual(len(complete.items),2)
+            self.assertIn('한 항목씩',b.calculate(complete)['clarifications'][0])
+
+    def test_missing_food_is_blocked_in_both_orders(self):
+        foods=['파김치 150g','식품코드 D314-612380000-0001 해파리냉채 400g']
+        for parts in [foods,foods[::-1]]:
+            q='과 '.join(parts)+' 먹었어.'
+            result=self.check(q,kind='food',name='해파리냉채',food_code='D314-612380000-0001',nutrient_id=None,amount=400,unit='g')
+            self.assertFalse(result.items)
+            self.assertEqual(b.calculate(result)['items'],[])
+
+    def test_profile_and_reference_are_not_extra_intakes(self):
+        q='체중 70kg이고 비타민 C의 UL 2000mg 기준을 알아. 비타민 C 500mg 먹었어.'
+        self.assertTrue(self.check(q).items)
+        q='체중 70kg이고 비타민 C의 UL 2000mg인데 비타민 C 500mg 먹었어.'
+        self.assertTrue(self.check(q).items)
+
+    def test_equal_amounts_do_not_hide_missing_nutrient(self):
+        q='비타민 B6 500mg과 비타민 C 500mg 먹었어.'
+        self.assertFalse(self.check(q).items)
+
+    def test_all_reported_intakes_missing_are_blocked(self):
+        q='비타민 D 25ug과 비타민 C 500mg 먹었어.'
+        result=b.validate_extraction(q,b.ExtractedRequest(items=[]))
+        self.assertTrue(result.input_issues)
+        self.assertEqual(b.calculate(result)['status'],'needs_clarification')
+        self.assertFalse(b.validate_extraction('비타민 D와 C의 상한이 뭐야?',b.ExtractedRequest(items=[])).input_issues)
+
+    def test_count_only_input_requests_missing_label_information(self):
+        q='커피 세 잔 마셨는데 카페인 과다야?'
+        request=self.check(q,name='카페인',nutrient_id='caffeine',amount=None,unit='mg')
+        result=b.calculate(request)
+        self.assertEqual(result['status'],'needs_clarification')
+        self.assertIn('표시 성분 함량',result['clarifications'][0])
 
 if __name__=='__main__':unittest.main()

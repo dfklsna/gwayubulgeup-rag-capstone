@@ -1,0 +1,6 @@
+{
+  "revision": "source-intake-coverage",
+  "frozen_before_execution": true,
+  "criteria": "Previous 24/12/4/4 gold unchanged. Single full regression run; preserve all outcomes. New source coverage tested with deliberately omitted items in both orders, complete multi-item inputs, and profile/reference exclusions.",
+  "limitations": "Conservative explicit intake clause grammar. No promise to detect every omission or interpret unrestricted language."
+}

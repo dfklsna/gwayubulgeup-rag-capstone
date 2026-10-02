@@ -1,0 +1,7 @@
+{
+  "revision": "source-intake-coverage-label-clarification",
+  "frozen_before_execution": true,
+  "criteria": "Previous 24/12/4/4 gold unchanged. Single full regression run; preserve all outcomes. New source coverage tested with deliberately omitted items in both orders, complete multi-item inputs, and profile/reference exclusions.",
+  "limitations": "Conservative explicit intake clause grammar. No promise to detect every omission or interpret unrestricted language.",
+  "followup_reason": "First full run preserved. Count-only coffee input was safely blocked but requested generic re-entry; clarify missing product label/volume instead. Rerun all 44 questions."
+}
