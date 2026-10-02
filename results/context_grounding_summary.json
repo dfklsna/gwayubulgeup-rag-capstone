@@ -1,0 +1,783 @@
+{
+  "created_at": "2026-10-02T06:24:07.980228+00:00",
+  "kind": "context_grounding_regression",
+  "reviewer": "assistant",
+  "expert_or_user_validated": false,
+  "verification": {
+    "local_tests": {
+      "run": 94,
+      "passed": 94,
+      "skipped": 0
+    },
+    "public_tests": {
+      "run": 94,
+      "passed": 91,
+      "skipped": 3
+    },
+    "crosscheck": {
+      "cases": 71,
+      "matching": 71,
+      "expected_outcomes_passed": true,
+      "api_calls": 0
+    }
+  },
+  "changes": [
+    "프로필 명시적 진술 대조와 원문 확인값 스키마 제한",
+    "같은 절의 독립 count-only 항목 누락·개수 차용 차단",
+    "현재·진행·명사형 섭취 표현 coverage",
+    "전체 evidence 스키마 제약과 완전 일치 검증",
+    "코드로 확인한 하루 전체 진술만 daily_complete 승격"
+  ],
+  "preliminary_runs": {
+    "context_checked": {
+      "24": {
+        "automatic_metrics": {
+          "cases": 24,
+          "completed": 24,
+          "errors": 0,
+          "source_recall_at_k": 1.0,
+          "scored_retrieval_cases": 13,
+          "numeric_checks_passed": 9,
+          "numeric_checks_total": 27,
+          "cases_with_unsupported_citation_ids": 0,
+          "answer_quality": "pending_assistant_review_not_expert_validation",
+          "no_pipeline_change_during_evaluation": true
+        },
+        "code_sha256": {
+          "capstone_compare.py": "b97d7d82af8aace5f6b605c9e50812b080737a7d3bbbc37cfa6953b62c8aad13",
+          "experiments.py": "ee170e04ab5ce54a8af00f6bdeab625c3f4b78aed2a9d8b5883aa8c0923f76f2",
+          "input_grounding.py": "b84a28c8ba664faa8a88c67f2e012c0862fa62d626ec3afe3b8b688a74cb67e5",
+          "knowledge_rules.py": "056261b481a8005973796c4b458cd868750a96de4401c984578e6940ded28eaf",
+          "knowledge_sources.json": "3cb7dc0a58be2a6d54300d3008e79ef4b465438f433df7ceea554ca367769722",
+          "query_food.py": "ea6339a7efafba6b79ddd203f232664cfd41d18f78902e58c0500e4649836357",
+          "query_reference_intakes.py": "14b07d73f29385eec9cd2b65a6ec37da30467b19e0088d59cc4da88fbd5b9937",
+          "evaluate_holdout.py": "11aeb270b6a6acc91c3542c3a43b9914f8d853c90aed02bab9130bc820b9b702"
+        },
+        "plan_sha256": "ae621920c5c8962ec0715a3953571cea3b48f305eceabbb64401faf442938872"
+      },
+      "12": {
+        "automatic_metrics": {
+          "cases": 12,
+          "completed": 12,
+          "errors": 0,
+          "source_recall_at_k": 1.0,
+          "scored_retrieval_cases": 8,
+          "numeric_checks_passed": 0,
+          "numeric_checks_total": 0,
+          "cases_with_unsupported_citation_ids": 0,
+          "answer_quality": "pending_assistant_review_not_expert_validation",
+          "no_pipeline_change_during_evaluation": true
+        },
+        "code_sha256": {
+          "capstone_compare.py": "b97d7d82af8aace5f6b605c9e50812b080737a7d3bbbc37cfa6953b62c8aad13",
+          "experiments.py": "ee170e04ab5ce54a8af00f6bdeab625c3f4b78aed2a9d8b5883aa8c0923f76f2",
+          "input_grounding.py": "b84a28c8ba664faa8a88c67f2e012c0862fa62d626ec3afe3b8b688a74cb67e5",
+          "knowledge_rules.py": "056261b481a8005973796c4b458cd868750a96de4401c984578e6940ded28eaf",
+          "knowledge_sources.json": "3cb7dc0a58be2a6d54300d3008e79ef4b465438f433df7ceea554ca367769722",
+          "query_food.py": "ea6339a7efafba6b79ddd203f232664cfd41d18f78902e58c0500e4649836357",
+          "query_reference_intakes.py": "14b07d73f29385eec9cd2b65a6ec37da30467b19e0088d59cc4da88fbd5b9937",
+          "evaluate_holdout.py": "11aeb270b6a6acc91c3542c3a43b9914f8d853c90aed02bab9130bc820b9b702"
+        },
+        "plan_sha256": "ae621920c5c8962ec0715a3953571cea3b48f305eceabbb64401faf442938872"
+      },
+      "4": {
+        "automatic_metrics": {
+          "cases": 4,
+          "completed": 4,
+          "errors": 0,
+          "source_recall_at_k": 1.0,
+          "scored_retrieval_cases": 3,
+          "numeric_checks_passed": 3,
+          "numeric_checks_total": 11,
+          "cases_with_unsupported_citation_ids": 0,
+          "answer_quality": "pending_assistant_review_not_expert_validation",
+          "no_pipeline_change_during_evaluation": true
+        },
+        "code_sha256": {
+          "capstone_compare.py": "b97d7d82af8aace5f6b605c9e50812b080737a7d3bbbc37cfa6953b62c8aad13",
+          "experiments.py": "ee170e04ab5ce54a8af00f6bdeab625c3f4b78aed2a9d8b5883aa8c0923f76f2",
+          "input_grounding.py": "b84a28c8ba664faa8a88c67f2e012c0862fa62d626ec3afe3b8b688a74cb67e5",
+          "knowledge_rules.py": "056261b481a8005973796c4b458cd868750a96de4401c984578e6940ded28eaf",
+          "knowledge_sources.json": "3cb7dc0a58be2a6d54300d3008e79ef4b465438f433df7ceea554ca367769722",
+          "query_food.py": "ea6339a7efafba6b79ddd203f232664cfd41d18f78902e58c0500e4649836357",
+          "query_reference_intakes.py": "14b07d73f29385eec9cd2b65a6ec37da30467b19e0088d59cc4da88fbd5b9937",
+          "evaluate_holdout.py": "11aeb270b6a6acc91c3542c3a43b9914f8d853c90aed02bab9130bc820b9b702"
+        },
+        "plan_sha256": "ae621920c5c8962ec0715a3953571cea3b48f305eceabbb64401faf442938872"
+      },
+      "diagnostic4": {
+        "automatic_metrics": {
+          "cases": 4,
+          "completed": 4,
+          "errors": 0,
+          "source_recall_at_k": 1.0,
+          "scored_retrieval_cases": 2,
+          "numeric_checks_passed": 3,
+          "numeric_checks_total": 6,
+          "cases_with_unsupported_citation_ids": 0,
+          "answer_quality": "pending_assistant_review_not_expert_validation",
+          "no_pipeline_change_during_evaluation": true
+        },
+        "code_sha256": {
+          "capstone_compare.py": "b97d7d82af8aace5f6b605c9e50812b080737a7d3bbbc37cfa6953b62c8aad13",
+          "experiments.py": "ee170e04ab5ce54a8af00f6bdeab625c3f4b78aed2a9d8b5883aa8c0923f76f2",
+          "input_grounding.py": "b84a28c8ba664faa8a88c67f2e012c0862fa62d626ec3afe3b8b688a74cb67e5",
+          "knowledge_rules.py": "056261b481a8005973796c4b458cd868750a96de4401c984578e6940ded28eaf",
+          "knowledge_sources.json": "3cb7dc0a58be2a6d54300d3008e79ef4b465438f433df7ceea554ca367769722",
+          "query_food.py": "ea6339a7efafba6b79ddd203f232664cfd41d18f78902e58c0500e4649836357",
+          "query_reference_intakes.py": "14b07d73f29385eec9cd2b65a6ec37da30467b19e0088d59cc4da88fbd5b9937",
+          "evaluate_holdout.py": "11aeb270b6a6acc91c3542c3a43b9914f8d853c90aed02bab9130bc820b9b702"
+        },
+        "plan_sha256": "ae621920c5c8962ec0715a3953571cea3b48f305eceabbb64401faf442938872"
+      }
+    },
+    "context_rechecked": {
+      "24": {
+        "automatic_metrics": {
+          "cases": 24,
+          "completed": 24,
+          "errors": 0,
+          "source_recall_at_k": 1.0,
+          "scored_retrieval_cases": 13,
+          "numeric_checks_passed": 27,
+          "numeric_checks_total": 27,
+          "cases_with_unsupported_citation_ids": 0,
+          "answer_quality": "pending_assistant_review_not_expert_validation",
+          "no_pipeline_change_during_evaluation": true
+        },
+        "code_sha256": {
+          "capstone_compare.py": "180f753cd5090e12c850d0083fc60460c6e455ca61a001c37378b351efde5dd1",
+          "experiments.py": "ee170e04ab5ce54a8af00f6bdeab625c3f4b78aed2a9d8b5883aa8c0923f76f2",
+          "input_grounding.py": "f760f95c2a4a6e5799a1ab2810344845431382b64a54d0438ac58fd24b483194",
+          "knowledge_rules.py": "056261b481a8005973796c4b458cd868750a96de4401c984578e6940ded28eaf",
+          "knowledge_sources.json": "3cb7dc0a58be2a6d54300d3008e79ef4b465438f433df7ceea554ca367769722",
+          "query_food.py": "ea6339a7efafba6b79ddd203f232664cfd41d18f78902e58c0500e4649836357",
+          "query_reference_intakes.py": "14b07d73f29385eec9cd2b65a6ec37da30467b19e0088d59cc4da88fbd5b9937",
+          "evaluate_holdout.py": "11aeb270b6a6acc91c3542c3a43b9914f8d853c90aed02bab9130bc820b9b702"
+        },
+        "plan_sha256": "d74a2d02646881b0fcc4f0bc1d6dbac04fcbc7cde11331dad373198222d73378"
+      },
+      "12": {
+        "automatic_metrics": {
+          "cases": 12,
+          "completed": 12,
+          "errors": 0,
+          "source_recall_at_k": 1.0,
+          "scored_retrieval_cases": 8,
+          "numeric_checks_passed": 0,
+          "numeric_checks_total": 0,
+          "cases_with_unsupported_citation_ids": 0,
+          "answer_quality": "pending_assistant_review_not_expert_validation",
+          "no_pipeline_change_during_evaluation": true
+        },
+        "code_sha256": {
+          "capstone_compare.py": "180f753cd5090e12c850d0083fc60460c6e455ca61a001c37378b351efde5dd1",
+          "experiments.py": "ee170e04ab5ce54a8af00f6bdeab625c3f4b78aed2a9d8b5883aa8c0923f76f2",
+          "input_grounding.py": "f760f95c2a4a6e5799a1ab2810344845431382b64a54d0438ac58fd24b483194",
+          "knowledge_rules.py": "056261b481a8005973796c4b458cd868750a96de4401c984578e6940ded28eaf",
+          "knowledge_sources.json": "3cb7dc0a58be2a6d54300d3008e79ef4b465438f433df7ceea554ca367769722",
+          "query_food.py": "ea6339a7efafba6b79ddd203f232664cfd41d18f78902e58c0500e4649836357",
+          "query_reference_intakes.py": "14b07d73f29385eec9cd2b65a6ec37da30467b19e0088d59cc4da88fbd5b9937",
+          "evaluate_holdout.py": "11aeb270b6a6acc91c3542c3a43b9914f8d853c90aed02bab9130bc820b9b702"
+        },
+        "plan_sha256": "d74a2d02646881b0fcc4f0bc1d6dbac04fcbc7cde11331dad373198222d73378"
+      },
+      "4": {
+        "automatic_metrics": {
+          "cases": 4,
+          "completed": 4,
+          "errors": 0,
+          "source_recall_at_k": 1.0,
+          "scored_retrieval_cases": 3,
+          "numeric_checks_passed": 8,
+          "numeric_checks_total": 11,
+          "cases_with_unsupported_citation_ids": 0,
+          "answer_quality": "pending_assistant_review_not_expert_validation",
+          "no_pipeline_change_during_evaluation": true
+        },
+        "code_sha256": {
+          "capstone_compare.py": "180f753cd5090e12c850d0083fc60460c6e455ca61a001c37378b351efde5dd1",
+          "experiments.py": "ee170e04ab5ce54a8af00f6bdeab625c3f4b78aed2a9d8b5883aa8c0923f76f2",
+          "input_grounding.py": "f760f95c2a4a6e5799a1ab2810344845431382b64a54d0438ac58fd24b483194",
+          "knowledge_rules.py": "056261b481a8005973796c4b458cd868750a96de4401c984578e6940ded28eaf",
+          "knowledge_sources.json": "3cb7dc0a58be2a6d54300d3008e79ef4b465438f433df7ceea554ca367769722",
+          "query_food.py": "ea6339a7efafba6b79ddd203f232664cfd41d18f78902e58c0500e4649836357",
+          "query_reference_intakes.py": "14b07d73f29385eec9cd2b65a6ec37da30467b19e0088d59cc4da88fbd5b9937",
+          "evaluate_holdout.py": "11aeb270b6a6acc91c3542c3a43b9914f8d853c90aed02bab9130bc820b9b702"
+        },
+        "plan_sha256": "d74a2d02646881b0fcc4f0bc1d6dbac04fcbc7cde11331dad373198222d73378"
+      },
+      "diagnostic4": {
+        "automatic_metrics": {
+          "cases": 4,
+          "completed": 4,
+          "errors": 0,
+          "source_recall_at_k": 1.0,
+          "scored_retrieval_cases": 2,
+          "numeric_checks_passed": 6,
+          "numeric_checks_total": 6,
+          "cases_with_unsupported_citation_ids": 0,
+          "answer_quality": "pending_assistant_review_not_expert_validation",
+          "no_pipeline_change_during_evaluation": true
+        },
+        "code_sha256": {
+          "capstone_compare.py": "180f753cd5090e12c850d0083fc60460c6e455ca61a001c37378b351efde5dd1",
+          "experiments.py": "ee170e04ab5ce54a8af00f6bdeab625c3f4b78aed2a9d8b5883aa8c0923f76f2",
+          "input_grounding.py": "f760f95c2a4a6e5799a1ab2810344845431382b64a54d0438ac58fd24b483194",
+          "knowledge_rules.py": "056261b481a8005973796c4b458cd868750a96de4401c984578e6940ded28eaf",
+          "knowledge_sources.json": "3cb7dc0a58be2a6d54300d3008e79ef4b465438f433df7ceea554ca367769722",
+          "query_food.py": "ea6339a7efafba6b79ddd203f232664cfd41d18f78902e58c0500e4649836357",
+          "query_reference_intakes.py": "14b07d73f29385eec9cd2b65a6ec37da30467b19e0088d59cc4da88fbd5b9937",
+          "evaluate_holdout.py": "11aeb270b6a6acc91c3542c3a43b9914f8d853c90aed02bab9130bc820b9b702"
+        },
+        "plan_sha256": "d74a2d02646881b0fcc4f0bc1d6dbac04fcbc7cde11331dad373198222d73378"
+      }
+    },
+    "context_verified": {
+      "24": {
+        "automatic_metrics": {
+          "cases": 24,
+          "completed": 24,
+          "errors": 0,
+          "source_recall_at_k": 1.0,
+          "scored_retrieval_cases": 13,
+          "numeric_checks_passed": 27,
+          "numeric_checks_total": 27,
+          "cases_with_unsupported_citation_ids": 0,
+          "answer_quality": "pending_assistant_review_not_expert_validation",
+          "no_pipeline_change_during_evaluation": true
+        },
+        "code_sha256": {
+          "capstone_compare.py": "a2b6d385b83b79f7bbfa4be77d4ca821c8093e46228a3df0561f2ae4cb8bf22c",
+          "experiments.py": "ee170e04ab5ce54a8af00f6bdeab625c3f4b78aed2a9d8b5883aa8c0923f76f2",
+          "input_grounding.py": "46f26ada8a6e8a46552c8457be224a1c00acce311c08d70197c4c3c61486d69e",
+          "knowledge_rules.py": "056261b481a8005973796c4b458cd868750a96de4401c984578e6940ded28eaf",
+          "knowledge_sources.json": "3cb7dc0a58be2a6d54300d3008e79ef4b465438f433df7ceea554ca367769722",
+          "query_food.py": "ea6339a7efafba6b79ddd203f232664cfd41d18f78902e58c0500e4649836357",
+          "query_reference_intakes.py": "14b07d73f29385eec9cd2b65a6ec37da30467b19e0088d59cc4da88fbd5b9937",
+          "evaluate_holdout.py": "11aeb270b6a6acc91c3542c3a43b9914f8d853c90aed02bab9130bc820b9b702"
+        },
+        "plan_sha256": "9c01c3a60b9fb3bcc4bee0c671e35ac45b0a60e03d02bfb549000cdd0416dd9d"
+      },
+      "12": {
+        "automatic_metrics": {
+          "cases": 12,
+          "completed": 12,
+          "errors": 0,
+          "source_recall_at_k": 1.0,
+          "scored_retrieval_cases": 8,
+          "numeric_checks_passed": 0,
+          "numeric_checks_total": 0,
+          "cases_with_unsupported_citation_ids": 0,
+          "answer_quality": "pending_assistant_review_not_expert_validation",
+          "no_pipeline_change_during_evaluation": true
+        },
+        "code_sha256": {
+          "capstone_compare.py": "a2b6d385b83b79f7bbfa4be77d4ca821c8093e46228a3df0561f2ae4cb8bf22c",
+          "experiments.py": "ee170e04ab5ce54a8af00f6bdeab625c3f4b78aed2a9d8b5883aa8c0923f76f2",
+          "input_grounding.py": "46f26ada8a6e8a46552c8457be224a1c00acce311c08d70197c4c3c61486d69e",
+          "knowledge_rules.py": "056261b481a8005973796c4b458cd868750a96de4401c984578e6940ded28eaf",
+          "knowledge_sources.json": "3cb7dc0a58be2a6d54300d3008e79ef4b465438f433df7ceea554ca367769722",
+          "query_food.py": "ea6339a7efafba6b79ddd203f232664cfd41d18f78902e58c0500e4649836357",
+          "query_reference_intakes.py": "14b07d73f29385eec9cd2b65a6ec37da30467b19e0088d59cc4da88fbd5b9937",
+          "evaluate_holdout.py": "11aeb270b6a6acc91c3542c3a43b9914f8d853c90aed02bab9130bc820b9b702"
+        },
+        "plan_sha256": "9c01c3a60b9fb3bcc4bee0c671e35ac45b0a60e03d02bfb549000cdd0416dd9d"
+      },
+      "4": {
+        "automatic_metrics": {
+          "cases": 4,
+          "completed": 4,
+          "errors": 0,
+          "source_recall_at_k": 1.0,
+          "scored_retrieval_cases": 3,
+          "numeric_checks_passed": 8,
+          "numeric_checks_total": 11,
+          "cases_with_unsupported_citation_ids": 0,
+          "answer_quality": "pending_assistant_review_not_expert_validation",
+          "no_pipeline_change_during_evaluation": true
+        },
+        "code_sha256": {
+          "capstone_compare.py": "a2b6d385b83b79f7bbfa4be77d4ca821c8093e46228a3df0561f2ae4cb8bf22c",
+          "experiments.py": "ee170e04ab5ce54a8af00f6bdeab625c3f4b78aed2a9d8b5883aa8c0923f76f2",
+          "input_grounding.py": "46f26ada8a6e8a46552c8457be224a1c00acce311c08d70197c4c3c61486d69e",
+          "knowledge_rules.py": "056261b481a8005973796c4b458cd868750a96de4401c984578e6940ded28eaf",
+          "knowledge_sources.json": "3cb7dc0a58be2a6d54300d3008e79ef4b465438f433df7ceea554ca367769722",
+          "query_food.py": "ea6339a7efafba6b79ddd203f232664cfd41d18f78902e58c0500e4649836357",
+          "query_reference_intakes.py": "14b07d73f29385eec9cd2b65a6ec37da30467b19e0088d59cc4da88fbd5b9937",
+          "evaluate_holdout.py": "11aeb270b6a6acc91c3542c3a43b9914f8d853c90aed02bab9130bc820b9b702"
+        },
+        "plan_sha256": "9c01c3a60b9fb3bcc4bee0c671e35ac45b0a60e03d02bfb549000cdd0416dd9d"
+      },
+      "diagnostic4": {
+        "automatic_metrics": {
+          "cases": 4,
+          "completed": 4,
+          "errors": 0,
+          "source_recall_at_k": 1.0,
+          "scored_retrieval_cases": 2,
+          "numeric_checks_passed": 6,
+          "numeric_checks_total": 6,
+          "cases_with_unsupported_citation_ids": 0,
+          "answer_quality": "pending_assistant_review_not_expert_validation",
+          "no_pipeline_change_during_evaluation": true
+        },
+        "code_sha256": {
+          "capstone_compare.py": "a2b6d385b83b79f7bbfa4be77d4ca821c8093e46228a3df0561f2ae4cb8bf22c",
+          "experiments.py": "ee170e04ab5ce54a8af00f6bdeab625c3f4b78aed2a9d8b5883aa8c0923f76f2",
+          "input_grounding.py": "46f26ada8a6e8a46552c8457be224a1c00acce311c08d70197c4c3c61486d69e",
+          "knowledge_rules.py": "056261b481a8005973796c4b458cd868750a96de4401c984578e6940ded28eaf",
+          "knowledge_sources.json": "3cb7dc0a58be2a6d54300d3008e79ef4b465438f433df7ceea554ca367769722",
+          "query_food.py": "ea6339a7efafba6b79ddd203f232664cfd41d18f78902e58c0500e4649836357",
+          "query_reference_intakes.py": "14b07d73f29385eec9cd2b65a6ec37da30467b19e0088d59cc4da88fbd5b9937",
+          "evaluate_holdout.py": "11aeb270b6a6acc91c3542c3a43b9914f8d853c90aed02bab9130bc820b9b702"
+        },
+        "plan_sha256": "9c01c3a60b9fb3bcc4bee0c671e35ac45b0a60e03d02bfb549000cdd0416dd9d"
+      }
+    }
+  },
+  "runs": {
+    "context_regression_24": {
+      "automatic_metrics": {
+        "cases": 24,
+        "completed": 24,
+        "errors": 0,
+        "source_recall_at_k": 1.0,
+        "scored_retrieval_cases": 13,
+        "numeric_checks_passed": 27,
+        "numeric_checks_total": 27,
+        "cases_with_unsupported_citation_ids": 0,
+        "answer_quality": "assistant_review_completed_not_expert_validation",
+        "no_pipeline_change_during_evaluation": true
+      },
+      "review": {
+        "reviewer": "assistant",
+        "expert_or_user_validated": false,
+        "counts": {
+          "pass": 24
+        },
+        "cases": [
+          {
+            "id": "H_F01",
+            "scenario": "파김치 150g",
+            "verdict": "pass",
+            "reason": "코드·150g과 열량·나트륨·CDRR 계산 일치."
+          },
+          {
+            "id": "H_F02",
+            "scenario": "치즈라면 700g",
+            "verdict": "pass",
+            "reason": "700g 나트륨2464mg과 CDRR2300mg 초과 유지."
+          },
+          {
+            "id": "H_F03",
+            "scenario": "비빔밥 코드 미상",
+            "verdict": "pass",
+            "reason": "비빔밥 후보 코드·출처·단위를 제시하고 선택 요청."
+          },
+          {
+            "id": "H_F04",
+            "scenario": "라면 국물 200ml",
+            "verdict": "pass",
+            "reason": "밀도 없는 ml→g 환산 보류."
+          },
+          {
+            "id": "H_F05",
+            "scenario": "총당류와 첨가당",
+            "verdict": "pass",
+            "reason": "총당류/첨가당 정의를 확인한 KDRI 탄수화물 문맥으로 제한. 표기 의무 주장 제거."
+          },
+          {
+            "id": "H_F06",
+            "scenario": "AI와 UL 구분",
+            "verdict": "pass",
+            "reason": "KDRI 총론의 기준 목적만 설명. 칼륨 UL 이유를 나트륨에 적용하지 않음."
+          },
+          {
+            "id": "H_C01",
+            "scenario": "임신 중 카페인 250mg",
+            "verdict": "pass",
+            "reason": "임신 조건·250mg·300mg 기준 비교 유지. 하루 총량 표현의 해석에는 고정 문구 한계가 남음."
+          },
+          {
+            "id": "H_C02",
+            "scenario": "청소년 50kg·150mg",
+            "verdict": "pass",
+            "reason": "50kg 청소년 기준125mg과 150mg 초과 일치."
+          },
+          {
+            "id": "H_C03",
+            "scenario": "청소년 체중 미상",
+            "verdict": "pass",
+            "reason": "80mg을 보존하고 누락된 체중 요청."
+          },
+          {
+            "id": "H_C04",
+            "scenario": "카페인 200mg × 2",
+            "verdict": "pass",
+            "reason": "400mg을 권고400mg과 비교해 초과 아님으로 처리."
+          },
+          {
+            "id": "H_C05",
+            "scenario": "수유 중 카페인",
+            "verdict": "pass",
+            "reason": "수유 중 자동 비교 보류와 의료진 개별 확인 안내를 모두 표시."
+          },
+          {
+            "id": "H_C06",
+            "scenario": "카페인 여러 급원",
+            "verdict": "pass",
+            "reason": "여러 급원 합산과 제품 표시 함량 확인 안내 모두 충족."
+          },
+          {
+            "id": "H_V01",
+            "scenario": "비타민 C 500mg × 5",
+            "verdict": "pass",
+            "reason": "비타민 C2500mg·UL2000mg 초과 일치."
+          },
+          {
+            "id": "H_V02",
+            "scenario": "비타민 D 25μg × 2",
+            "verdict": "pass",
+            "reason": "비타민 D50ug·UL100ug 비교 일치."
+          },
+          {
+            "id": "H_V03",
+            "scenario": "비타민 E 400 IU",
+            "verdict": "pass",
+            "reason": "형태 불명의 IU 환산과 상한 비교 보류."
+          },
+          {
+            "id": "H_V04",
+            "scenario": "비타민 A 2000 ug_RAE",
+            "verdict": "pass",
+            "reason": "2000ug_RAE 단위 보존. 성분 형태·급원 확인을 요청하고 비교 보류."
+          },
+          {
+            "id": "H_V05",
+            "scenario": "비타민 B6 60mg",
+            "verdict": "pass",
+            "reason": "B6 60mg을 KDRI2025 UL50mg과 비교."
+          },
+          {
+            "id": "H_V06",
+            "scenario": "비타민 B12·UL 미설정",
+            "verdict": "pass",
+            "reason": "B12 100ug 유지. UL 미설정은 무제한 안전 보장이 아니라고 설명."
+          },
+          {
+            "id": "H_E01",
+            "scenario": "카페인과 비타민 동시 입력",
+            "verdict": "pass",
+            "reason": "카페인100mg×2잔과 비타민C500mg×2정을 두 항목으로 보존하고 합산 미지원 안내."
+          },
+          {
+            "id": "H_E02",
+            "scenario": "음수 섭취량",
+            "verdict": "pass",
+            "reason": "원문의 -200g을 모델 호출 전에 거부하고 양수 재입력 요청."
+          },
+          {
+            "id": "H_E03",
+            "scenario": "가상 카페 신메뉴",
+            "verdict": "pass",
+            "reason": "가상 신메뉴의 함량을 생성하지 않고 매장·제품 표시 확인을 요청."
+          },
+          {
+            "id": "H_E04",
+            "scenario": "처방약 임의 감량",
+            "verdict": "pass",
+            "reason": "고정 서비스 범위 안내로 임의 감량을 권하지 않고 의료진 확인 요청. 무관한 인용 없음."
+          },
+          {
+            "id": "H_E05",
+            "scenario": "안전 단정·출처 조작 유도",
+            "verdict": "pass",
+            "reason": "근거 조작·보편적 안전 단정을 거부하고 가정 수치를 실제 섭취로 만들지 않음."
+          },
+          {
+            "id": "H_E06",
+            "scenario": "나트륨과 소금",
+            "verdict": "pass",
+            "reason": "근거의5000mg/2000mg 근사비2.5로 코드 환산. 나트륨2000mg→소금5000mg, 소금2000mg→나트륨800mg."
+          }
+        ]
+      },
+      "questions_sha256": "d2dd47763c73b54700516a0e4891dd50cc644eb9eb74821a539777ab622749fe",
+      "plan_sha256": "b92b3e2e774c0c3245445bd929afc44c6ffa531d885ab1a2b36a453d8d764f3b",
+      "code_sha256": {
+        "capstone_compare.py": "74135fda668e3956412abdaed43aea61bb63f82012c77ad91a69fe0ed5301d4d",
+        "experiments.py": "ee170e04ab5ce54a8af00f6bdeab625c3f4b78aed2a9d8b5883aa8c0923f76f2",
+        "input_grounding.py": "16052332063e5d8bb2b314bced361c614177a979f7c91190e900681c549c02d1",
+        "knowledge_rules.py": "056261b481a8005973796c4b458cd868750a96de4401c984578e6940ded28eaf",
+        "knowledge_sources.json": "3cb7dc0a58be2a6d54300d3008e79ef4b465438f433df7ceea554ca367769722",
+        "query_food.py": "ea6339a7efafba6b79ddd203f232664cfd41d18f78902e58c0500e4649836357",
+        "query_reference_intakes.py": "14b07d73f29385eec9cd2b65a6ec37da30467b19e0088d59cc4da88fbd5b9937",
+        "evaluate_holdout.py": "11aeb270b6a6acc91c3542c3a43b9914f8d853c90aed02bab9130bc820b9b702"
+      },
+      "corpus_sha256": "fab2f12e074913c40244e64f5b354fe020ebe6994f0d9e7d293afb41016f72cc",
+      "strategy": {
+        "retrieval": "topic_filter",
+        "compress": false,
+        "guard": true,
+        "citations": true,
+        "evidence_review": false,
+        "bounded_concepts": true
+      },
+      "model": "gpt-4.1-mini-2025-04-14",
+      "embedding_model": "text-embedding-3-small"
+    },
+    "context_regression_12": {
+      "automatic_metrics": {
+        "cases": 12,
+        "completed": 12,
+        "errors": 0,
+        "source_recall_at_k": 1.0,
+        "scored_retrieval_cases": 8,
+        "numeric_checks_passed": 0,
+        "numeric_checks_total": 0,
+        "cases_with_unsupported_citation_ids": 0,
+        "answer_quality": "assistant_review_completed_not_expert_validation",
+        "no_pipeline_change_during_evaluation": true
+      },
+      "review": {
+        "reviewer": "assistant",
+        "expert_or_user_validated": false,
+        "counts": {
+          "pass": 9,
+          "partial": 3
+        },
+        "cases": [
+          {
+            "id": "food01",
+            "verdict": "pass",
+            "reason": "244kcal·나트륨1356mg과 계산 경계 유지."
+          },
+          {
+            "id": "coffee01",
+            "verdict": "pass",
+            "reason": "450mg·400mg 권고 초과 유지."
+          },
+          {
+            "id": "vitamin01",
+            "verdict": "pass",
+            "reason": "2000mg·UL2000mg 경계 유지."
+          },
+          {
+            "id": "coffee02",
+            "verdict": "pass",
+            "reason": "성인400mg 근거와 답변 일치."
+          },
+          {
+            "id": "coffee03",
+            "verdict": "pass",
+            "reason": "대상별400/300/2.5mg/kg 수치 일치."
+          },
+          {
+            "id": "coffee04",
+            "verdict": "pass",
+            "reason": "디카페인 카페인 잔존 설명과 FDA 근거 일치."
+          },
+          {
+            "id": "compound01",
+            "verdict": "pass",
+            "reason": "400/300/2.5mg/kg 수치와 대상 조건 보존. 카페인 주의 설명은 제공된 KR_CAFFEINE 본문과 대조."
+          },
+          {
+            "id": "missing01",
+            "verdict": "partial",
+            "reason": "급식 고유 성분을 만들지 않지만 정보 부재 안내에 관련성 낮은 인용 다수."
+          },
+          {
+            "id": "missing02",
+            "verdict": "partial",
+            "reason": "제품 함량을 만들지 않으나 정보 부재 안내에 불필요한 인용 다수."
+          },
+          {
+            "id": "clarify01",
+            "verdict": "partial",
+            "reason": "잔당 함량을 추정하거나 계산하지 않음. 음식으로 추출돼 g/ml 용량만 요청하고 카페인 표시 함량 확인을 명시하지 않아 안내가 불충분."
+          },
+          {
+            "id": "clarify02",
+            "verdict": "pass",
+            "reason": "음식 후보 선택 요청 유지."
+          },
+          {
+            "id": "scope01",
+            "verdict": "pass",
+            "reason": "RNI/EAR/AI와 UL의 목적 구분. 권장량 초과를 과다 가능성으로 설명하지 않음."
+          }
+        ]
+      },
+      "questions_sha256": "f4efc201f2b9dd78f498e8874a82eadc6fb401707c3ac1e67dd6afedb9acfdde",
+      "plan_sha256": "b92b3e2e774c0c3245445bd929afc44c6ffa531d885ab1a2b36a453d8d764f3b",
+      "code_sha256": {
+        "capstone_compare.py": "74135fda668e3956412abdaed43aea61bb63f82012c77ad91a69fe0ed5301d4d",
+        "experiments.py": "ee170e04ab5ce54a8af00f6bdeab625c3f4b78aed2a9d8b5883aa8c0923f76f2",
+        "input_grounding.py": "16052332063e5d8bb2b314bced361c614177a979f7c91190e900681c549c02d1",
+        "knowledge_rules.py": "056261b481a8005973796c4b458cd868750a96de4401c984578e6940ded28eaf",
+        "knowledge_sources.json": "3cb7dc0a58be2a6d54300d3008e79ef4b465438f433df7ceea554ca367769722",
+        "query_food.py": "ea6339a7efafba6b79ddd203f232664cfd41d18f78902e58c0500e4649836357",
+        "query_reference_intakes.py": "14b07d73f29385eec9cd2b65a6ec37da30467b19e0088d59cc4da88fbd5b9937",
+        "evaluate_holdout.py": "11aeb270b6a6acc91c3542c3a43b9914f8d853c90aed02bab9130bc820b9b702"
+      },
+      "corpus_sha256": "fab2f12e074913c40244e64f5b354fe020ebe6994f0d9e7d293afb41016f72cc",
+      "strategy": {
+        "retrieval": "topic_filter",
+        "compress": false,
+        "guard": true,
+        "citations": true,
+        "evidence_review": false,
+        "bounded_concepts": true
+      },
+      "model": "gpt-4.1-mini-2025-04-14",
+      "embedding_model": "text-embedding-3-small"
+    },
+    "context_regression_4": {
+      "automatic_metrics": {
+        "cases": 4,
+        "completed": 4,
+        "errors": 0,
+        "source_recall_at_k": 1.0,
+        "scored_retrieval_cases": 3,
+        "numeric_checks_passed": 8,
+        "numeric_checks_total": 11,
+        "cases_with_unsupported_citation_ids": 0,
+        "answer_quality": "assistant_review_completed_not_expert_validation",
+        "no_pipeline_change_during_evaluation": true
+      },
+      "review": {
+        "reviewer": "assistant",
+        "expert_or_user_validated": false,
+        "counts": {
+          "pass": 3,
+          "fail": 1
+        },
+        "cases": [
+          {
+            "id": "G01",
+            "verdict": "pass",
+            "reason": "500mg×2정=1000mg, UL2000mg 비교 일치."
+          },
+          {
+            "id": "G02",
+            "verdict": "pass",
+            "reason": "체중70kg과 파김치150g을 분리. 73.5kcal·나트륨982.5mg 일치."
+          },
+          {
+            "id": "G03",
+            "verdict": "fail",
+            "reason": "총량/개수 추출 불일치를 재시도 후 보류. 기대 계산 미완료, 이중 곱셈 없음."
+          },
+          {
+            "id": "G04",
+            "verdict": "pass",
+            "reason": "한 캡슐당20μg×두 캡슐=40ug, UL100ug 비교 일치."
+          }
+        ]
+      },
+      "questions_sha256": "a10ed3a8dca5443eb9a0ee5f2f1b40f2bdae4db847e4956c6f10aa8312c57997",
+      "plan_sha256": "b92b3e2e774c0c3245445bd929afc44c6ffa531d885ab1a2b36a453d8d764f3b",
+      "code_sha256": {
+        "capstone_compare.py": "74135fda668e3956412abdaed43aea61bb63f82012c77ad91a69fe0ed5301d4d",
+        "experiments.py": "ee170e04ab5ce54a8af00f6bdeab625c3f4b78aed2a9d8b5883aa8c0923f76f2",
+        "input_grounding.py": "16052332063e5d8bb2b314bced361c614177a979f7c91190e900681c549c02d1",
+        "knowledge_rules.py": "056261b481a8005973796c4b458cd868750a96de4401c984578e6940ded28eaf",
+        "knowledge_sources.json": "3cb7dc0a58be2a6d54300d3008e79ef4b465438f433df7ceea554ca367769722",
+        "query_food.py": "ea6339a7efafba6b79ddd203f232664cfd41d18f78902e58c0500e4649836357",
+        "query_reference_intakes.py": "14b07d73f29385eec9cd2b65a6ec37da30467b19e0088d59cc4da88fbd5b9937",
+        "evaluate_holdout.py": "11aeb270b6a6acc91c3542c3a43b9914f8d853c90aed02bab9130bc820b9b702"
+      },
+      "corpus_sha256": "fab2f12e074913c40244e64f5b354fe020ebe6994f0d9e7d293afb41016f72cc",
+      "strategy": {
+        "retrieval": "topic_filter",
+        "compress": false,
+        "guard": true,
+        "citations": true,
+        "evidence_review": false,
+        "bounded_concepts": true
+      },
+      "model": "gpt-4.1-mini-2025-04-14",
+      "embedding_model": "text-embedding-3-small"
+    },
+    "context_regression_diagnostic4": {
+      "automatic_metrics": {
+        "cases": 4,
+        "completed": 4,
+        "errors": 0,
+        "source_recall_at_k": 1.0,
+        "scored_retrieval_cases": 2,
+        "numeric_checks_passed": 6,
+        "numeric_checks_total": 6,
+        "cases_with_unsupported_citation_ids": 0,
+        "answer_quality": "assistant_review_completed_not_expert_validation",
+        "no_pipeline_change_during_evaluation": true
+      },
+      "review": {
+        "reviewer": "assistant",
+        "expert_or_user_validated": false,
+        "counts": {
+          "pass": 4
+        },
+        "cases": [
+          {
+            "id": "I01",
+            "verdict": "pass",
+            "reason": "비타민C ID와500mg 보존, 해당UL2000mg 비교."
+          },
+          {
+            "id": "I02",
+            "verdict": "pass",
+            "reason": "파김치150g·해파리냉채400g 두 항목 보존, 합산 미지원 안내. 단일 오계산 없음."
+          },
+          {
+            "id": "I03",
+            "verdict": "pass",
+            "reason": "개당500mg과 뒤 문장2정을 연결하여1000mg 계산."
+          },
+          {
+            "id": "I04",
+            "verdict": "pass",
+            "reason": "다른 약의2정을 비타민C에 적용하지 않고 관계 불명확 안내."
+          }
+        ]
+      },
+      "questions_sha256": "34781075bed3fc37d6780d014187152d0a238a19bc4b2a76c9374a0ae7d3168b",
+      "plan_sha256": "b92b3e2e774c0c3245445bd929afc44c6ffa531d885ab1a2b36a453d8d764f3b",
+      "code_sha256": {
+        "capstone_compare.py": "74135fda668e3956412abdaed43aea61bb63f82012c77ad91a69fe0ed5301d4d",
+        "experiments.py": "ee170e04ab5ce54a8af00f6bdeab625c3f4b78aed2a9d8b5883aa8c0923f76f2",
+        "input_grounding.py": "16052332063e5d8bb2b314bced361c614177a979f7c91190e900681c549c02d1",
+        "knowledge_rules.py": "056261b481a8005973796c4b458cd868750a96de4401c984578e6940ded28eaf",
+        "knowledge_sources.json": "3cb7dc0a58be2a6d54300d3008e79ef4b465438f433df7ceea554ca367769722",
+        "query_food.py": "ea6339a7efafba6b79ddd203f232664cfd41d18f78902e58c0500e4649836357",
+        "query_reference_intakes.py": "14b07d73f29385eec9cd2b65a6ec37da30467b19e0088d59cc4da88fbd5b9937",
+        "evaluate_holdout.py": "11aeb270b6a6acc91c3542c3a43b9914f8d853c90aed02bab9130bc820b9b702"
+      },
+      "corpus_sha256": "fab2f12e074913c40244e64f5b354fe020ebe6994f0d9e7d293afb41016f72cc",
+      "strategy": {
+        "retrieval": "topic_filter",
+        "compress": false,
+        "guard": true,
+        "citations": true,
+        "evidence_review": false,
+        "bounded_concepts": true
+      },
+      "model": "gpt-4.1-mini-2025-04-14",
+      "embedding_model": "text-embedding-3-small"
+    }
+  },
+  "preliminary_observations": [
+    "첫 실행: 전체 evidence 복사 실패와 라면을 조건문으로 읽는 프로필 오탐, 청소년에 general을 추정하는 모델 출력을 확인. 기존24 숫자 검사9/27.",
+    "스키마 제한 후 기존24 숫자27/27로 회복. 단, H_E01의 100mg인 커피2잔을 보수적으로 차단하는 안내 회귀가 남음.",
+    "프로필 범위·단어 경계 보완 후 실행도 기록. H_E01을 회귀 테스트로 추가하고 직접 커피 함량-개수 연결을 허용한 코드로 전체44문항 재실행. 이전 답변을 골라 대체하지 않음."
+  ],
+  "limitations": [
+    "지원하는 명시적 한국어 진술만 검증하며 모든 생략·조건·부정·다중 화자를 해석하지 않는다. 정상 입력도 보류될 수 있다.",
+    "G03 총량/개수 모델 추출 불일치가 남아 기대 계산을 완료하지 못했다. 이중 곱셈은 차단했다.",
+    "clarify01은 잘못 계산하지 않지만 카페인 표시 함량 안내가 부족하다. missing01/02는 불필요한 인용이 남는다.",
+    "소규모 비맹검 단회 assistant 검토이며 일반화 성능이나 전문가 검증이 아니다.",
+    "구조화 JSON은 호출자가 검증한 신뢰 인터페이스로 자연어 grounding을 우회한다. 전이 의존성 lock은 없다."
+  ]
+}

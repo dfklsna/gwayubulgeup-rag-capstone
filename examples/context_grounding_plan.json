@@ -1,0 +1,18 @@
+{
+  "created_at": "2026-10-02T06:13:52.555716+00:00",
+  "purpose": "프로필·같은 절의 개수·섭취 동사·원문 증거·하루 전체 여부 검증 이후 회귀",
+  "sets": [
+    "holdout_questions_24.jsonl",
+    "evaluation_questions.jsonl",
+    "relationship_questions_4.jsonl",
+    "grounding_v2_questions_4.jsonl"
+  ],
+  "rules": [
+    "코드와 질문·계획을 고정하고 각 묶음을 한 번 실행한다.",
+    "실패 결과를 성공한 재생성으로 대체하지 않는다.",
+    "자동 출처·수치 지표와 assistant 내용 검토를 분리한다.",
+    "71개 오추출/정상 입력 교차 검증은 LLM 오류 빈도 측정이 아니다."
+  ],
+  "tests": 87,
+  "crosscheck_cases": 71
+}

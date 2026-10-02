@@ -13,13 +13,13 @@
     },
     {
       "path": ".gitignore",
-      "sha256": "99610944a759ef3fc8a98a0d2a41c829edd5537a27d2ff02caeac8883fe57469",
-      "bytes": 806
+      "sha256": "f416ef01b5bf348d2fe878701bba3a1b8a141dba535bb829b45ad54f2d9a795a",
+      "bytes": 847
     },
     {
       "path": "README.md",
-      "sha256": "1f92d8d7f7c96f982da575a269a843504430ce0e4f454402b14fb77a2499942e",
-      "bytes": 7404
+      "sha256": "8040e5c43e4f8e5edd9ff516420b7a65bc00252c07eb8ce766b95835cb5edccc",
+      "bytes": 7542
     },
     {
       "path": "data/README.md",
@@ -48,8 +48,8 @@
     },
     {
       "path": "docs/RUNNING.md",
-      "sha256": "11d22715d4d90b0a15ff4481d8a705e1bce1232a6420966d07d64215944b41a9",
-      "bytes": 2114
+      "sha256": "549d7cc16f97570ccaacf5363670da4de1dfe7f7a08f79dc0280369d695b2e6f",
+      "bytes": 2123
     },
     {
       "path": "docs/history/design_before_submission_review.md",
@@ -75,6 +75,26 @@
       "path": "examples/caffeine_450mg.json",
       "sha256": "66b059f1115a727c2c98537bd6bb99d09a3b7f3324f92735cb31b7f2553c45fe",
       "bytes": 363
+    },
+    {
+      "path": "examples/context_grounding_plan.json",
+      "sha256": "ae621920c5c8962ec0715a3953571cea3b48f305eceabbb64401faf442938872",
+      "bytes": 725
+    },
+    {
+      "path": "examples/context_grounding_recheck_plan.json",
+      "sha256": "d74a2d02646881b0fcc4f0bc1d6dbac04fcbc7cde11331dad373198222d73378",
+      "bytes": 848
+    },
+    {
+      "path": "examples/context_regression_plan.json",
+      "sha256": "b92b3e2e774c0c3245445bd929afc44c6ffa531d885ab1a2b36a453d8d764f3b",
+      "bytes": 824
+    },
+    {
+      "path": "examples/context_validation_plan.json",
+      "sha256": "9c01c3a60b9fb3bcc4bee0c671e35ac45b0a60e03d02bfb549000cdd0416dd9d",
+      "bytes": 842
     },
     {
       "path": "examples/coverage_regression_plan.json",
@@ -212,19 +232,24 @@
       "bytes": 48266
     },
     {
+      "path": "results/context_grounding_summary.json",
+      "sha256": "dfe555717f89801836b3c8fe11d878c8651dd4b3bdcb14f4632d8faedc661ca6",
+      "bytes": 36637
+    },
+    {
       "path": "results/coverage_summary.json",
       "sha256": "fd7e2b46e47813aa34fc3e6201eae32dacf56abd23742f0807a07777d8c87839",
       "bytes": 19980
     },
     {
       "path": "results/design.md",
-      "sha256": "ce5a082716095479bba7b9882c7cae3ccb6db6d0caddbe40f40e61ec6b7a45af",
-      "bytes": 11959
+      "sha256": "a86fcf132e1631630f764f7a93f03ee937ee2c8a8a87a7882da7584235a6668d",
+      "bytes": 14341
     },
     {
       "path": "results/evaluation.md",
-      "sha256": "cc9db859a2e8a6736ecdd260d693becd5ea78b4611e5fca12ae8e338d9c5ef41",
-      "bytes": 12766
+      "sha256": "8102998f90cd66f80489e625da7ad7940404d72b1790c09b511ca9722f555163",
+      "bytes": 13837
     },
     {
       "path": "results/grounding_v2_summary.json",
@@ -263,8 +288,8 @@
     },
     {
       "path": "scripts/crosscheck_submission.py",
-      "sha256": "127e6475086e88b8739fa35650c5f5765df3bcfd97c080562e51a182feca692f",
-      "bytes": 5091
+      "sha256": "1c0f971b07c98a976a0d57c9d2332accec4622d08e30a8913bfa4d0665d5630e",
+      "bytes": 7540
     },
     {
       "path": "scripts/evaluate_holdout.py",
@@ -278,8 +303,8 @@
     },
     {
       "path": "scripts/package_release.py",
-      "sha256": "2fe793f83348c0827871776f693768af437ff5a1ade8ac11525566e554e1d2c8",
-      "bytes": 3038
+      "sha256": "7218fb303815556fd9f09e580b13e4f486128694236937aaca01db8f312ea7f1",
+      "bytes": 3079
     },
     {
       "path": "scripts/package_submission.py",
@@ -353,8 +378,8 @@
     },
     {
       "path": "src/capstone_compare.py",
-      "sha256": "5c282a253901a37c3a0cc51b021055216f90f08cbb55557d5bf625ce57c6d09c",
-      "bytes": 114147
+      "sha256": "74135fda668e3956412abdaed43aea61bb63f82012c77ad91a69fe0ed5301d4d",
+      "bytes": 122475
     },
     {
       "path": "src/experiments.py",
@@ -363,8 +388,8 @@
     },
     {
       "path": "src/input_grounding.py",
-      "sha256": "3062d32bd32b4462a0a2d92b745f4ce3e1fde9e6c0888da28fd34b5f6e2ff65b",
-      "bytes": 11797
+      "sha256": "16052332063e5d8bb2b314bced361c614177a979f7c91190e900681c549c02d1",
+      "bytes": 18601
     },
     {
       "path": "src/knowledge_rules.py",
@@ -380,6 +405,11 @@
       "path": "tests/test_baseline.py",
       "sha256": "e62726f1c74bca020ab9c7269d15d29def8210d4b37dff79bb66aeee6e06c30f",
       "bytes": 6014
+    },
+    {
+      "path": "tests/test_context_grounding.py",
+      "sha256": "d89017924227fbfd3a1bbae9cdc4bc15bf36e83b0cc12fa7d6c8d3bccdc7fbc8",
+      "bytes": 11165
     },
     {
       "path": "tests/test_experiments.py",
